@@ -66,6 +66,16 @@ Partial Class Form1
         NameLabel.TabIndex = 18
         NameLabel.Text = "Select Machine :"
         '
+        'Label4
+        '
+        Label4.AutoSize = True
+        Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label4.Location = New System.Drawing.Point(662, 71)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(126, 31)
+        Label4.TabIndex = 24
+        Label4.Text = "Counter :"
+        '
         'SerialPort1
         '
         Me.SerialPort1.PortName = "COM6"
@@ -221,16 +231,6 @@ Partial Class Form1
         '
         Me.View_Ded_CounterTableAdapter.ClearBeforeFill = True
         '
-        'Label4
-        '
-        Label4.AutoSize = True
-        Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label4.Location = New System.Drawing.Point(662, 71)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(126, 31)
-        Label4.TabIndex = 24
-        Label4.Text = "Counter :"
-        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -241,7 +241,7 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(948, 50)
         Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Metal Detector"
+        Me.Label5.Text = "Metal Detector Indicator"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
