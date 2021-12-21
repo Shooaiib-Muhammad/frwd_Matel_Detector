@@ -1,0 +1,256 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MatelDedt
+</name>
+</assembly>
+<members>
+<member name="T:MatelDedt.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MatelDedt.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MatelDedt.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.Tbl_Ded_machineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.tbl_Matel_dedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.DataTable1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.Tbl_Ded_machineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.tbl_Matel_dedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.DataTable1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.Tbl_Ded_machineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.tbl_Matel_dedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DedSets.DataTable1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.Tbl_Ded_machineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.tbl_Matel_dedTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.DataTable1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:MatelDedt.DedSetsTableAdapters.TableAdapterManager.UpdateUpdatedRows(MatelDedt.DedSets,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:MatelDedt.DedSetsTableAdapters.TableAdapterManager.UpdateInsertedRows(MatelDedt.DedSets,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:MatelDedt.DedSetsTableAdapters.TableAdapterManager.UpdateDeletedRows(MatelDedt.DedSets,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:MatelDedt.DedSetsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:MatelDedt.DedSetsTableAdapters.TableAdapterManager.UpdateAll(MatelDedt.DedSets)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:MatelDedt.DedSetsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Tbl_Ded_machineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Matel_dedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Inv_Tran_DateDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.view_Ded_CounterDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Tbl_Ded_machineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Matel_dedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Inv_Tran_DateRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.view_Ded_CounterRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Tbl_Ded_machineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Matel_dedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.tbl_Inv_Tran_DateRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.view_Ded_CounterRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Tbl_Ded_machineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.tbl_Matel_dedTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.tbl_Inv_Tran_DateTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.view_Ded_CounterTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.UpdateUpdatedRows(MatelDedt.DSmatalDed,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.UpdateInsertedRows(MatelDedt.DSmatalDed,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.UpdateDeletedRows(MatelDedt.DSmatalDed,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.UpdateAll(MatelDedt.DSmatalDed)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

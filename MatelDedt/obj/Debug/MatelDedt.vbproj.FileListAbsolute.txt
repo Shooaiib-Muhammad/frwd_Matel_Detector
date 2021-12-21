@@ -1,0 +1,12 @@
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\bin\Debug\MatelDedt.exe.config
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\bin\Debug\MatelDedt.exe
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\bin\Debug\MatelDedt.pdb
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\bin\Debug\MatelDedt.xml
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.Form1.resources
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.Resources.resources
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.vbproj.GenerateResource.cache
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.vbproj.CoreCompileInputs.cache
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.exe
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.xml
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.pdb
+C:\Users\ITS-4\source\repos\MatelDedt\MatelDedt\obj\Debug\MatelDedt.vbprojAssemblyReference.cache
