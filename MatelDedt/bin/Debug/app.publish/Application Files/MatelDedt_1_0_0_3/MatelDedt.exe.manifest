@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MatelDedt.exe" version="1.0.0.3" publicKeyToken="87a058190078daf5" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="metal-detector.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MatelDedt" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MatelDedt.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MatelDedt.exe" size="240560">
+      <assemblyIdentity name="MatelDedt" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>q+BeZsbKdzWYddb9mF+jdyX/4OOLAY/t9vliaV2qTLQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MatelDedt.exe.config" size="507">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9tWzYOsJkO4391FH5Hn08jiK7a0KShdD1nKu4lrAOgY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="metal-detector.ico" size="104556">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qFWmv9VE7eEuqyPtQ3cJZAjKvoU8JzyjLvyIu4vObb8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=FORWARD\its-4" issuerKeyHash="6c4810b4ada76c9cba4b37d28ea331515644c17f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>kQRN8vV5JBp+GxTM3AU5MS+s3wvOCTh8TdIMXDKiTLc=</DigestValue></Reference></SignedInfo><SignatureValue>C8pL/wW1AuOgekun5M0G0unVJA3s1FHy+WHPljChBJGb0x4LXguEA5bC86JYt/tF4RMxh0YHgVCj+vRC1PrQmbApRgQPUaZOiGHIRHx3eCLSkV+Qjr71hX+t+71+OwwWR1rI+6es+wrVUjyd9XQfEmvUrfTuZXtb/wY0RuVRCSs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>zyPJ5j7wVQUxFj3nZ6tRYwtdpotJwJcjdvM2WJBvRz3cr076EiMvDgjkTPM8XAmCv1BoUe3cLZXxhEJL+wiDZWyF7EXiQ9/3zWkt88luvj/PrX7g/DaM9tlr3QMbL+Bpz7b2bcfAokgfhU5KUYKgNfFl7qrpV1L2QbgugpRzU6U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b74ca2325c0cd24d7c3809ce0bdfac2f313905dccc141b7e1a2479f5f24d0491" Description="" Url=""><as:assemblyIdentity name="MatelDedt.exe" version="1.0.0.3" publicKeyToken="87a058190078daf5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=FORWARD\its-4</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>phveIkbAj102tpYrn/uoYLuURptuXvHxgaB665AYcR4=</DigestValue></Reference></SignedInfo><SignatureValue>MQDE6U4HcHn70nFtjyJ2sCjyL512MD1dRbf3jtYzejRqmouroDEu+2cnT71T1TU38eopsqYH50VVkxEbmwb2XdgKnFY3u9DwTyK9Jp+6Y5cSj5PtzOUlcrvOLe6jvPPdlJEEd1f8ry2ufeGNhAmUI0cGehVbKbDGtI9iLLe+Ivo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zyPJ5j7wVQUxFj3nZ6tRYwtdpotJwJcjdvM2WJBvRz3cr076EiMvDgjkTPM8XAmCv1BoUe3cLZXxhEJL+wiDZWyF7EXiQ9/3zWkt88luvj/PrX7g/DaM9tlr3QMbL+Bpz7b2bcfAokgfhU5KUYKgNfFl7qrpV1L2QbgugpRzU6U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQXSTCi06TjbBNRRvGsV2CxTANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoARgBPAFIAVwBBAFIARABcAGkAdABzAC0ANDAeFw0yMjAxMDMwNjI4MDFaFw0yMzAxMDMxMjI4MDFaMCUxIzAhBgNVBAMeGgBGAE8AUgBXAEEAUgBEAFwAaQB0AHMALQA0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPI8nmPvBVBTEWPednq1FjC12mi0nAlyN28zZYkG9HPdyvTvoSIy8OCORM8zxcCYK/UGhR7dwtlfGEQkv7CINlbIXsReJD3/fNaS3zyW6+P8+tfuD8Noz22WvdAxsv4GnPtvZtx8CiSB+FTkpRgqA18WXuqulXUvZBuC6ClHNTpQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAEQ7Fcm59FSYDFPMFKMh6IDvjuGtyvvkhXtbnW86P1kw7Qu2ffJFZHR3EcWHO6cLO+Qqajzika7Veg6luf5CclcOU8sjl/Dwe+aFOO33rU0xMINT0S94PpRE29QToDPgj0uqhWWkqukkOhX9OLpybLlhfAVC2MtT9WkgJ5CR0DQP</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

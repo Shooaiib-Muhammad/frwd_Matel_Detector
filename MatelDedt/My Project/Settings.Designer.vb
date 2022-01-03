@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Dsn=ERPFS;uid=sa;app=Microsoft® Visual Studio®;wsid=ITS-4;database=MIS")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Dsn=ERPFS;uid=ajax;app=Microsoft® Visual Studio®;wsid=ITS-4;database=MIS;pwd=Forw"& _ 
+            "ard@123")>  _
         Public ReadOnly Property MISConnectionString() As String
             Get
                 Return CType(Me("MISConnectionString"),String)
