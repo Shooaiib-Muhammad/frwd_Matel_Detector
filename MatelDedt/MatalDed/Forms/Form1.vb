@@ -1,7 +1,9 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DSmatalDed.tbl_Matel_ded' table. You can move, or remove it, as needed.
-        Me.Tbl_Matel_dedTableAdapter.Fill(Me.DSmatalDed.tbl_Matel_ded)
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO' table. You can move, or remove it, as needed.
+		Me.View_MS_PONOTableAdapter.Fill(Me.DSmatalDed.view_MS_PONO)
+		'TODO: This line of code loads data into the 'DSmatalDed.tbl_Matel_ded' table. You can move, or remove it, as needed.
+		Me.Tbl_Matel_dedTableAdapter.Fill(Me.DSmatalDed.tbl_Matel_ded)
         'TODO: This line of code loads data into the 'DSmatalDed.Tbl_Ded_machine' table. You can move, or remove it, as needed.
         Me.Tbl_Ded_machineTableAdapter.Fill(Me.DSmatalDed.Tbl_Ded_machine)
 
@@ -24,7 +26,7 @@
 			Dim Incoming As String = Me.SerialPort1.ReadLine()
 			'MsgBox(Incoming)
 			Try
-				Tbl_Matel_dedTableAdapter.Insert(NameComboBox.SelectedValue, 1, Nothing, Now, Label1.Text)
+				Tbl_Matel_dedTableAdapter.Insert(NameComboBox.SelectedValue, 1, Nothing, Now, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
 				loadData()
 			Catch ex As Exception
 
@@ -76,7 +78,7 @@
 
 	Private Sub loadData()
 		Try
-			Me.View_Ded_CounterTableAdapter.Fill(Me.DSmatalDed.view_Ded_Counter, Label1.Text, NameComboBox.SelectedValue)
+			Me.View_Ded_CounterTableAdapter.Fill(Me.DSmatalDed.view_Ded_Counter, Label1.Text, NameComboBox.SelectedValue, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
 		Catch ex As Exception
 
 		End Try

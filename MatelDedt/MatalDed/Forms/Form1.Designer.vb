@@ -33,8 +33,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.NameComboBox = New System.Windows.Forms.ComboBox()
-        Me.Tbl_Ded_machineBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.View_MS_PONOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DSmatalDed = New MatelDedt.DSmatalDed()
+        Me.Tbl_Ded_machineBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_Ded_machineTableAdapter = New MatelDedt.DSmatalDedTableAdapters.Tbl_Ded_machineTableAdapter()
         Me.TableAdapterManager = New MatelDedt.DSmatalDedTableAdapters.TableAdapterManager()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -47,10 +48,15 @@ Partial Class Form1
         Me.View_Ded_CounterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.View_Ded_CounterTableAdapter = New MatelDedt.DSmatalDedTableAdapters.view_Ded_CounterTableAdapter()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.View_MS_PONOTableAdapter = New MatelDedt.DSmatalDedTableAdapters.view_MS_PONOTableAdapter()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         NameLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
-        CType(Me.Tbl_Ded_machineBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.View_MS_PONOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DSmatalDed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_Ded_machineBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Matel_dedBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.View_Ded_CounterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,9 +68,9 @@ Partial Class Form1
         NameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         NameLabel.Location = New System.Drawing.Point(12, 81)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(316, 46)
+        NameLabel.Size = New System.Drawing.Size(294, 46)
         NameLabel.TabIndex = 18
-        NameLabel.Text = "Select Machine :"
+        NameLabel.Text = "Select PO NO :"
         '
         'Label4
         '
@@ -92,7 +98,7 @@ Partial Class Form1
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label2.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(0, 358)
+        Me.Label2.Location = New System.Drawing.Point(0, 375)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(948, 14)
         Me.Label2.TabIndex = 8
@@ -103,20 +109,20 @@ Partial Class Form1
         '
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(311, 239)
+        Me.Label8.Location = New System.Drawing.Point(265, 259)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(141, 94)
+        Me.Label8.Size = New System.Drawing.Size(41, 94)
         Me.Label8.TabIndex = 15
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(142, 196)
+        Me.Button1.Location = New System.Drawing.Point(248, 196)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 40)
+        Me.Button1.Size = New System.Drawing.Size(204, 70)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Close"
         Me.Button1.UseVisualStyleBackColor = False
@@ -124,11 +130,11 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(12, 196)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(105, 40)
+        Me.Button2.Size = New System.Drawing.Size(191, 70)
         Me.Button2.TabIndex = 17
         Me.Button2.Text = "Start"
         Me.Button2.UseVisualStyleBackColor = False
@@ -137,25 +143,30 @@ Partial Class Form1
         '
         Me.NameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.NameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.NameComboBox.DataSource = Me.Tbl_Ded_machineBindingSource
-        Me.NameComboBox.DisplayMember = "Name"
+        Me.NameComboBox.DataSource = Me.View_MS_PONOBindingSource
+        Me.NameComboBox.DisplayMember = "POCode"
         Me.NameComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameComboBox.FormattingEnabled = True
         Me.NameComboBox.Location = New System.Drawing.Point(9, 129)
         Me.NameComboBox.Name = "NameComboBox"
         Me.NameComboBox.Size = New System.Drawing.Size(443, 54)
         Me.NameComboBox.TabIndex = 19
-        Me.NameComboBox.ValueMember = "MID"
+        Me.NameComboBox.ValueMember = "PO"
         '
-        'Tbl_Ded_machineBindingSource
+        'View_MS_PONOBindingSource
         '
-        Me.Tbl_Ded_machineBindingSource.DataMember = "Tbl_Ded_machine"
-        Me.Tbl_Ded_machineBindingSource.DataSource = Me.DSmatalDed
+        Me.View_MS_PONOBindingSource.DataMember = "view_MS_PONO"
+        Me.View_MS_PONOBindingSource.DataSource = Me.DSmatalDed
         '
         'DSmatalDed
         '
         Me.DSmatalDed.DataSetName = "DSmatalDed"
         Me.DSmatalDed.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_Ded_machineBindingSource
+        '
+        Me.Tbl_Ded_machineBindingSource.DataMember = "Tbl_Ded_machine"
+        Me.Tbl_Ded_machineBindingSource.DataSource = Me.DSmatalDed
         '
         'Tbl_Ded_machineTableAdapter
         '
@@ -173,9 +184,9 @@ Partial Class Form1
         '
         Me.Button3.BackColor = System.Drawing.Color.Red
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(820, 315)
+        Me.Button3.Location = New System.Drawing.Point(648, 315)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(105, 40)
+        Me.Button3.Size = New System.Drawing.Size(277, 40)
         Me.Button3.TabIndex = 20
         Me.Button3.Text = "EXIT"
         Me.Button3.UseVisualStyleBackColor = False
@@ -244,11 +255,53 @@ Partial Class Form1
         Me.Label5.Text = "Metal Detector Indicator"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'View_MS_PONOTableAdapter
+        '
+        Me.View_MS_PONOTableAdapter.ClearBeforeFill = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "PO", True))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(603, 92)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "Label6"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "POM", True))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(603, 108)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.TabIndex = 27
+        Me.Label7.Text = "Label7"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "POD", True))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(603, 128)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(39, 13)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Label9"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(948, 372)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(948, 389)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Label4)
         Me.Controls.Add(Me.Label3)
@@ -261,9 +314,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label2)
         Me.Name = "Form1"
-        Me.Text = "Matal Dedication"
-        CType(Me.Tbl_Ded_machineBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.View_MS_PONOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DSmatalDed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_Ded_machineBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_Matel_dedBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.View_Ded_CounterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -311,4 +365,9 @@ Partial Class Form1
     Friend WithEvents View_Ded_CounterBindingSource As BindingSource
     Friend WithEvents View_Ded_CounterTableAdapter As DSmatalDedTableAdapters.view_Ded_CounterTableAdapter
     Friend WithEvents Label5 As Label
+    Friend WithEvents View_MS_PONOBindingSource As BindingSource
+    Friend WithEvents View_MS_PONOTableAdapter As DSmatalDedTableAdapters.view_MS_PONOTableAdapter
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label9 As Label
 End Class

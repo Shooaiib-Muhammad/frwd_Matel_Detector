@@ -33,6 +33,8 @@ Partial Public Class DSmatalDed
     
     Private tableview_Ded_Counter As view_Ded_CounterDataTable
     
+    Private tableview_MS_PONO As view_MS_PONODataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -73,6 +75,9 @@ Partial Public Class DSmatalDed
             End If
             If (Not (ds.Tables("view_Ded_Counter")) Is Nothing) Then
                 MyBase.Tables.Add(New view_Ded_CounterDataTable(ds.Tables("view_Ded_Counter")))
+            End If
+            If (Not (ds.Tables("view_MS_PONO")) Is Nothing) Then
+                MyBase.Tables.Add(New view_MS_PONODataTable(ds.Tables("view_MS_PONO")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -128,6 +133,16 @@ Partial Public Class DSmatalDed
     Public ReadOnly Property view_Ded_Counter() As view_Ded_CounterDataTable
         Get
             Return Me.tableview_Ded_Counter
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property view_MS_PONO() As view_MS_PONODataTable
+        Get
+            Return Me.tableview_MS_PONO
         End Get
     End Property
     
@@ -210,6 +225,9 @@ Partial Public Class DSmatalDed
             If (Not (ds.Tables("view_Ded_Counter")) Is Nothing) Then
                 MyBase.Tables.Add(New view_Ded_CounterDataTable(ds.Tables("view_Ded_Counter")))
             End If
+            If (Not (ds.Tables("view_MS_PONO")) Is Nothing) Then
+                MyBase.Tables.Add(New view_MS_PONODataTable(ds.Tables("view_MS_PONO")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -266,6 +284,12 @@ Partial Public Class DSmatalDed
                 Me.tableview_Ded_Counter.InitVars
             End If
         End If
+        Me.tableview_MS_PONO = CType(MyBase.Tables("view_MS_PONO"),view_MS_PONODataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableview_MS_PONO) Is Nothing) Then
+                Me.tableview_MS_PONO.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -284,6 +308,8 @@ Partial Public Class DSmatalDed
         MyBase.Tables.Add(Me.tabletbl_Inv_Tran_Date)
         Me.tableview_Ded_Counter = New view_Ded_CounterDataTable()
         MyBase.Tables.Add(Me.tableview_Ded_Counter)
+        Me.tableview_MS_PONO = New view_MS_PONODataTable()
+        MyBase.Tables.Add(Me.tableview_MS_PONO)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -307,6 +333,12 @@ Partial Public Class DSmatalDed
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Function ShouldSerializeview_Ded_Counter() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Private Function ShouldSerializeview_MS_PONO() As Boolean
         Return false
     End Function
     
@@ -379,6 +411,9 @@ Partial Public Class DSmatalDed
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Delegate Sub view_Ded_CounterRowChangeEventHandler(ByVal sender As Object, ByVal e As view_Ded_CounterRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Delegate Sub view_MS_PONORowChangeEventHandler(ByVal sender As Object, ByVal e As view_MS_PONORowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -690,6 +725,12 @@ Partial Public Class DSmatalDed
         
         Private columnDayID As Global.System.Data.DataColumn
         
+        Private columnPO As Global.System.Data.DataColumn
+        
+        Private columnPOM As Global.System.Data.DataColumn
+        
+        Private columnPOD As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -782,6 +823,30 @@ Partial Public Class DSmatalDed
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property POColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property POMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPOM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPOD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -818,9 +883,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_Matel_dedRow(ByVal MachineID As Integer, ByVal DedCount As Decimal, ByVal Ip As String, ByVal EntryDate As Date, ByVal _Date As String, ByVal DayID As Integer) As tbl_Matel_dedRow
+        Public Overloads Function Addtbl_Matel_dedRow(ByVal MachineID As Integer, ByVal DedCount As Decimal, ByVal Ip As String, ByVal EntryDate As Date, ByVal _Date As String, ByVal DayID As Integer, ByVal PO As Integer, ByVal POM As Integer, ByVal POD As Integer) As tbl_Matel_dedRow
             Dim rowtbl_Matel_dedRow As tbl_Matel_dedRow = CType(Me.NewRow,tbl_Matel_dedRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, MachineID, DedCount, Ip, EntryDate, _Date, DayID}
+            Dim columnValuesArray() As Object = New Object() {Nothing, MachineID, DedCount, Ip, EntryDate, _Date, DayID, PO, POM, POD}
             rowtbl_Matel_dedRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Matel_dedRow)
             Return rowtbl_Matel_dedRow
@@ -856,6 +921,9 @@ Partial Public Class DSmatalDed
             Me.columnEntryDate = MyBase.Columns("EntryDate")
             Me.columnDate = MyBase.Columns("Date")
             Me.columnDayID = MyBase.Columns("DayID")
+            Me.columnPO = MyBase.Columns("PO")
+            Me.columnPOM = MyBase.Columns("POM")
+            Me.columnPOD = MyBase.Columns("POD")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -878,6 +946,12 @@ Partial Public Class DSmatalDed
             MyBase.Columns.Add(Me.columnDate)
             Me.columnDayID = New Global.System.Data.DataColumn("DayID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDayID)
+            Me.columnPO = New Global.System.Data.DataColumn("PO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPO)
+            Me.columnPOM = New Global.System.Data.DataColumn("POM", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPOM)
+            Me.columnPOD = New Global.System.Data.DataColumn("POD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPOD)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTID}, true))
             Me.columnTID.AutoIncrement = true
             Me.columnTID.AutoIncrementSeed = -1
@@ -1549,6 +1623,428 @@ Partial Public Class DSmatalDed
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class view_MS_PONODataTable
+        Inherits Global.System.Data.TypedTableBase(Of view_MS_PONORow)
+        
+        Private columnPOCode As Global.System.Data.DataColumn
+        
+        Private columnPO As Global.System.Data.DataColumn
+        
+        Private columnPOM As Global.System.Data.DataColumn
+        
+        Private columnPOD As Global.System.Data.DataColumn
+        
+        Private columnOrderQty As Global.System.Data.DataColumn
+        
+        Private columnArtCode As Global.System.Data.DataColumn
+        
+        Private columnFactoryCode As Global.System.Data.DataColumn
+        
+        Private columnOrderType As Global.System.Data.DataColumn
+        
+        Private columnClientID As Global.System.Data.DataColumn
+        
+        Private columnModelID As Global.System.Data.DataColumn
+        
+        Private columnArtID As Global.System.Data.DataColumn
+        
+        Private columnArtSize As Global.System.Data.DataColumn
+        
+        Private columnSecondConfDate As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "view_MS_PONO"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property POCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPOCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property POColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property POMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPOM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PODColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPOD
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property OrderQtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrderQty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArtCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArtCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property FactoryCodeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFactoryCode
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property OrderTypeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnOrderType
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ClientIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnClientID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ModelIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnModelID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArtIDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArtID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property ArtSizeColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArtSize
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SecondConfDateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSecondConfDate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As view_MS_PONORow
+            Get
+                Return CType(Me.Rows(index),view_MS_PONORow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event view_MS_PONORowChanging As view_MS_PONORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event view_MS_PONORowChanged As view_MS_PONORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event view_MS_PONORowDeleting As view_MS_PONORowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event view_MS_PONORowDeleted As view_MS_PONORowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub Addview_MS_PONORow(ByVal row As view_MS_PONORow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function Addview_MS_PONORow(ByVal POCode As String, ByVal PO As Integer, ByVal POM As Integer, ByVal POD As Integer, ByVal OrderQty As Integer, ByVal ArtCode As String, ByVal FactoryCode As String, ByVal OrderType As String, ByVal ClientID As Integer, ByVal ModelID As Integer, ByVal ArtID As Integer, ByVal ArtSize As String, ByVal SecondConfDate As Date) As view_MS_PONORow
+            Dim rowview_MS_PONORow As view_MS_PONORow = CType(Me.NewRow,view_MS_PONORow)
+            Dim columnValuesArray() As Object = New Object() {POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, ClientID, ModelID, ArtID, ArtSize, SecondConfDate}
+            rowview_MS_PONORow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowview_MS_PONORow)
+            Return rowview_MS_PONORow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As view_MS_PONODataTable = CType(MyBase.Clone,view_MS_PONODataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New view_MS_PONODataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnPOCode = MyBase.Columns("POCode")
+            Me.columnPO = MyBase.Columns("PO")
+            Me.columnPOM = MyBase.Columns("POM")
+            Me.columnPOD = MyBase.Columns("POD")
+            Me.columnOrderQty = MyBase.Columns("OrderQty")
+            Me.columnArtCode = MyBase.Columns("ArtCode")
+            Me.columnFactoryCode = MyBase.Columns("FactoryCode")
+            Me.columnOrderType = MyBase.Columns("OrderType")
+            Me.columnClientID = MyBase.Columns("ClientID")
+            Me.columnModelID = MyBase.Columns("ModelID")
+            Me.columnArtID = MyBase.Columns("ArtID")
+            Me.columnArtSize = MyBase.Columns("ArtSize")
+            Me.columnSecondConfDate = MyBase.Columns("SecondConfDate")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnPOCode = New Global.System.Data.DataColumn("POCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPOCode)
+            Me.columnPO = New Global.System.Data.DataColumn("PO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPO)
+            Me.columnPOM = New Global.System.Data.DataColumn("POM", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPOM)
+            Me.columnPOD = New Global.System.Data.DataColumn("POD", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPOD)
+            Me.columnOrderQty = New Global.System.Data.DataColumn("OrderQty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrderQty)
+            Me.columnArtCode = New Global.System.Data.DataColumn("ArtCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArtCode)
+            Me.columnFactoryCode = New Global.System.Data.DataColumn("FactoryCode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFactoryCode)
+            Me.columnOrderType = New Global.System.Data.DataColumn("OrderType", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnOrderType)
+            Me.columnClientID = New Global.System.Data.DataColumn("ClientID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnClientID)
+            Me.columnModelID = New Global.System.Data.DataColumn("ModelID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnModelID)
+            Me.columnArtID = New Global.System.Data.DataColumn("ArtID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArtID)
+            Me.columnArtSize = New Global.System.Data.DataColumn("ArtSize", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArtSize)
+            Me.columnSecondConfDate = New Global.System.Data.DataColumn("SecondConfDate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSecondConfDate)
+            Me.columnPOCode.MaxLength = 50
+            Me.columnPO.AllowDBNull = false
+            Me.columnPOM.AllowDBNull = false
+            Me.columnPOD.AllowDBNull = false
+            Me.columnOrderQty.AllowDBNull = false
+            Me.columnArtCode.AllowDBNull = false
+            Me.columnArtCode.MaxLength = 50
+            Me.columnFactoryCode.MaxLength = 10
+            Me.columnOrderType.MaxLength = 50
+            Me.columnClientID.AllowDBNull = false
+            Me.columnModelID.AllowDBNull = false
+            Me.columnArtID.AllowDBNull = false
+            Me.columnArtSize.AllowDBNull = false
+            Me.columnArtSize.MaxLength = 50
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Newview_MS_PONORow() As view_MS_PONORow
+            Return CType(Me.NewRow,view_MS_PONORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New view_MS_PONORow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(view_MS_PONORow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.view_MS_PONORowChangedEvent) Is Nothing) Then
+                RaiseEvent view_MS_PONORowChanged(Me, New view_MS_PONORowChangeEvent(CType(e.Row,view_MS_PONORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.view_MS_PONORowChangingEvent) Is Nothing) Then
+                RaiseEvent view_MS_PONORowChanging(Me, New view_MS_PONORowChangeEvent(CType(e.Row,view_MS_PONORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.view_MS_PONORowDeletedEvent) Is Nothing) Then
+                RaiseEvent view_MS_PONORowDeleted(Me, New view_MS_PONORowChangeEvent(CType(e.Row,view_MS_PONORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.view_MS_PONORowDeletingEvent) Is Nothing) Then
+                RaiseEvent view_MS_PONORowDeleting(Me, New view_MS_PONORowChangeEvent(CType(e.Row,view_MS_PONORow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Removeview_MS_PONORow(ByVal row As view_MS_PONORow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DSmatalDed = New DSmatalDed()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "view_MS_PONODataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class Tbl_Ded_machineRow
@@ -1747,6 +2243,51 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property PO() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Matel_ded.POColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'PO' in table 'tbl_Matel_ded' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Matel_ded.POColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property POM() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Matel_ded.POMColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'POM' in table 'tbl_Matel_ded' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Matel_ded.POMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property POD() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Matel_ded.PODColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'POD' in table 'tbl_Matel_ded' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Matel_ded.PODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsMachineIDNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Matel_ded.MachineIDColumn)
         End Function
@@ -1815,6 +2356,42 @@ Partial Public Class DSmatalDed
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDayIDNull()
             Me(Me.tabletbl_Matel_ded.DayIDColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPONull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Matel_ded.POColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPONull()
+            Me(Me.tabletbl_Matel_ded.POColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPOMNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Matel_ded.POMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPOMNull()
+            Me(Me.tabletbl_Matel_ded.POMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPODNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Matel_ded.PODColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPODNull()
+            Me(Me.tabletbl_Matel_ded.PODColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1896,6 +2473,229 @@ Partial Public Class DSmatalDed
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDedCountNull()
             Me(Me.tableview_Ded_Counter.DedCountColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class view_MS_PONORow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableview_MS_PONO As view_MS_PONODataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableview_MS_PONO = CType(Me.Table,view_MS_PONODataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property POCode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableview_MS_PONO.POCodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'POCode' in table 'view_MS_PONO' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.POCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property PO() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.POColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.POColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property POM() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.POMColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.POMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property POD() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.PODColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.PODColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property OrderQty() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.OrderQtyColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.OrderQtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArtCode() As String
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.ArtCodeColumn),String)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.ArtCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property FactoryCode() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableview_MS_PONO.FactoryCodeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'FactoryCode' in table 'view_MS_PONO' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.FactoryCodeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property OrderType() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableview_MS_PONO.OrderTypeColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'OrderType' in table 'view_MS_PONO' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.OrderTypeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClientID() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.ClientIDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.ClientIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ModelID() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.ModelIDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.ModelIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArtID() As Integer
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.ArtIDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.ArtIDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ArtSize() As String
+            Get
+                Return CType(Me(Me.tableview_MS_PONO.ArtSizeColumn),String)
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.ArtSizeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SecondConfDate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableview_MS_PONO.SecondConfDateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SecondConfDate' in table 'view_MS_PONO' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableview_MS_PONO.SecondConfDateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsPOCodeNull() As Boolean
+            Return Me.IsNull(Me.tableview_MS_PONO.POCodeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPOCodeNull()
+            Me(Me.tableview_MS_PONO.POCodeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsFactoryCodeNull() As Boolean
+            Return Me.IsNull(Me.tableview_MS_PONO.FactoryCodeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetFactoryCodeNull()
+            Me(Me.tableview_MS_PONO.FactoryCodeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsOrderTypeNull() As Boolean
+            Return Me.IsNull(Me.tableview_MS_PONO.OrderTypeColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetOrderTypeNull()
+            Me(Me.tableview_MS_PONO.OrderTypeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSecondConfDateNull() As Boolean
+            Return Me.IsNull(Me.tableview_MS_PONO.SecondConfDateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSecondConfDateNull()
+            Me(Me.tableview_MS_PONO.SecondConfDateColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2029,6 +2829,42 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Row() As view_Ded_CounterRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class view_MS_PONORowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As view_MS_PONORow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As view_MS_PONORow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As view_MS_PONORow
             Get
                 Return Me.eventRow
             End Get
@@ -2535,6 +3371,9 @@ Namespace DSmatalDedTableAdapters
             tableMapping.ColumnMappings.Add("EntryDate", "EntryDate")
             tableMapping.ColumnMappings.Add("Date", "Date")
             tableMapping.ColumnMappings.Add("DayID", "DayID")
+            tableMapping.ColumnMappings.Add("PO", "PO")
+            tableMapping.ColumnMappings.Add("POM", "POM")
+            tableMapping.ColumnMappings.Add("POD", "POD")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -2542,7 +3381,9 @@ Namespace DSmatalDedTableAdapters
                 "L) OR ([MachineID] = ?)) AND ((? = 1 AND [DedCount] IS NULL) OR ([DedCount] = ?)"& _ 
                 ") AND ((? = 1 AND [Ip] IS NULL) OR ([Ip] = ?)) AND ((? = 1 AND [Date] IS NULL) O"& _ 
                 "R ([Date] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ("& _ 
-                "(? = 1 AND [DayID] IS NULL) OR ([DayID] = ?)))"
+                "(? = 1 AND [DayID] IS NULL) OR ([DayID] = ?)) AND ((? = 1 AND [PO] IS NULL) OR ("& _ 
+                "[PO] = ?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] "& _ 
+                "IS NULL) OR ([POD] = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -2557,24 +3398,36 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.DateTime, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (MachineID, DedCount, Ip, Ent"& _ 
-                "ryDate, DayID)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Matel_ded] ([MachineID], [DedCount], [Ip], [Date], [EntryDate], "& _ 
+                "[DayID], [PO], [POM], [POD]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DedCount", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "DedCount", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Ip", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ip", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Ip", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Ip", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Date", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.DateTime, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Matel_ded] SET [MachineID] = ?, [DedCount] = ?, [Ip] = ?, [Date] = ?,"& _ 
-                " [EntryDate] = ?, [DayID] = ? WHERE (([TID] = ?) AND ((? = 1 AND [MachineID] IS "& _ 
-                "NULL) OR ([MachineID] = ?)) AND ((? = 1 AND [DedCount] IS NULL) OR ([DedCount] ="& _ 
-                " ?)) AND ((? = 1 AND [Ip] IS NULL) OR ([Ip] = ?)) AND ((? = 1 AND [Date] IS NULL"& _ 
-                ") OR ([Date] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AN"& _ 
-                "D ((? = 1 AND [DayID] IS NULL) OR ([DayID] = ?)))"
+                " [EntryDate] = ?, [DayID] = ?, [PO] = ?, [POM] = ?, [POD] = ? WHERE (([TID] = ?)"& _ 
+                " AND ((? = 1 AND [MachineID] IS NULL) OR ([MachineID] = ?)) AND ((? = 1 AND [Ded"& _ 
+                "Count] IS NULL) OR ([DedCount] = ?)) AND ((? = 1 AND [Ip] IS NULL) OR ([Ip] = ?)"& _ 
+                ") AND ((? = 1 AND [Date] IS NULL) OR ([Date] = ?)) AND ((? = 1 AND [EntryDate] I"& _ 
+                "S NULL) OR ([EntryDate] = ?)) AND ((? = 1 AND [DayID] IS NULL) OR ([DayID] = ?))"& _ 
+                " AND ((? = 1 AND [PO] IS NULL) OR ([PO] = ?)) AND ((? = 1 AND [POM] IS NULL) OR "& _ 
+                "([POM] = ?)) AND ((? = 1 AND [POD] IS NULL) OR ([POD] = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DedCount", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "DedCount", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2582,6 +3435,9 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Date", Global.System.Data.Odbc.OdbcType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Date", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("EntryDate", Global.System.Data.Odbc.OdbcType.DateTime, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -2595,6 +3451,12 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_EntryDate", Global.System.Data.Odbc.OdbcType.DateTime, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "EntryDate", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2610,8 +3472,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        TID, MachineID, DedCount, Ip, [Date], EntryDate, DayID"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
-                "     tbl_Matel_ded"
+            Me._commandCollection(0).CommandText = "SELECT        TID, MachineID, DedCount, Ip, [Date], EntryDate, DayID, PO, POM, PO"& _ 
+                "D"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_ded"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -2671,7 +3533,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_TID As Integer, ByVal Original_MachineID As Global.System.Nullable(Of Integer), ByVal Original_DedCount As Global.System.Nullable(Of Decimal), ByVal Original_Ip As String, ByVal Original_Date As String, ByVal Original_EntryDate As Global.System.Nullable(Of Date), ByVal Original_DayID As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_TID As Integer, ByVal Original_MachineID As Global.System.Nullable(Of Integer), ByVal Original_DedCount As Global.System.Nullable(Of Decimal), ByVal Original_Ip As String, ByVal Original_Date As String, ByVal Original_EntryDate As Global.System.Nullable(Of Date), ByVal Original_DayID As Global.System.Nullable(Of Integer), ByVal Original_PO As Global.System.Nullable(Of Integer), ByVal Original_POM As Global.System.Nullable(Of Integer), ByVal Original_POD As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_TID,Integer)
             If (Original_MachineID.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -2715,6 +3577,27 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
+            If (Original_PO.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_PO.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_POM.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_POM.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            If (Original_POD.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_POD.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2734,7 +3617,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal MachineID As Global.System.Nullable(Of Integer), ByVal DedCount As Global.System.Nullable(Of Decimal), ByVal Ip As String, ByVal EntryDate As Global.System.Nullable(Of Date), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal MachineID As Global.System.Nullable(Of Integer), ByVal DedCount As Global.System.Nullable(Of Decimal), ByVal Ip As String, ByVal _Date As String, ByVal EntryDate As Global.System.Nullable(Of Date), ByVal DayID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
             If (MachineID.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(MachineID.Value,Integer)
             Else
@@ -2750,15 +3633,35 @@ Namespace DSmatalDedTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = CType(Ip,String)
             End If
-            If (EntryDate.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(EntryDate.Value,Date)
-            Else
+            If (_Date Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(_Date,String)
             End If
-            If (DayID.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(DayID.Value,Integer)
+            If (EntryDate.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(EntryDate.Value,Date)
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (PO.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(PO.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (POM.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(POM.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (POD.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(POD.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -2779,7 +3682,26 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal MachineID As Global.System.Nullable(Of Integer), ByVal DedCount As Global.System.Nullable(Of Decimal), ByVal Ip As String, ByVal _Date As String, ByVal EntryDate As Global.System.Nullable(Of Date), ByVal DayID As Global.System.Nullable(Of Integer), ByVal Original_TID As Integer, ByVal Original_MachineID As Global.System.Nullable(Of Integer), ByVal Original_DedCount As Global.System.Nullable(Of Decimal), ByVal Original_Ip As String, ByVal Original_Date As String, ByVal Original_EntryDate As Global.System.Nullable(Of Date), ByVal Original_DayID As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal MachineID As Global.System.Nullable(Of Integer),  _
+                    ByVal DedCount As Global.System.Nullable(Of Decimal),  _
+                    ByVal Ip As String,  _
+                    ByVal _Date As String,  _
+                    ByVal EntryDate As Global.System.Nullable(Of Date),  _
+                    ByVal DayID As Global.System.Nullable(Of Integer),  _
+                    ByVal PO As Global.System.Nullable(Of Integer),  _
+                    ByVal POM As Global.System.Nullable(Of Integer),  _
+                    ByVal POD As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_TID As Integer,  _
+                    ByVal Original_MachineID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_DedCount As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_Ip As String,  _
+                    ByVal Original_Date As String,  _
+                    ByVal Original_EntryDate As Global.System.Nullable(Of Date),  _
+                    ByVal Original_DayID As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PO As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_POM As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_POD As Global.System.Nullable(Of Integer)) As Integer
             If (MachineID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(MachineID.Value,Integer)
             Else
@@ -2810,48 +3732,84 @@ Namespace DSmatalDedTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_TID,Integer)
-            If (Original_MachineID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_MachineID.Value,Integer)
+            If (PO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (POM.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(POM.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (POD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(POD.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
-            If (Original_DedCount.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_DedCount.Value,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_TID,Integer)
+            If (Original_MachineID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_MachineID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Original_DedCount.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_DedCount.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             End If
             If (Original_Ip Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Ip,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Ip,String)
             End If
             If (Original_Date Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Date,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Date,String)
             End If
             If (Original_EntryDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_EntryDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_EntryDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             If (Original_DayID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_DayID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_DayID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PO.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_PO.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+            End If
+            If (Original_POM.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_POM.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (Original_POD.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_POD.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3305,17 +4263,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(DedCount) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  "& _ 
-                "      (DayID = ?) AND (MachineID = ?)"
+                "      (DayID = ?) AND (MachineID = ?) AND (PO = ?) AND (POM = ?) AND (POD = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.view_Ded_CounterDataTable, ByVal DayID As Global.System.Nullable(Of Integer), ByVal MachineID As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.view_Ded_CounterDataTable, ByVal DayID As Global.System.Nullable(Of Integer), ByVal MachineID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (DayID.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(DayID.Value,Integer)
@@ -3326,6 +4287,21 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(MachineID.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
+            End If
+            If (PO.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(PO.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (POM.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(POM.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (POD.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(POD.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -3338,7 +4314,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal DayID As Global.System.Nullable(Of Integer), ByVal MachineID As Global.System.Nullable(Of Integer)) As DSmatalDed.view_Ded_CounterDataTable
+        Public Overloads Overridable Function GetData(ByVal DayID As Global.System.Nullable(Of Integer), ByVal MachineID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.view_Ded_CounterDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (DayID.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(DayID.Value,Integer)
@@ -3350,7 +4326,209 @@ Namespace DSmatalDedTableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
+            If (PO.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(2).Value = CType(PO.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (POM.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(POM.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            If (POD.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(POD.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
             Dim dataTable As DSmatalDed.view_Ded_CounterDataTable = New DSmatalDed.view_Ded_CounterDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class view_MS_PONOTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.Odbc.OdbcDataAdapter
+        
+        Private _connection As Global.System.Data.Odbc.OdbcConnection
+        
+        Private _transaction As Global.System.Data.Odbc.OdbcTransaction
+        
+        Private _commandCollection() As Global.System.Data.Odbc.OdbcCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.Odbc.OdbcDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.Odbc.OdbcConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.Odbc.OdbcCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.Odbc.OdbcTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.Odbc.OdbcCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.Odbc.OdbcDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "view_MS_PONO"
+            tableMapping.ColumnMappings.Add("POCode", "POCode")
+            tableMapping.ColumnMappings.Add("PO", "PO")
+            tableMapping.ColumnMappings.Add("POM", "POM")
+            tableMapping.ColumnMappings.Add("POD", "POD")
+            tableMapping.ColumnMappings.Add("OrderQty", "OrderQty")
+            tableMapping.ColumnMappings.Add("ArtCode", "ArtCode")
+            tableMapping.ColumnMappings.Add("FactoryCode", "FactoryCode")
+            tableMapping.ColumnMappings.Add("OrderType", "OrderType")
+            tableMapping.ColumnMappings.Add("ClientID", "ClientID")
+            tableMapping.ColumnMappings.Add("ModelID", "ModelID")
+            tableMapping.ColumnMappings.Add("ArtID", "ArtID")
+            tableMapping.ColumnMappings.Add("ArtSize", "ArtSize")
+            tableMapping.ColumnMappings.Add("SecondConfDate", "SecondConfDate")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.Odbc.OdbcConnection()
+            Me._connection.ConnectionString = Global.MatelDedt.My.MySettings.Default.MISConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, Cl"& _ 
+                "ientID, ModelID, ArtID, ArtSize, SecondConfDate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            view_MS_PONO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
+                "HERE        (SecondConfDate > '01/01/2022')"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.view_MS_PONODataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As DSmatalDed.view_MS_PONODataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As DSmatalDed.view_MS_PONODataTable = New DSmatalDed.view_MS_PONODataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
