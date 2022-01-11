@@ -21,12 +21,21 @@
 	End Sub
 
 	Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
+		Dim Machinename As String
 		If (Me.SerialPort1.IsOpen) Then
 			Dim Incoming As String = Me.SerialPort1.ReadLine()
-			'MsgBox(Incoming)
+			If Incoming = "1" & vbCr Then
+				Machinename = "Metal Ded 1"
+			ElseIf Incoming = "2" & vbCr Then
+				Machinename = "Metal Ded 2"
+			ElseIf Incoming = "3" & vbCr Then
+				Machinename = "Metal Ded 3"
+			ElseIf Incoming = "4" & vbCr Then
+				Machinename = "Metal Ded 4"
+			End If
+
 			Try
-				Tbl_Matel_dedTableAdapter.Insert(NameComboBox.SelectedValue, 1, Nothing, Now, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
+				Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Now, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
 				loadData()
 			Catch ex As Exception
 
@@ -39,7 +48,7 @@
 	Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
 		If (Me.Label2.Text.Length <> 10) Then
 			Me.Label2.Text = String.Concat(Me.Label2.Text, ".")
-		Else
+
 			Me.Label2.Text = "Running"
 		End If
 		If (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Me.Label8.Text, "...", False) <> 0) Then
