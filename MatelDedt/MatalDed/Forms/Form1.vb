@@ -32,6 +32,8 @@
 				Machinename = "Metal Ded 3"
 			ElseIf Incoming = "4" & vbCr Then
 				Machinename = "Metal Ded 4"
+			ElseIf Incoming = "5" & vbCr Then
+				Machinename = "Metal Ded 5"
 			End If
 
 			Try
@@ -87,9 +89,63 @@
 
 	Private Sub loadData()
 		Try
-			Me.View_Ded_CounterTableAdapter.Fill(Me.DSmatalDed.view_Ded_Counter, Label1.Text, NameComboBox.SelectedValue, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
+			Me.View_Ded_CounterTableAdapter.Fill(Me.DSmatalDed.view_Ded_Counter, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
 		Catch ex As Exception
 
 		End Try
+		Try
+			Ded1TableAdapter.Fill(Me.DSmatalDed.Ded1, Label1.Text)
+			Ded2TableAdapter.Fill(Me.DSmatalDed.Ded2, Label1.Text)
+			Ded3TableAdapter.Fill(Me.DSmatalDed.Ded3, Label1.Text)
+			Ded4TableAdapter.Fill(Me.DSmatalDed.Ded4, Label1.Text)
+			Ded5TableAdapter.Fill(Me.DSmatalDed.Ded5, Label1.Text)
+		Catch ex As Exception
+
+		End Try
+	End Sub
+
+	Private Sub FillToolStripButton1_Click(sender As Object, e As EventArgs)
+		Try
+			Me.Ded1TableAdapter.Fill(Me.DSmatalDed.Ded1, New System.Nullable(Of Integer)(CType(DayIDToolStripTextBox.Text, Integer)))
+		Catch ex As System.Exception
+			System.Windows.Forms.MessageBox.Show(ex.Message)
+		End Try
+
+	End Sub
+
+	Private Sub FillToolStripButton1_Click_1(sender As Object, e As EventArgs)
+		Try
+			Me.Ded2TableAdapter.Fill(Me.DSmatalDed.Ded2, New System.Nullable(Of Integer)(CType(DayIDToolStripTextBox.Text, Integer)))
+		Catch ex As System.Exception
+			System.Windows.Forms.MessageBox.Show(ex.Message)
+		End Try
+
+	End Sub
+
+	Private Sub FillToolStripButton1_Click_2(sender As Object, e As EventArgs)
+		Try
+			Me.Ded3TableAdapter.Fill(Me.DSmatalDed.Ded3, New System.Nullable(Of Integer)(CType(DayIDToolStripTextBox.Text, Integer)))
+		Catch ex As System.Exception
+			System.Windows.Forms.MessageBox.Show(ex.Message)
+		End Try
+
+	End Sub
+
+	Private Sub FillToolStripButton1_Click_3(sender As Object, e As EventArgs)
+		Try
+			Me.Ded4TableAdapter.Fill(Me.DSmatalDed.Ded4, New System.Nullable(Of Integer)(CType(DayIDToolStripTextBox.Text, Integer)))
+		Catch ex As System.Exception
+			System.Windows.Forms.MessageBox.Show(ex.Message)
+		End Try
+
+	End Sub
+
+	Private Sub FillToolStripButton1_Click_4(sender As Object, e As EventArgs)
+		Try
+			Me.Ded5TableAdapter.Fill(Me.DSmatalDed.Ded5, New System.Nullable(Of Integer)(CType(DayIDToolStripTextBox.Text, Integer)))
+		Catch ex As System.Exception
+			System.Windows.Forms.MessageBox.Show(ex.Message)
+		End Try
+
 	End Sub
 End Class

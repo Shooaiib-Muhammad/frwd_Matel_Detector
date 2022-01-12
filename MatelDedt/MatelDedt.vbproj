@@ -27,7 +27,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>\\server\it shared\ERPFS\Matel\</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,9 @@
     <Compile Include="MatalDed\DS\DSmatalDed.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>DSmatalDed.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MatalDed\DS\DSmatalDed.vb">
       <DependentUpon>DSmatalDed.xsd</DependentUpon>
     </Compile>
     <Compile Include="MatalDed\Forms\Form1.vb">

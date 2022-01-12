@@ -157,6 +157,31 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:MatelDedt.DSmatalDed.Ded1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded3DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded4DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded5DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:MatelDedt.DSmatalDed.Tbl_Ded_machineRow">
 <summary>
 Represents strongly named DataRow class.
@@ -178,6 +203,31 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:MatelDedt.DSmatalDed.view_MS_PONORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded3Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded4Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded5Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -207,6 +257,31 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:MatelDedt.DSmatalDed.Ded1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded3RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded4RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDed.Ded5RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:MatelDedt.DSmatalDedTableAdapters.Tbl_Ded_machineTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -228,6 +303,31 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:MatelDedt.DSmatalDedTableAdapters.view_MS_PONOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Ded1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Ded2TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Ded3TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Ded4TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MatelDedt.DSmatalDedTableAdapters.Ded5TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
