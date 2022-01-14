@@ -187,11 +187,12 @@ Partial Class Form1
         '
         'Label8
         '
+        Me.Label8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "POD", True))
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(265, 259)
+        Me.Label8.Location = New System.Drawing.Point(876, 495)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 94)
+        Me.Label8.Size = New System.Drawing.Size(41, 137)
         Me.Label8.TabIndex = 15
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
