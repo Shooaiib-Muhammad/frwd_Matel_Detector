@@ -22,20 +22,21 @@
 
 	Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 		Dim Machinename As String
+Linelist:
 		If (Me.SerialPort1.IsOpen) Then
 			Dim Incoming As String = Me.SerialPort1.ReadLine()
-			If Incoming = "1" & vbCr Then
+			If Incoming = "Machine 1" & vbCr Then
 				Machinename = "Metal Ded 1"
-			ElseIf Incoming = "2" & vbCr Then
+			ElseIf Incoming = "Machine 2" & vbCr Then
 				Machinename = "Metal Ded 2"
-			ElseIf Incoming = "3" & vbCr Then
+			ElseIf Incoming = "Machine 3" & vbCr Then
 				Machinename = "Metal Ded 3"
-			ElseIf Incoming = "4" & vbCr Then
+			ElseIf Incoming = "Machine 4" & vbCr Then
 				Machinename = "Metal Ded 4"
-			ElseIf Incoming = "5" & vbCr Then
+			ElseIf Incoming = "Machine 5" & vbCr Then
 				Machinename = "Metal Ded 5"
 			End If
-
+			GoTo Linelist
 			Try
 				Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Now, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
 				loadData()
