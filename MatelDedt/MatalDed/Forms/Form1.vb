@@ -1,15 +1,31 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO13' table. You can move, or remove it, as needed.
-        Me.View_MS_PONO13TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO13)
-        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO12' table. You can move, or remove it, as needed.
-        Me.View_MS_PONO12TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO12)
-        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO11' table. You can move, or remove it, as needed.
-        Me.View_MS_PONO11TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO11)
-        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO1' table. You can move, or remove it, as needed.
-        Me.View_MS_PONO1TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO1)
-        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO' table. You can move, or remove it, as needed.
-        Try
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO13' table. You can move, or remove it, as needed.
+		Try
+			Me.View_MS_PONO13TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO13)
+		Catch ex As Exception
+
+		End Try
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO12' table. You can move, or remove it, as needed.
+		Try
+			Me.View_MS_PONO12TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO12)
+		Catch ex As Exception
+
+		End Try
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO11' table. You can move, or remove it, as needed.
+		Try
+			Me.View_MS_PONO11TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO11)
+		Catch ex As Exception
+
+		End Try
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO1' table. You can move, or remove it, as needed.
+		Try
+			Me.View_MS_PONO1TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO1)
+		Catch ex As Exception
+
+		End Try
+		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO' table. You can move, or remove it, as needed.
+		Try
             Me.View_MS_PONOTableAdapter.Fill(Me.DSmatalDed.view_MS_PONO)
 
 		Catch ex As Exception
