@@ -375,6 +375,126 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_MS_PONO1TableAdapter" GeneratorDataComponentClassName="view_MS_PONO1TableAdapter" Name="view_MS_PONO1" UserDataComponentName="view_MS_PONO1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MISConnectionString (MySettings)" DbObjectName="MIS.dbo.view_MS_PONO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, ClientID, ModelID, ArtID, ArtSize, SecondConfDate
+FROM            view_MS_PONO
+WHERE        (SecondConfDate &gt; '01/01/2022')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="POCode" DataSetColumn="POCode" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="POM" DataSetColumn="POM" />
+              <Mapping SourceColumn="POD" DataSetColumn="POD" />
+              <Mapping SourceColumn="OrderQty" DataSetColumn="OrderQty" />
+              <Mapping SourceColumn="ArtCode" DataSetColumn="ArtCode" />
+              <Mapping SourceColumn="FactoryCode" DataSetColumn="FactoryCode" />
+              <Mapping SourceColumn="OrderType" DataSetColumn="OrderType" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="ModelID" DataSetColumn="ModelID" />
+              <Mapping SourceColumn="ArtID" DataSetColumn="ArtID" />
+              <Mapping SourceColumn="ArtSize" DataSetColumn="ArtSize" />
+              <Mapping SourceColumn="SecondConfDate" DataSetColumn="SecondConfDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_MS_PONO11TableAdapter" GeneratorDataComponentClassName="view_MS_PONO11TableAdapter" Name="view_MS_PONO11" UserDataComponentName="view_MS_PONO11TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MISConnectionString (MySettings)" DbObjectName="MIS.dbo.view_MS_PONO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, ClientID, ModelID, ArtID, ArtSize, SecondConfDate
+FROM            view_MS_PONO
+WHERE        (SecondConfDate &gt; '01/01/2022')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="POCode" DataSetColumn="POCode" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="POM" DataSetColumn="POM" />
+              <Mapping SourceColumn="POD" DataSetColumn="POD" />
+              <Mapping SourceColumn="OrderQty" DataSetColumn="OrderQty" />
+              <Mapping SourceColumn="ArtCode" DataSetColumn="ArtCode" />
+              <Mapping SourceColumn="FactoryCode" DataSetColumn="FactoryCode" />
+              <Mapping SourceColumn="OrderType" DataSetColumn="OrderType" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="ModelID" DataSetColumn="ModelID" />
+              <Mapping SourceColumn="ArtID" DataSetColumn="ArtID" />
+              <Mapping SourceColumn="ArtSize" DataSetColumn="ArtSize" />
+              <Mapping SourceColumn="SecondConfDate" DataSetColumn="SecondConfDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_MS_PONO12TableAdapter" GeneratorDataComponentClassName="view_MS_PONO12TableAdapter" Name="view_MS_PONO12" UserDataComponentName="view_MS_PONO12TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MISConnectionString (MySettings)" DbObjectName="MIS.dbo.view_MS_PONO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, ClientID, ModelID, ArtID, ArtSize, SecondConfDate
+FROM            view_MS_PONO
+WHERE        (SecondConfDate &gt; '01/01/2022')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="POCode" DataSetColumn="POCode" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="POM" DataSetColumn="POM" />
+              <Mapping SourceColumn="POD" DataSetColumn="POD" />
+              <Mapping SourceColumn="OrderQty" DataSetColumn="OrderQty" />
+              <Mapping SourceColumn="ArtCode" DataSetColumn="ArtCode" />
+              <Mapping SourceColumn="FactoryCode" DataSetColumn="FactoryCode" />
+              <Mapping SourceColumn="OrderType" DataSetColumn="OrderType" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="ModelID" DataSetColumn="ModelID" />
+              <Mapping SourceColumn="ArtID" DataSetColumn="ArtID" />
+              <Mapping SourceColumn="ArtSize" DataSetColumn="ArtSize" />
+              <Mapping SourceColumn="SecondConfDate" DataSetColumn="SecondConfDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_MS_PONO13TableAdapter" GeneratorDataComponentClassName="view_MS_PONO13TableAdapter" Name="view_MS_PONO13" UserDataComponentName="view_MS_PONO13TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MISConnectionString (MySettings)" DbObjectName="MIS.dbo.view_MS_PONO" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        POCode, PO, POM, POD, OrderQty, ArtCode, FactoryCode, OrderType, ClientID, ModelID, ArtID, ArtSize, SecondConfDate
+FROM            view_MS_PONO
+WHERE        (SecondConfDate &gt; '01/01/2022')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="POCode" DataSetColumn="POCode" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="POM" DataSetColumn="POM" />
+              <Mapping SourceColumn="POD" DataSetColumn="POD" />
+              <Mapping SourceColumn="OrderQty" DataSetColumn="OrderQty" />
+              <Mapping SourceColumn="ArtCode" DataSetColumn="ArtCode" />
+              <Mapping SourceColumn="FactoryCode" DataSetColumn="FactoryCode" />
+              <Mapping SourceColumn="OrderType" DataSetColumn="OrderType" />
+              <Mapping SourceColumn="ClientID" DataSetColumn="ClientID" />
+              <Mapping SourceColumn="ModelID" DataSetColumn="ModelID" />
+              <Mapping SourceColumn="ArtID" DataSetColumn="ArtID" />
+              <Mapping SourceColumn="ArtSize" DataSetColumn="ArtSize" />
+              <Mapping SourceColumn="SecondConfDate" DataSetColumn="SecondConfDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -383,7 +503,7 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
   <xs:element name="DSmatalDed" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSmatalDed" msprop:Generator_UserDSName="DSmatalDed">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Tbl_Ded_machine" msprop:Generator_TableClassName="Tbl_Ded_machineDataTable" msprop:Generator_TableVarName="tableTbl_Ded_machine" msprop:Generator_TablePropName="Tbl_Ded_machine" msprop:Generator_RowDeletingName="Tbl_Ded_machineRowDeleting" msprop:Generator_RowChangingName="Tbl_Ded_machineRowChanging" msprop:Generator_RowEvHandlerName="Tbl_Ded_machineRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_Ded_machineRowDeleted" msprop:Generator_UserTableName="Tbl_Ded_machine" msprop:Generator_RowChangedName="Tbl_Ded_machineRowChanged" msprop:Generator_RowEvArgName="Tbl_Ded_machineRowChangeEvent" msprop:Generator_RowClassName="Tbl_Ded_machineRow">
+        <xs:element name="Tbl_Ded_machine" msprop:Generator_TableClassName="Tbl_Ded_machineDataTable" msprop:Generator_TableVarName="tableTbl_Ded_machine" msprop:Generator_RowChangedName="Tbl_Ded_machineRowChanged" msprop:Generator_TablePropName="Tbl_Ded_machine" msprop:Generator_RowDeletingName="Tbl_Ded_machineRowDeleting" msprop:Generator_RowChangingName="Tbl_Ded_machineRowChanging" msprop:Generator_RowEvHandlerName="Tbl_Ded_machineRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_Ded_machineRowDeleted" msprop:Generator_RowClassName="Tbl_Ded_machineRow" msprop:Generator_UserTableName="Tbl_Ded_machine" msprop:Generator_RowEvArgName="Tbl_Ded_machineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MID" msprop:Generator_ColumnVarNameInTable="columnMID" msprop:Generator_ColumnPropNameInRow="MID" msprop:Generator_ColumnPropNameInTable="MIDColumn" msprop:Generator_UserColumnName="MID" type="xs:int" />
@@ -398,7 +518,7 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Matel_ded" msprop:Generator_TableClassName="tbl_Matel_dedDataTable" msprop:Generator_TableVarName="tabletbl_Matel_ded" msprop:Generator_TablePropName="tbl_Matel_ded" msprop:Generator_RowDeletingName="tbl_Matel_dedRowDeleting" msprop:Generator_RowChangingName="tbl_Matel_dedRowChanging" msprop:Generator_RowEvHandlerName="tbl_Matel_dedRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Matel_dedRowDeleted" msprop:Generator_UserTableName="tbl_Matel_ded" msprop:Generator_RowChangedName="tbl_Matel_dedRowChanged" msprop:Generator_RowEvArgName="tbl_Matel_dedRowChangeEvent" msprop:Generator_RowClassName="tbl_Matel_dedRow">
+        <xs:element name="tbl_Matel_ded" msprop:Generator_TableClassName="tbl_Matel_dedDataTable" msprop:Generator_TableVarName="tabletbl_Matel_ded" msprop:Generator_RowChangedName="tbl_Matel_dedRowChanged" msprop:Generator_TablePropName="tbl_Matel_ded" msprop:Generator_RowDeletingName="tbl_Matel_dedRowDeleting" msprop:Generator_RowChangingName="tbl_Matel_dedRowChanging" msprop:Generator_RowEvHandlerName="tbl_Matel_dedRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Matel_dedRowDeleted" msprop:Generator_RowClassName="tbl_Matel_dedRow" msprop:Generator_UserTableName="tbl_Matel_ded" msprop:Generator_RowEvArgName="tbl_Matel_dedRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTID" msprop:Generator_ColumnPropNameInRow="TID" msprop:Generator_ColumnPropNameInTable="TIDColumn" msprop:Generator_UserColumnName="TID" type="xs:int" />
@@ -433,7 +553,7 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Inv_Tran_Date" msprop:Generator_TableClassName="tbl_Inv_Tran_DateDataTable" msprop:Generator_TableVarName="tabletbl_Inv_Tran_Date" msprop:Generator_RowChangedName="tbl_Inv_Tran_DateRowChanged" msprop:Generator_TablePropName="tbl_Inv_Tran_Date" msprop:Generator_RowDeletingName="tbl_Inv_Tran_DateRowDeleting" msprop:Generator_RowChangingName="tbl_Inv_Tran_DateRowChanging" msprop:Generator_RowEvHandlerName="tbl_Inv_Tran_DateRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Inv_Tran_DateRowDeleted" msprop:Generator_RowClassName="tbl_Inv_Tran_DateRow" msprop:Generator_UserTableName="tbl_Inv_Tran_Date" msprop:Generator_RowEvArgName="tbl_Inv_Tran_DateRowChangeEvent">
+        <xs:element name="tbl_Inv_Tran_Date" msprop:Generator_TableClassName="tbl_Inv_Tran_DateDataTable" msprop:Generator_TableVarName="tabletbl_Inv_Tran_Date" msprop:Generator_TablePropName="tbl_Inv_Tran_Date" msprop:Generator_RowDeletingName="tbl_Inv_Tran_DateRowDeleting" msprop:Generator_RowChangingName="tbl_Inv_Tran_DateRowChanging" msprop:Generator_RowEvHandlerName="tbl_Inv_Tran_DateRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_Inv_Tran_DateRowDeleted" msprop:Generator_UserTableName="tbl_Inv_Tran_Date" msprop:Generator_RowChangedName="tbl_Inv_Tran_DateRowChanged" msprop:Generator_RowEvArgName="tbl_Inv_Tran_DateRowChangeEvent" msprop:Generator_RowClassName="tbl_Inv_Tran_DateRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DayNo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDayNo" msprop:Generator_ColumnPropNameInRow="DayNo" msprop:Generator_ColumnPropNameInTable="DayNoColumn" msprop:Generator_UserColumnName="DayNo" type="xs:int" />
@@ -441,14 +561,14 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_Ded_Counter" msprop:Generator_TableClassName="view_Ded_CounterDataTable" msprop:Generator_TableVarName="tableview_Ded_Counter" msprop:Generator_RowChangedName="view_Ded_CounterRowChanged" msprop:Generator_TablePropName="view_Ded_Counter" msprop:Generator_RowDeletingName="view_Ded_CounterRowDeleting" msprop:Generator_RowChangingName="view_Ded_CounterRowChanging" msprop:Generator_RowEvHandlerName="view_Ded_CounterRowChangeEventHandler" msprop:Generator_RowDeletedName="view_Ded_CounterRowDeleted" msprop:Generator_RowClassName="view_Ded_CounterRow" msprop:Generator_UserTableName="view_Ded_Counter" msprop:Generator_RowEvArgName="view_Ded_CounterRowChangeEvent">
+        <xs:element name="view_Ded_Counter" msprop:Generator_TableClassName="view_Ded_CounterDataTable" msprop:Generator_TableVarName="tableview_Ded_Counter" msprop:Generator_TablePropName="view_Ded_Counter" msprop:Generator_RowDeletingName="view_Ded_CounterRowDeleting" msprop:Generator_RowChangingName="view_Ded_CounterRowChanging" msprop:Generator_RowEvHandlerName="view_Ded_CounterRowChangeEventHandler" msprop:Generator_RowDeletedName="view_Ded_CounterRowDeleted" msprop:Generator_UserTableName="view_Ded_Counter" msprop:Generator_RowChangedName="view_Ded_CounterRowChanged" msprop:Generator_RowEvArgName="view_Ded_CounterRowChangeEvent" msprop:Generator_RowClassName="view_Ded_CounterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="view_MS_PONO" msprop:Generator_TableClassName="view_MS_PONODataTable" msprop:Generator_TableVarName="tableview_MS_PONO" msprop:Generator_TablePropName="view_MS_PONO" msprop:Generator_RowDeletingName="view_MS_PONORowDeleting" msprop:Generator_RowChangingName="view_MS_PONORowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONORowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONORowDeleted" msprop:Generator_UserTableName="view_MS_PONO" msprop:Generator_RowChangedName="view_MS_PONORowChanged" msprop:Generator_RowEvArgName="view_MS_PONORowChangeEvent" msprop:Generator_RowClassName="view_MS_PONORow">
+        <xs:element name="view_MS_PONO" msprop:Generator_TableClassName="view_MS_PONODataTable" msprop:Generator_TableVarName="tableview_MS_PONO" msprop:Generator_RowChangedName="view_MS_PONORowChanged" msprop:Generator_TablePropName="view_MS_PONO" msprop:Generator_RowDeletingName="view_MS_PONORowDeleting" msprop:Generator_RowChangingName="view_MS_PONORowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONORowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONORowDeleted" msprop:Generator_RowClassName="view_MS_PONORow" msprop:Generator_UserTableName="view_MS_PONO" msprop:Generator_RowEvArgName="view_MS_PONORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="POCode" msprop:Generator_ColumnVarNameInTable="columnPOCode" msprop:Generator_ColumnPropNameInRow="POCode" msprop:Generator_ColumnPropNameInTable="POCodeColumn" msprop:Generator_UserColumnName="POCode" minOccurs="0">
@@ -497,38 +617,234 @@ WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ded1" msprop:Generator_TableClassName="Ded1DataTable" msprop:Generator_TableVarName="tableDed1" msprop:Generator_TablePropName="Ded1" msprop:Generator_RowDeletingName="Ded1RowDeleting" msprop:Generator_RowChangingName="Ded1RowChanging" msprop:Generator_RowEvHandlerName="Ded1RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded1RowDeleted" msprop:Generator_UserTableName="Ded1" msprop:Generator_RowChangedName="Ded1RowChanged" msprop:Generator_RowEvArgName="Ded1RowChangeEvent" msprop:Generator_RowClassName="Ded1Row">
+        <xs:element name="Ded1" msprop:Generator_TableClassName="Ded1DataTable" msprop:Generator_TableVarName="tableDed1" msprop:Generator_RowChangedName="Ded1RowChanged" msprop:Generator_TablePropName="Ded1" msprop:Generator_RowDeletingName="Ded1RowDeleting" msprop:Generator_RowChangingName="Ded1RowChanging" msprop:Generator_RowEvHandlerName="Ded1RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded1RowDeleted" msprop:Generator_RowClassName="Ded1Row" msprop:Generator_UserTableName="Ded1" msprop:Generator_RowEvArgName="Ded1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ded2" msprop:Generator_TableClassName="Ded2DataTable" msprop:Generator_TableVarName="tableDed2" msprop:Generator_TablePropName="Ded2" msprop:Generator_RowDeletingName="Ded2RowDeleting" msprop:Generator_RowChangingName="Ded2RowChanging" msprop:Generator_RowEvHandlerName="Ded2RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded2RowDeleted" msprop:Generator_UserTableName="Ded2" msprop:Generator_RowChangedName="Ded2RowChanged" msprop:Generator_RowEvArgName="Ded2RowChangeEvent" msprop:Generator_RowClassName="Ded2Row">
+        <xs:element name="Ded2" msprop:Generator_TableClassName="Ded2DataTable" msprop:Generator_TableVarName="tableDed2" msprop:Generator_RowChangedName="Ded2RowChanged" msprop:Generator_TablePropName="Ded2" msprop:Generator_RowDeletingName="Ded2RowDeleting" msprop:Generator_RowChangingName="Ded2RowChanging" msprop:Generator_RowEvHandlerName="Ded2RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded2RowDeleted" msprop:Generator_RowClassName="Ded2Row" msprop:Generator_UserTableName="Ded2" msprop:Generator_RowEvArgName="Ded2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ded3" msprop:Generator_TableClassName="Ded3DataTable" msprop:Generator_TableVarName="tableDed3" msprop:Generator_TablePropName="Ded3" msprop:Generator_RowDeletingName="Ded3RowDeleting" msprop:Generator_RowChangingName="Ded3RowChanging" msprop:Generator_RowEvHandlerName="Ded3RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded3RowDeleted" msprop:Generator_UserTableName="Ded3" msprop:Generator_RowChangedName="Ded3RowChanged" msprop:Generator_RowEvArgName="Ded3RowChangeEvent" msprop:Generator_RowClassName="Ded3Row">
+        <xs:element name="Ded3" msprop:Generator_TableClassName="Ded3DataTable" msprop:Generator_TableVarName="tableDed3" msprop:Generator_RowChangedName="Ded3RowChanged" msprop:Generator_TablePropName="Ded3" msprop:Generator_RowDeletingName="Ded3RowDeleting" msprop:Generator_RowChangingName="Ded3RowChanging" msprop:Generator_RowEvHandlerName="Ded3RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded3RowDeleted" msprop:Generator_RowClassName="Ded3Row" msprop:Generator_UserTableName="Ded3" msprop:Generator_RowEvArgName="Ded3RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ded4" msprop:Generator_TableClassName="Ded4DataTable" msprop:Generator_TableVarName="tableDed4" msprop:Generator_TablePropName="Ded4" msprop:Generator_RowDeletingName="Ded4RowDeleting" msprop:Generator_RowChangingName="Ded4RowChanging" msprop:Generator_RowEvHandlerName="Ded4RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded4RowDeleted" msprop:Generator_UserTableName="Ded4" msprop:Generator_RowChangedName="Ded4RowChanged" msprop:Generator_RowEvArgName="Ded4RowChangeEvent" msprop:Generator_RowClassName="Ded4Row">
+        <xs:element name="Ded4" msprop:Generator_TableClassName="Ded4DataTable" msprop:Generator_TableVarName="tableDed4" msprop:Generator_RowChangedName="Ded4RowChanged" msprop:Generator_TablePropName="Ded4" msprop:Generator_RowDeletingName="Ded4RowDeleting" msprop:Generator_RowChangingName="Ded4RowChanging" msprop:Generator_RowEvHandlerName="Ded4RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded4RowDeleted" msprop:Generator_RowClassName="Ded4Row" msprop:Generator_UserTableName="Ded4" msprop:Generator_RowEvArgName="Ded4RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ded5" msprop:Generator_TableClassName="Ded5DataTable" msprop:Generator_TableVarName="tableDed5" msprop:Generator_TablePropName="Ded5" msprop:Generator_RowDeletingName="Ded5RowDeleting" msprop:Generator_RowChangingName="Ded5RowChanging" msprop:Generator_RowEvHandlerName="Ded5RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded5RowDeleted" msprop:Generator_UserTableName="Ded5" msprop:Generator_RowChangedName="Ded5RowChanged" msprop:Generator_RowEvArgName="Ded5RowChangeEvent" msprop:Generator_RowClassName="Ded5Row">
+        <xs:element name="Ded5" msprop:Generator_TableClassName="Ded5DataTable" msprop:Generator_TableVarName="tableDed5" msprop:Generator_RowChangedName="Ded5RowChanged" msprop:Generator_TablePropName="Ded5" msprop:Generator_RowDeletingName="Ded5RowDeleting" msprop:Generator_RowChangingName="Ded5RowChanging" msprop:Generator_RowEvHandlerName="Ded5RowChangeEventHandler" msprop:Generator_RowDeletedName="Ded5RowDeleted" msprop:Generator_RowClassName="Ded5Row" msprop:Generator_UserTableName="Ded5" msprop:Generator_RowEvArgName="Ded5RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DedCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDedCount" msprop:Generator_ColumnPropNameInRow="DedCount" msprop:Generator_ColumnPropNameInTable="DedCountColumn" msprop:Generator_UserColumnName="DedCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_MS_PONO1" msprop:Generator_TableClassName="view_MS_PONO1DataTable" msprop:Generator_TableVarName="tableview_MS_PONO1" msprop:Generator_TablePropName="view_MS_PONO1" msprop:Generator_RowDeletingName="view_MS_PONO1RowDeleting" msprop:Generator_RowChangingName="view_MS_PONO1RowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONO1RowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONO1RowDeleted" msprop:Generator_UserTableName="view_MS_PONO1" msprop:Generator_RowChangedName="view_MS_PONO1RowChanged" msprop:Generator_RowEvArgName="view_MS_PONO1RowChangeEvent" msprop:Generator_RowClassName="view_MS_PONO1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POCode" msprop:Generator_ColumnVarNameInTable="columnPOCode" msprop:Generator_ColumnPropNameInRow="POCode" msprop:Generator_ColumnPropNameInTable="POCodeColumn" msprop:Generator_UserColumnName="POCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" type="xs:int" />
+              <xs:element name="POM" msprop:Generator_ColumnVarNameInTable="columnPOM" msprop:Generator_ColumnPropNameInRow="POM" msprop:Generator_ColumnPropNameInTable="POMColumn" msprop:Generator_UserColumnName="POM" type="xs:int" />
+              <xs:element name="POD" msprop:Generator_ColumnVarNameInTable="columnPOD" msprop:Generator_ColumnPropNameInRow="POD" msprop:Generator_ColumnPropNameInTable="PODColumn" msprop:Generator_UserColumnName="POD" type="xs:int" />
+              <xs:element name="OrderQty" msprop:Generator_ColumnVarNameInTable="columnOrderQty" msprop:Generator_ColumnPropNameInRow="OrderQty" msprop:Generator_ColumnPropNameInTable="OrderQtyColumn" msprop:Generator_UserColumnName="OrderQty" type="xs:int" />
+              <xs:element name="ArtCode" msprop:Generator_ColumnVarNameInTable="columnArtCode" msprop:Generator_ColumnPropNameInRow="ArtCode" msprop:Generator_ColumnPropNameInTable="ArtCodeColumn" msprop:Generator_UserColumnName="ArtCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryCode" msprop:Generator_ColumnVarNameInTable="columnFactoryCode" msprop:Generator_ColumnPropNameInRow="FactoryCode" msprop:Generator_ColumnPropNameInTable="FactoryCodeColumn" msprop:Generator_UserColumnName="FactoryCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderType" msprop:Generator_ColumnVarNameInTable="columnOrderType" msprop:Generator_ColumnPropNameInRow="OrderType" msprop:Generator_ColumnPropNameInTable="OrderTypeColumn" msprop:Generator_UserColumnName="OrderType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="ModelID" msprop:Generator_ColumnVarNameInTable="columnModelID" msprop:Generator_ColumnPropNameInRow="ModelID" msprop:Generator_ColumnPropNameInTable="ModelIDColumn" msprop:Generator_UserColumnName="ModelID" type="xs:int" />
+              <xs:element name="ArtID" msprop:Generator_ColumnVarNameInTable="columnArtID" msprop:Generator_ColumnPropNameInRow="ArtID" msprop:Generator_ColumnPropNameInTable="ArtIDColumn" msprop:Generator_UserColumnName="ArtID" type="xs:int" />
+              <xs:element name="ArtSize" msprop:Generator_ColumnVarNameInTable="columnArtSize" msprop:Generator_ColumnPropNameInRow="ArtSize" msprop:Generator_ColumnPropNameInTable="ArtSizeColumn" msprop:Generator_UserColumnName="ArtSize">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecondConfDate" msprop:Generator_ColumnVarNameInTable="columnSecondConfDate" msprop:Generator_ColumnPropNameInRow="SecondConfDate" msprop:Generator_ColumnPropNameInTable="SecondConfDateColumn" msprop:Generator_UserColumnName="SecondConfDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_MS_PONO11" msprop:Generator_TableClassName="view_MS_PONO11DataTable" msprop:Generator_TableVarName="tableview_MS_PONO11" msprop:Generator_TablePropName="view_MS_PONO11" msprop:Generator_RowDeletingName="view_MS_PONO11RowDeleting" msprop:Generator_RowChangingName="view_MS_PONO11RowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONO11RowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONO11RowDeleted" msprop:Generator_UserTableName="view_MS_PONO11" msprop:Generator_RowChangedName="view_MS_PONO11RowChanged" msprop:Generator_RowEvArgName="view_MS_PONO11RowChangeEvent" msprop:Generator_RowClassName="view_MS_PONO11Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POCode" msprop:Generator_ColumnVarNameInTable="columnPOCode" msprop:Generator_ColumnPropNameInRow="POCode" msprop:Generator_ColumnPropNameInTable="POCodeColumn" msprop:Generator_UserColumnName="POCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" type="xs:int" />
+              <xs:element name="POM" msprop:Generator_ColumnVarNameInTable="columnPOM" msprop:Generator_ColumnPropNameInRow="POM" msprop:Generator_ColumnPropNameInTable="POMColumn" msprop:Generator_UserColumnName="POM" type="xs:int" />
+              <xs:element name="POD" msprop:Generator_ColumnVarNameInTable="columnPOD" msprop:Generator_ColumnPropNameInRow="POD" msprop:Generator_ColumnPropNameInTable="PODColumn" msprop:Generator_UserColumnName="POD" type="xs:int" />
+              <xs:element name="OrderQty" msprop:Generator_ColumnVarNameInTable="columnOrderQty" msprop:Generator_ColumnPropNameInRow="OrderQty" msprop:Generator_ColumnPropNameInTable="OrderQtyColumn" msprop:Generator_UserColumnName="OrderQty" type="xs:int" />
+              <xs:element name="ArtCode" msprop:Generator_ColumnVarNameInTable="columnArtCode" msprop:Generator_ColumnPropNameInRow="ArtCode" msprop:Generator_ColumnPropNameInTable="ArtCodeColumn" msprop:Generator_UserColumnName="ArtCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryCode" msprop:Generator_ColumnVarNameInTable="columnFactoryCode" msprop:Generator_ColumnPropNameInRow="FactoryCode" msprop:Generator_ColumnPropNameInTable="FactoryCodeColumn" msprop:Generator_UserColumnName="FactoryCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderType" msprop:Generator_ColumnVarNameInTable="columnOrderType" msprop:Generator_ColumnPropNameInRow="OrderType" msprop:Generator_ColumnPropNameInTable="OrderTypeColumn" msprop:Generator_UserColumnName="OrderType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="ModelID" msprop:Generator_ColumnVarNameInTable="columnModelID" msprop:Generator_ColumnPropNameInRow="ModelID" msprop:Generator_ColumnPropNameInTable="ModelIDColumn" msprop:Generator_UserColumnName="ModelID" type="xs:int" />
+              <xs:element name="ArtID" msprop:Generator_ColumnVarNameInTable="columnArtID" msprop:Generator_ColumnPropNameInRow="ArtID" msprop:Generator_ColumnPropNameInTable="ArtIDColumn" msprop:Generator_UserColumnName="ArtID" type="xs:int" />
+              <xs:element name="ArtSize" msprop:Generator_ColumnVarNameInTable="columnArtSize" msprop:Generator_ColumnPropNameInRow="ArtSize" msprop:Generator_ColumnPropNameInTable="ArtSizeColumn" msprop:Generator_UserColumnName="ArtSize">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecondConfDate" msprop:Generator_ColumnVarNameInTable="columnSecondConfDate" msprop:Generator_ColumnPropNameInRow="SecondConfDate" msprop:Generator_ColumnPropNameInTable="SecondConfDateColumn" msprop:Generator_UserColumnName="SecondConfDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_MS_PONO12" msprop:Generator_TableClassName="view_MS_PONO12DataTable" msprop:Generator_TableVarName="tableview_MS_PONO12" msprop:Generator_TablePropName="view_MS_PONO12" msprop:Generator_RowDeletingName="view_MS_PONO12RowDeleting" msprop:Generator_RowChangingName="view_MS_PONO12RowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONO12RowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONO12RowDeleted" msprop:Generator_UserTableName="view_MS_PONO12" msprop:Generator_RowChangedName="view_MS_PONO12RowChanged" msprop:Generator_RowEvArgName="view_MS_PONO12RowChangeEvent" msprop:Generator_RowClassName="view_MS_PONO12Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POCode" msprop:Generator_ColumnVarNameInTable="columnPOCode" msprop:Generator_ColumnPropNameInRow="POCode" msprop:Generator_ColumnPropNameInTable="POCodeColumn" msprop:Generator_UserColumnName="POCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" type="xs:int" />
+              <xs:element name="POM" msprop:Generator_ColumnVarNameInTable="columnPOM" msprop:Generator_ColumnPropNameInRow="POM" msprop:Generator_ColumnPropNameInTable="POMColumn" msprop:Generator_UserColumnName="POM" type="xs:int" />
+              <xs:element name="POD" msprop:Generator_ColumnVarNameInTable="columnPOD" msprop:Generator_ColumnPropNameInRow="POD" msprop:Generator_ColumnPropNameInTable="PODColumn" msprop:Generator_UserColumnName="POD" type="xs:int" />
+              <xs:element name="OrderQty" msprop:Generator_ColumnVarNameInTable="columnOrderQty" msprop:Generator_ColumnPropNameInRow="OrderQty" msprop:Generator_ColumnPropNameInTable="OrderQtyColumn" msprop:Generator_UserColumnName="OrderQty" type="xs:int" />
+              <xs:element name="ArtCode" msprop:Generator_ColumnVarNameInTable="columnArtCode" msprop:Generator_ColumnPropNameInRow="ArtCode" msprop:Generator_ColumnPropNameInTable="ArtCodeColumn" msprop:Generator_UserColumnName="ArtCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryCode" msprop:Generator_ColumnVarNameInTable="columnFactoryCode" msprop:Generator_ColumnPropNameInRow="FactoryCode" msprop:Generator_ColumnPropNameInTable="FactoryCodeColumn" msprop:Generator_UserColumnName="FactoryCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderType" msprop:Generator_ColumnVarNameInTable="columnOrderType" msprop:Generator_ColumnPropNameInRow="OrderType" msprop:Generator_ColumnPropNameInTable="OrderTypeColumn" msprop:Generator_UserColumnName="OrderType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="ModelID" msprop:Generator_ColumnVarNameInTable="columnModelID" msprop:Generator_ColumnPropNameInRow="ModelID" msprop:Generator_ColumnPropNameInTable="ModelIDColumn" msprop:Generator_UserColumnName="ModelID" type="xs:int" />
+              <xs:element name="ArtID" msprop:Generator_ColumnVarNameInTable="columnArtID" msprop:Generator_ColumnPropNameInRow="ArtID" msprop:Generator_ColumnPropNameInTable="ArtIDColumn" msprop:Generator_UserColumnName="ArtID" type="xs:int" />
+              <xs:element name="ArtSize" msprop:Generator_ColumnVarNameInTable="columnArtSize" msprop:Generator_ColumnPropNameInRow="ArtSize" msprop:Generator_ColumnPropNameInTable="ArtSizeColumn" msprop:Generator_UserColumnName="ArtSize">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecondConfDate" msprop:Generator_ColumnVarNameInTable="columnSecondConfDate" msprop:Generator_ColumnPropNameInRow="SecondConfDate" msprop:Generator_ColumnPropNameInTable="SecondConfDateColumn" msprop:Generator_UserColumnName="SecondConfDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_MS_PONO13" msprop:Generator_TableClassName="view_MS_PONO13DataTable" msprop:Generator_TableVarName="tableview_MS_PONO13" msprop:Generator_TablePropName="view_MS_PONO13" msprop:Generator_RowDeletingName="view_MS_PONO13RowDeleting" msprop:Generator_RowChangingName="view_MS_PONO13RowChanging" msprop:Generator_RowEvHandlerName="view_MS_PONO13RowChangeEventHandler" msprop:Generator_RowDeletedName="view_MS_PONO13RowDeleted" msprop:Generator_UserTableName="view_MS_PONO13" msprop:Generator_RowChangedName="view_MS_PONO13RowChanged" msprop:Generator_RowEvArgName="view_MS_PONO13RowChangeEvent" msprop:Generator_RowClassName="view_MS_PONO13Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POCode" msprop:Generator_ColumnVarNameInTable="columnPOCode" msprop:Generator_ColumnPropNameInRow="POCode" msprop:Generator_ColumnPropNameInTable="POCodeColumn" msprop:Generator_UserColumnName="POCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" type="xs:int" />
+              <xs:element name="POM" msprop:Generator_ColumnVarNameInTable="columnPOM" msprop:Generator_ColumnPropNameInRow="POM" msprop:Generator_ColumnPropNameInTable="POMColumn" msprop:Generator_UserColumnName="POM" type="xs:int" />
+              <xs:element name="POD" msprop:Generator_ColumnVarNameInTable="columnPOD" msprop:Generator_ColumnPropNameInRow="POD" msprop:Generator_ColumnPropNameInTable="PODColumn" msprop:Generator_UserColumnName="POD" type="xs:int" />
+              <xs:element name="OrderQty" msprop:Generator_ColumnVarNameInTable="columnOrderQty" msprop:Generator_ColumnPropNameInRow="OrderQty" msprop:Generator_ColumnPropNameInTable="OrderQtyColumn" msprop:Generator_UserColumnName="OrderQty" type="xs:int" />
+              <xs:element name="ArtCode" msprop:Generator_ColumnVarNameInTable="columnArtCode" msprop:Generator_ColumnPropNameInRow="ArtCode" msprop:Generator_ColumnPropNameInTable="ArtCodeColumn" msprop:Generator_UserColumnName="ArtCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FactoryCode" msprop:Generator_ColumnVarNameInTable="columnFactoryCode" msprop:Generator_ColumnPropNameInRow="FactoryCode" msprop:Generator_ColumnPropNameInTable="FactoryCodeColumn" msprop:Generator_UserColumnName="FactoryCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderType" msprop:Generator_ColumnVarNameInTable="columnOrderType" msprop:Generator_ColumnPropNameInRow="OrderType" msprop:Generator_ColumnPropNameInTable="OrderTypeColumn" msprop:Generator_UserColumnName="OrderType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientID" msprop:Generator_ColumnVarNameInTable="columnClientID" msprop:Generator_ColumnPropNameInRow="ClientID" msprop:Generator_ColumnPropNameInTable="ClientIDColumn" msprop:Generator_UserColumnName="ClientID" type="xs:int" />
+              <xs:element name="ModelID" msprop:Generator_ColumnVarNameInTable="columnModelID" msprop:Generator_ColumnPropNameInRow="ModelID" msprop:Generator_ColumnPropNameInTable="ModelIDColumn" msprop:Generator_UserColumnName="ModelID" type="xs:int" />
+              <xs:element name="ArtID" msprop:Generator_ColumnVarNameInTable="columnArtID" msprop:Generator_ColumnPropNameInRow="ArtID" msprop:Generator_ColumnPropNameInTable="ArtIDColumn" msprop:Generator_UserColumnName="ArtID" type="xs:int" />
+              <xs:element name="ArtSize" msprop:Generator_ColumnVarNameInTable="columnArtSize" msprop:Generator_ColumnPropNameInRow="ArtSize" msprop:Generator_ColumnPropNameInTable="ArtSizeColumn" msprop:Generator_UserColumnName="ArtSize">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecondConfDate" msprop:Generator_ColumnVarNameInTable="columnSecondConfDate" msprop:Generator_ColumnPropNameInRow="SecondConfDate" msprop:Generator_ColumnPropNameInTable="SecondConfDateColumn" msprop:Generator_UserColumnName="SecondConfDate" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

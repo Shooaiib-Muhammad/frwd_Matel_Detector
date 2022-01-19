@@ -1,11 +1,32 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-		'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO' table. You can move, or remove it, as needed.
-		Me.View_MS_PONOTableAdapter.Fill(Me.DSmatalDed.view_MS_PONO)
+        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO13' table. You can move, or remove it, as needed.
+        Me.View_MS_PONO13TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO13)
+        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO12' table. You can move, or remove it, as needed.
+        Me.View_MS_PONO12TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO12)
+        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO11' table. You can move, or remove it, as needed.
+        Me.View_MS_PONO11TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO11)
+        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO1' table. You can move, or remove it, as needed.
+        Me.View_MS_PONO1TableAdapter.Fill(Me.DSmatalDed.view_MS_PONO1)
+        'TODO: This line of code loads data into the 'DSmatalDed.view_MS_PONO' table. You can move, or remove it, as needed.
+        Try
+            Me.View_MS_PONOTableAdapter.Fill(Me.DSmatalDed.view_MS_PONO)
+
+		Catch ex As Exception
+
+		End Try
 		'TODO: This line of code loads data into the 'DSmatalDed.tbl_Matel_ded' table. You can move, or remove it, as needed.
-		Me.Tbl_Matel_dedTableAdapter.Fill(Me.DSmatalDed.tbl_Matel_ded)
-        'TODO: This line of code loads data into the 'DSmatalDed.Tbl_Ded_machine' table. You can move, or remove it, as needed.
-        Me.Tbl_Ded_machineTableAdapter.Fill(Me.DSmatalDed.Tbl_Ded_machine)
+		Try
+			Me.Tbl_Matel_dedTableAdapter.Fill(Me.DSmatalDed.tbl_Matel_ded)
+		Catch ex As Exception
+
+		End Try
+		'TODO: This line of code loads data into the 'DSmatalDed.Tbl_Ded_machine' table. You can move, or remove it, as needed.
+		Try
+			Me.Tbl_Ded_machineTableAdapter.Fill(Me.DSmatalDed.Tbl_Ded_machine)
+		Catch ex As Exception
+
+		End Try
 
 
 
@@ -22,27 +43,66 @@
 
 	Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 		Dim Machinename As String
-Linelist:
+LastLine:
 		If (Me.SerialPort1.IsOpen) Then
 			Dim Incoming As String = Me.SerialPort1.ReadLine()
-			If Incoming = "Machine 1" & vbCr Then
+			If Incoming = "machine 1" & vbCr Then
 				Machinename = "Metal Ded 1"
-			ElseIf Incoming = "Machine 2" & vbCr Then
-				Machinename = "Metal Ded 2"
-			ElseIf Incoming = "Machine 3" & vbCr Then
-				Machinename = "Metal Ded 3"
-			ElseIf Incoming = "Machine 4" & vbCr Then
-				Machinename = "Metal Ded 4"
-			ElseIf Incoming = "Machine 5" & vbCr Then
-				Machinename = "Metal Ded 5"
-			End If
-			GoTo Linelist
-			Try
-				Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Now, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
-				loadData()
-			Catch ex As Exception
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
 
-			End Try
+				Catch ex As Exception
+
+				End Try
+			ElseIf Incoming = "machine 2" & vbCr Then
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
+
+				Catch ex As Exception
+
+				End Try
+				Machinename = "Metal Ded 2"
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
+
+				Catch ex As Exception
+
+				End Try
+			ElseIf Incoming = "machine 3" & vbCr Then
+				Machinename = "Metal Ded 3"
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
+
+				Catch ex As Exception
+
+				End Try
+			ElseIf Incoming = "machine 4" & vbCr Then
+				Machinename = "Metal Ded 4"
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
+
+				Catch ex As Exception
+
+				End Try
+			ElseIf Incoming = "machine 5" & vbCr Then
+				Machinename = "Metal Ded 5"
+				Try
+					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+					loadData()
+
+				Catch ex As Exception
+
+				End Try
+			Else
+				GoTo LastLine
+			End If
+
+
 		End If
 
 
@@ -65,10 +125,14 @@ Linelist:
 		Timer1.Stop()
 		Me.SerialPort1.Close()
 		Timer2.Stop()
+		Button2.Enabled = True
 	End Sub
 
 	Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 		Me.Timer1.Start()
+		Button2.Enabled = False
+		Button1.Enabled = True
+
 		Try
 			Me.SerialPort1.Open()
 			If (Me.SerialPort1.IsOpen) Then
@@ -76,7 +140,7 @@ Linelist:
 			End If
 		Catch ex As Exception
 			MessageBox.Show("Robotic Device is not connected. Connect Robotic device to COM15", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-			Application.Exit()
+			'Application.Exit()
 		End Try
 		Me.Timer2.Start()
 	End Sub
@@ -147,6 +211,18 @@ Linelist:
 		Catch ex As System.Exception
 			System.Windows.Forms.MessageBox.Show(ex.Message)
 		End Try
+
+	End Sub
+
+	Private Sub NameComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NameComboBox.SelectedIndexChanged
+
+	End Sub
+
+	Private Sub NameLabel_Click(sender As Object, e As EventArgs)
+
+	End Sub
+
+	Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
 
 	End Sub
 End Class
