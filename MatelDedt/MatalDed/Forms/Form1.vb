@@ -48,56 +48,76 @@ LastLine:
 			Dim Incoming As String = Me.SerialPort1.ReadLine()
 			If Incoming = "machine 1" & vbCr Then
 				Machinename = "Metal Ded 1"
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+				If RadioButton1.Checked = True Then
+
+					Try
+						Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+						loadData()
+
+					Catch ex As Exception
+					End Try
+				ElseIf RadioButton2.Checked = True Then
 					loadData()
+				End If
 
-				Catch ex As Exception
 
-				End Try
 			ElseIf Incoming = "machine 2" & vbCr Then
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
-					loadData()
 
-				Catch ex As Exception
-
-				End Try
 				Machinename = "Metal Ded 2"
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+				If RadioButton4.Checked = True Then
+
+					Try
+						Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename)
+						loadData()
+
+					Catch ex As Exception
+					End Try
+				ElseIf RadioButton3.Checked = True Then
 					loadData()
+				End If
 
-				Catch ex As Exception
-
-				End Try
 			ElseIf Incoming = "machine 3" & vbCr Then
 				Machinename = "Metal Ded 3"
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+				If RadioButton4.Checked = True Then
+
+					Try
+						Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label71.Text), Val(Label72.Text), Val(Label73.Text), Machinename)
+						loadData()
+
+					Catch ex As Exception
+					End Try
+				ElseIf RadioButton5.Checked = True Then
 					loadData()
+				End If
 
-				Catch ex As Exception
-
-				End Try
 			ElseIf Incoming = "machine 4" & vbCr Then
 				Machinename = "Metal Ded 4"
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+				If RadioButton6.Checked = True Then
+
+					Try
+						Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label74.Text), Val(Label75.Text), Val(Label76.Text), Machinename)
+						loadData()
+
+					Catch ex As Exception
+					End Try
+				ElseIf RadioButton7.Checked = True Then
 					loadData()
+				End If
 
-				Catch ex As Exception
-
-				End Try
 			ElseIf Incoming = "machine 5" & vbCr Then
 				Machinename = "Metal Ded 5"
-				Try
-					Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename)
+				If RadioButton8.Checked = True Then
+
+					Try
+						Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label77.Text), Val(Label78.Text), Val(Label79.Text), Machinename)
+						loadData()
+
+					Catch ex As Exception
+					End Try
+				ElseIf RadioButton9.Checked = True Then
 					loadData()
+				End If
 
-				Catch ex As Exception
-
-				End Try
 			Else
 				GoTo LastLine
 			End If
@@ -140,7 +160,7 @@ LastLine:
 			End If
 		Catch ex As Exception
 			MessageBox.Show("Robotic Device is not connected. Connect Robotic device to COM15", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-			'Application.Exit()
+			Application.Exit()
 		End Try
 		Me.Timer2.Start()
 	End Sub

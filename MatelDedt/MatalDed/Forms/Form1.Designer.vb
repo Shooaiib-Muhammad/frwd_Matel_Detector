@@ -124,35 +124,35 @@ Partial Class Form1
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
         Me.Label60 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
+        Me.Label54 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label69 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
@@ -243,6 +243,296 @@ Partial Class Form1
         Label4.Size = New System.Drawing.Size(194, 31)
         Label4.TabIndex = 24
         Label4.Text = "Total Counter :"
+        '
+        'Label10
+        '
+        Label10.AutoSize = True
+        Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label10.Location = New System.Drawing.Point(125, 295)
+        Label10.Name = "Label10"
+        Label10.Size = New System.Drawing.Size(126, 31)
+        Label10.TabIndex = 20
+        Label10.Text = "Counter :"
+        '
+        'Label11
+        '
+        Label11.AutoSize = True
+        Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label11.Location = New System.Drawing.Point(134, 295)
+        Label11.Name = "Label11"
+        Label11.Size = New System.Drawing.Size(126, 31)
+        Label11.TabIndex = 21
+        Label11.Text = "Counter :"
+        '
+        'Label12
+        '
+        Label12.AutoSize = True
+        Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label12.Location = New System.Drawing.Point(152, 298)
+        Label12.Name = "Label12"
+        Label12.Size = New System.Drawing.Size(126, 31)
+        Label12.TabIndex = 22
+        Label12.Text = "Counter :"
+        '
+        'Label13
+        '
+        Label13.AutoSize = True
+        Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label13.Location = New System.Drawing.Point(139, 297)
+        Label13.Name = "Label13"
+        Label13.Size = New System.Drawing.Size(126, 31)
+        Label13.TabIndex = 23
+        Label13.Text = "Counter :"
+        '
+        'Label14
+        '
+        Label14.AutoSize = True
+        Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label14.Location = New System.Drawing.Point(140, 293)
+        Label14.Name = "Label14"
+        Label14.Size = New System.Drawing.Size(126, 31)
+        Label14.TabIndex = 24
+        Label14.Text = "Counter :"
+        '
+        'Label15
+        '
+        Label15.AutoSize = True
+        Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label15.Location = New System.Drawing.Point(6, 99)
+        Label15.Name = "Label15"
+        Label15.Size = New System.Drawing.Size(147, 25)
+        Label15.TabIndex = 21
+        Label15.Text = "Select PO NO :"
+        '
+        'Label16
+        '
+        Label16.AutoSize = True
+        Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label16.Location = New System.Drawing.Point(24, 103)
+        Label16.Name = "Label16"
+        Label16.Size = New System.Drawing.Size(147, 25)
+        Label16.TabIndex = 23
+        Label16.Text = "Select PO NO :"
+        '
+        'Label17
+        '
+        Label17.AutoSize = True
+        Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label17.Location = New System.Drawing.Point(15, 100)
+        Label17.Name = "Label17"
+        Label17.Size = New System.Drawing.Size(147, 25)
+        Label17.TabIndex = 25
+        Label17.Text = "Select PO NO :"
+        '
+        'Label22
+        '
+        Label22.AutoSize = True
+        Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label22.Location = New System.Drawing.Point(12, 98)
+        Label22.Name = "Label22"
+        Label22.Size = New System.Drawing.Size(147, 25)
+        Label22.TabIndex = 27
+        Label22.Text = "Select PO NO :"
+        '
+        'Label23
+        '
+        Label23.AutoSize = True
+        Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label23.Location = New System.Drawing.Point(8, 137)
+        Label23.Name = "Label23"
+        Label23.Size = New System.Drawing.Size(141, 25)
+        Label23.TabIndex = 121
+        Label23.Text = "Factory Code :"
+        '
+        'Label29
+        '
+        Label29.AutoSize = True
+        Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label29.Location = New System.Drawing.Point(8, 173)
+        Label29.Name = "Label29"
+        Label29.Size = New System.Drawing.Size(77, 25)
+        Label29.TabIndex = 122
+        Label29.Text = "Article :"
+        '
+        'Label30
+        '
+        Label30.AutoSize = True
+        Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label30.Location = New System.Drawing.Point(8, 243)
+        Label30.Name = "Label30"
+        Label30.Size = New System.Drawing.Size(146, 25)
+        Label30.TabIndex = 123
+        Label30.Text = "Order Quantity:"
+        '
+        'Label59
+        '
+        Label59.AutoSize = True
+        Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label59.Location = New System.Drawing.Point(8, 209)
+        Label59.Name = "Label59"
+        Label59.Size = New System.Drawing.Size(62, 25)
+        Label59.TabIndex = 127
+        Label59.Text = "Size :"
+        '
+        'Label32
+        '
+        Label32.AutoSize = True
+        Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label32.Location = New System.Drawing.Point(5, 212)
+        Label32.Name = "Label32"
+        Label32.Size = New System.Drawing.Size(62, 25)
+        Label32.TabIndex = 135
+        Label32.Text = "Size :"
+        '
+        'Label36
+        '
+        Label36.AutoSize = True
+        Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label36.Location = New System.Drawing.Point(1, 244)
+        Label36.Name = "Label36"
+        Label36.Size = New System.Drawing.Size(146, 25)
+        Label36.TabIndex = 131
+        Label36.Text = "Order Quantity:"
+        '
+        'Label37
+        '
+        Label37.AutoSize = True
+        Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label37.Location = New System.Drawing.Point(1, 174)
+        Label37.Name = "Label37"
+        Label37.Size = New System.Drawing.Size(77, 25)
+        Label37.TabIndex = 130
+        Label37.Text = "Article :"
+        '
+        'Label38
+        '
+        Label38.AutoSize = True
+        Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label38.Location = New System.Drawing.Point(1, 138)
+        Label38.Name = "Label38"
+        Label38.Size = New System.Drawing.Size(141, 25)
+        Label38.TabIndex = 129
+        Label38.Text = "Factory Code :"
+        '
+        'Label40
+        '
+        Label40.AutoSize = True
+        Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label40.Location = New System.Drawing.Point(19, 213)
+        Label40.Name = "Label40"
+        Label40.Size = New System.Drawing.Size(62, 25)
+        Label40.TabIndex = 143
+        Label40.Text = "Size :"
+        '
+        'Label47
+        '
+        Label47.AutoSize = True
+        Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label47.Location = New System.Drawing.Point(19, 247)
+        Label47.Name = "Label47"
+        Label47.Size = New System.Drawing.Size(146, 25)
+        Label47.TabIndex = 139
+        Label47.Text = "Order Quantity:"
+        '
+        'Label48
+        '
+        Label48.AutoSize = True
+        Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label48.Location = New System.Drawing.Point(19, 177)
+        Label48.Name = "Label48"
+        Label48.Size = New System.Drawing.Size(77, 25)
+        Label48.TabIndex = 138
+        Label48.Text = "Article :"
+        '
+        'Label49
+        '
+        Label49.AutoSize = True
+        Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label49.Location = New System.Drawing.Point(19, 141)
+        Label49.Name = "Label49"
+        Label49.Size = New System.Drawing.Size(141, 25)
+        Label49.TabIndex = 137
+        Label49.Text = "Factory Code :"
+        '
+        'Label51
+        '
+        Label51.AutoSize = True
+        Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label51.Location = New System.Drawing.Point(15, 206)
+        Label51.Name = "Label51"
+        Label51.Size = New System.Drawing.Size(62, 25)
+        Label51.TabIndex = 151
+        Label51.Text = "Size :"
+        '
+        'Label55
+        '
+        Label55.AutoSize = True
+        Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label55.Location = New System.Drawing.Point(15, 240)
+        Label55.Name = "Label55"
+        Label55.Size = New System.Drawing.Size(146, 25)
+        Label55.TabIndex = 147
+        Label55.Text = "Order Quantity:"
+        '
+        'Label56
+        '
+        Label56.AutoSize = True
+        Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label56.Location = New System.Drawing.Point(15, 170)
+        Label56.Name = "Label56"
+        Label56.Size = New System.Drawing.Size(77, 25)
+        Label56.TabIndex = 146
+        Label56.Text = "Article :"
+        '
+        'Label57
+        '
+        Label57.AutoSize = True
+        Label57.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label57.Location = New System.Drawing.Point(15, 134)
+        Label57.Name = "Label57"
+        Label57.Size = New System.Drawing.Size(141, 25)
+        Label57.TabIndex = 145
+        Label57.Text = "Factory Code :"
+        '
+        'Label61
+        '
+        Label61.AutoSize = True
+        Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label61.Location = New System.Drawing.Point(7, 208)
+        Label61.Name = "Label61"
+        Label61.Size = New System.Drawing.Size(62, 25)
+        Label61.TabIndex = 159
+        Label61.Text = "Size :"
+        '
+        'Label65
+        '
+        Label65.AutoSize = True
+        Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label65.Location = New System.Drawing.Point(7, 242)
+        Label65.Name = "Label65"
+        Label65.Size = New System.Drawing.Size(146, 25)
+        Label65.TabIndex = 155
+        Label65.Text = "Order Quantity:"
+        '
+        'Label66
+        '
+        Label66.AutoSize = True
+        Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label66.Location = New System.Drawing.Point(7, 172)
+        Label66.Name = "Label66"
+        Label66.Size = New System.Drawing.Size(77, 25)
+        Label66.TabIndex = 154
+        Label66.Text = "Article :"
+        '
+        'Label67
+        '
+        Label67.AutoSize = True
+        Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label67.Location = New System.Drawing.Point(7, 136)
+        Label67.Name = "Label67"
+        Label67.Size = New System.Drawing.Size(141, 25)
+        Label67.TabIndex = 153
+        Label67.Text = "Factory Code :"
         '
         'SerialPort1
         '
@@ -606,16 +896,6 @@ Partial Class Form1
         '
         Me.View_MS_PONO13TableAdapter.ClearBeforeFill = True
         '
-        'Label10
-        '
-        Label10.AutoSize = True
-        Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label10.Location = New System.Drawing.Point(125, 295)
-        Label10.Name = "Label10"
-        Label10.Size = New System.Drawing.Size(126, 31)
-        Label10.TabIndex = 20
-        Label10.Text = "Counter :"
-        '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
@@ -649,46 +929,6 @@ Partial Class Form1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "In Active"
         Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Label11.AutoSize = True
-        Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label11.Location = New System.Drawing.Point(134, 295)
-        Label11.Name = "Label11"
-        Label11.Size = New System.Drawing.Size(126, 31)
-        Label11.TabIndex = 21
-        Label11.Text = "Counter :"
-        '
-        'Label12
-        '
-        Label12.AutoSize = True
-        Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label12.Location = New System.Drawing.Point(152, 298)
-        Label12.Name = "Label12"
-        Label12.Size = New System.Drawing.Size(126, 31)
-        Label12.TabIndex = 22
-        Label12.Text = "Counter :"
-        '
-        'Label13
-        '
-        Label13.AutoSize = True
-        Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label13.Location = New System.Drawing.Point(139, 297)
-        Label13.Name = "Label13"
-        Label13.Size = New System.Drawing.Size(126, 31)
-        Label13.TabIndex = 23
-        Label13.Text = "Counter :"
-        '
-        'Label14
-        '
-        Label14.AutoSize = True
-        Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label14.Location = New System.Drawing.Point(140, 293)
-        Label14.Name = "Label14"
-        Label14.Size = New System.Drawing.Size(126, 31)
-        Label14.TabIndex = 24
-        Label14.Text = "Counter :"
         '
         'Panel2
         '
@@ -840,16 +1080,6 @@ Partial Class Form1
         Me.ComboBox1.TabIndex = 22
         Me.ComboBox1.ValueMember = "PO"
         '
-        'Label15
-        '
-        Label15.AutoSize = True
-        Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label15.Location = New System.Drawing.Point(6, 99)
-        Label15.Name = "Label15"
-        Label15.Size = New System.Drawing.Size(147, 25)
-        Label15.TabIndex = 21
-        Label15.Text = "Select PO NO :"
-        '
         'ComboBox2
         '
         Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -863,16 +1093,6 @@ Partial Class Form1
         Me.ComboBox2.Size = New System.Drawing.Size(237, 33)
         Me.ComboBox2.TabIndex = 24
         Me.ComboBox2.ValueMember = "PO"
-        '
-        'Label16
-        '
-        Label16.AutoSize = True
-        Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label16.Location = New System.Drawing.Point(24, 103)
-        Label16.Name = "Label16"
-        Label16.Size = New System.Drawing.Size(147, 25)
-        Label16.TabIndex = 23
-        Label16.Text = "Select PO NO :"
         '
         'ComboBox3
         '
@@ -888,16 +1108,6 @@ Partial Class Form1
         Me.ComboBox3.TabIndex = 26
         Me.ComboBox3.ValueMember = "PO"
         '
-        'Label17
-        '
-        Label17.AutoSize = True
-        Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label17.Location = New System.Drawing.Point(15, 100)
-        Label17.Name = "Label17"
-        Label17.Size = New System.Drawing.Size(147, 25)
-        Label17.TabIndex = 25
-        Label17.Text = "Select PO NO :"
-        '
         'ComboBox4
         '
         Me.ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -911,16 +1121,6 @@ Partial Class Form1
         Me.ComboBox4.Size = New System.Drawing.Size(236, 33)
         Me.ComboBox4.TabIndex = 28
         Me.ComboBox4.ValueMember = "PO"
-        '
-        'Label22
-        '
-        Label22.AutoSize = True
-        Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label22.Location = New System.Drawing.Point(12, 98)
-        Label22.Name = "Label22"
-        Label22.Size = New System.Drawing.Size(147, 25)
-        Label22.TabIndex = 27
-        Label22.Text = "Select PO NO :"
         '
         'Panel7
         '
@@ -944,511 +1144,6 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(410, 344)
         Me.Panel7.TabIndex = 122
         '
-        'Label24
-        '
-        Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label24.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label24.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.White
-        Me.Label24.Location = New System.Drawing.Point(0, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(408, 25)
-        Me.Label24.TabIndex = 120
-        Me.Label24.Text = "Machine 5"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel8
-        '
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel8.Controls.Add(Me.Label50)
-        Me.Panel8.Controls.Add(Me.Label25)
-        Me.Panel8.Controls.Add(Label51)
-        Me.Panel8.Controls.Add(Me.ComboBox3)
-        Me.Panel8.Controls.Add(Me.Label52)
-        Me.Panel8.Controls.Add(Label17)
-        Me.Panel8.Controls.Add(Me.Label53)
-        Me.Panel8.Controls.Add(Me.Label20)
-        Me.Panel8.Controls.Add(Me.Label54)
-        Me.Panel8.Controls.Add(Label55)
-        Me.Panel8.Controls.Add(Label13)
-        Me.Panel8.Controls.Add(Label56)
-        Me.Panel8.Controls.Add(Me.Panel4)
-        Me.Panel8.Controls.Add(Label57)
-        Me.Panel8.Location = New System.Drawing.Point(1285, 55)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(440, 356)
-        Me.Panel8.TabIndex = 122
-        '
-        'Label25
-        '
-        Me.Label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label25.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label25.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.White
-        Me.Label25.Location = New System.Drawing.Point(0, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(438, 25)
-        Me.Label25.TabIndex = 120
-        Me.Label25.Text = "Machine 4 "
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel9
-        '
-        Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel9.Controls.Add(Me.Label39)
-        Me.Panel9.Controls.Add(Me.ComboBox2)
-        Me.Panel9.Controls.Add(Label40)
-        Me.Panel9.Controls.Add(Label16)
-        Me.Panel9.Controls.Add(Me.Label41)
-        Me.Panel9.Controls.Add(Me.Label26)
-        Me.Panel9.Controls.Add(Me.Label42)
-        Me.Panel9.Controls.Add(Label12)
-        Me.Panel9.Controls.Add(Me.Label46)
-        Me.Panel9.Controls.Add(Label47)
-        Me.Panel9.Controls.Add(Me.Panel3)
-        Me.Panel9.Controls.Add(Label48)
-        Me.Panel9.Controls.Add(Me.Label19)
-        Me.Panel9.Controls.Add(Label49)
-        Me.Panel9.Location = New System.Drawing.Point(843, 54)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(428, 357)
-        Me.Panel9.TabIndex = 122
-        '
-        'Label26
-        '
-        Me.Label26.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label26.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label26.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(0, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(426, 25)
-        Me.Label26.TabIndex = 120
-        Me.Label26.Text = "Machine 3 "
-        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel10
-        '
-        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel10.Controls.Add(Me.Label31)
-        Me.Panel10.Controls.Add(Me.Label27)
-        Me.Panel10.Controls.Add(Label32)
-        Me.Panel10.Controls.Add(Me.ComboBox1)
-        Me.Panel10.Controls.Add(Me.Label33)
-        Me.Panel10.Controls.Add(Label15)
-        Me.Panel10.Controls.Add(Me.Label34)
-        Me.Panel10.Controls.Add(Me.Panel2)
-        Me.Panel10.Controls.Add(Me.Label35)
-        Me.Panel10.Controls.Add(Label36)
-        Me.Panel10.Controls.Add(Me.Label18)
-        Me.Panel10.Controls.Add(Label37)
-        Me.Panel10.Controls.Add(Label11)
-        Me.Panel10.Controls.Add(Label38)
-        Me.Panel10.Location = New System.Drawing.Point(426, 53)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(411, 353)
-        Me.Panel10.TabIndex = 122
-        '
-        'Label27
-        '
-        Me.Label27.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label27.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label27.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.ForeColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(0, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(409, 25)
-        Me.Label27.TabIndex = 120
-        Me.Label27.Text = "Machine 2 "
-        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel11
-        '
-        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel11.Controls.Add(Me.Label58)
-        Me.Panel11.Controls.Add(Label59)
-        Me.Panel11.Controls.Add(Me.Label45)
-        Me.Panel11.Controls.Add(Me.Label44)
-        Me.Panel11.Controls.Add(Me.Label43)
-        Me.Panel11.Controls.Add(Label30)
-        Me.Panel11.Controls.Add(Label29)
-        Me.Panel11.Controls.Add(Label23)
-        Me.Panel11.Controls.Add(Me.Label28)
-        Me.Panel11.Controls.Add(Me.NameComboBox)
-        Me.Panel11.Controls.Add(Me.Panel1)
-        Me.Panel11.Controls.Add(Label10)
-        Me.Panel11.Controls.Add(NameLabel)
-        Me.Panel11.Controls.Add(Me.DedCountLabel1)
-        Me.Panel11.Location = New System.Drawing.Point(3, 53)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(410, 353)
-        Me.Panel11.TabIndex = 122
-        '
-        'Label28
-        '
-        Me.Label28.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label28.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label28.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.ForeColor = System.Drawing.Color.White
-        Me.Label28.Location = New System.Drawing.Point(0, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(408, 25)
-        Me.Label28.TabIndex = 120
-        Me.Label28.Text = "Machine 1 "
-        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label23
-        '
-        Label23.AutoSize = True
-        Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label23.Location = New System.Drawing.Point(8, 137)
-        Label23.Name = "Label23"
-        Label23.Size = New System.Drawing.Size(141, 25)
-        Label23.TabIndex = 121
-        Label23.Text = "Factory Code :"
-        '
-        'Label29
-        '
-        Label29.AutoSize = True
-        Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label29.Location = New System.Drawing.Point(8, 173)
-        Label29.Name = "Label29"
-        Label29.Size = New System.Drawing.Size(77, 25)
-        Label29.TabIndex = 122
-        Label29.Text = "Article :"
-        '
-        'Label30
-        '
-        Label30.AutoSize = True
-        Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label30.Location = New System.Drawing.Point(8, 243)
-        Label30.Name = "Label30"
-        Label30.Size = New System.Drawing.Size(146, 25)
-        Label30.TabIndex = 123
-        Label30.Text = "Order Quantity:"
-        '
-        'Label43
-        '
-        Me.Label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label43.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "FactoryCode", True))
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(160, 136)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(237, 29)
-        Me.Label43.TabIndex = 124
-        Me.Label43.Text = "Label43"
-        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label44
-        '
-        Me.Label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label44.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "ArtCode", True))
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(160, 173)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(237, 29)
-        Me.Label44.TabIndex = 125
-        Me.Label44.Text = "Label44"
-        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label45
-        '
-        Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label45.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "OrderQty", True))
-        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label45.Location = New System.Drawing.Point(160, 242)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(237, 29)
-        Me.Label45.TabIndex = 126
-        Me.Label45.Text = "Label45"
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label58
-        '
-        Me.Label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label58.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "ArtSize", True))
-        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label58.Location = New System.Drawing.Point(160, 209)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(237, 29)
-        Me.Label58.TabIndex = 128
-        Me.Label58.Text = "Label58"
-        Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label59
-        '
-        Label59.AutoSize = True
-        Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label59.Location = New System.Drawing.Point(8, 209)
-        Label59.Name = "Label59"
-        Label59.Size = New System.Drawing.Size(62, 25)
-        Label59.TabIndex = 127
-        Label59.Text = "Size :"
-        '
-        'Label31
-        '
-        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label31.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "ArtSize", True))
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(153, 210)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(237, 29)
-        Me.Label31.TabIndex = 136
-        Me.Label31.Text = "Label31"
-        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label32
-        '
-        Label32.AutoSize = True
-        Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label32.Location = New System.Drawing.Point(5, 212)
-        Label32.Name = "Label32"
-        Label32.Size = New System.Drawing.Size(62, 25)
-        Label32.TabIndex = 135
-        Label32.Text = "Size :"
-        '
-        'Label33
-        '
-        Me.Label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label33.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "OrderQty", True))
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(153, 243)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(237, 29)
-        Me.Label33.TabIndex = 134
-        Me.Label33.Text = "Label33"
-        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label34
-        '
-        Me.Label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label34.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "ArtCode", True))
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(153, 174)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(237, 29)
-        Me.Label34.TabIndex = 133
-        Me.Label34.Text = "Label34"
-        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label35
-        '
-        Me.Label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label35.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "FactoryCode", True))
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(153, 137)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(237, 29)
-        Me.Label35.TabIndex = 132
-        Me.Label35.Text = "Label35"
-        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label36
-        '
-        Label36.AutoSize = True
-        Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label36.Location = New System.Drawing.Point(1, 244)
-        Label36.Name = "Label36"
-        Label36.Size = New System.Drawing.Size(146, 25)
-        Label36.TabIndex = 131
-        Label36.Text = "Order Quantity:"
-        '
-        'Label37
-        '
-        Label37.AutoSize = True
-        Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label37.Location = New System.Drawing.Point(1, 174)
-        Label37.Name = "Label37"
-        Label37.Size = New System.Drawing.Size(77, 25)
-        Label37.TabIndex = 130
-        Label37.Text = "Article :"
-        '
-        'Label38
-        '
-        Label38.AutoSize = True
-        Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label38.Location = New System.Drawing.Point(1, 138)
-        Label38.Name = "Label38"
-        Label38.Size = New System.Drawing.Size(141, 25)
-        Label38.TabIndex = 129
-        Label38.Text = "Factory Code :"
-        '
-        'Label39
-        '
-        Me.Label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label39.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "ArtSize", True))
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(171, 213)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(237, 29)
-        Me.Label39.TabIndex = 144
-        Me.Label39.Text = "Label39"
-        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label40
-        '
-        Label40.AutoSize = True
-        Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label40.Location = New System.Drawing.Point(19, 213)
-        Label40.Name = "Label40"
-        Label40.Size = New System.Drawing.Size(62, 25)
-        Label40.TabIndex = 143
-        Label40.Text = "Size :"
-        '
-        'Label41
-        '
-        Me.Label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label41.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "OrderQty", True))
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(171, 246)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(237, 29)
-        Me.Label41.TabIndex = 142
-        Me.Label41.Text = "Label41"
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label42
-        '
-        Me.Label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label42.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "ArtCode", True))
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(171, 177)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(237, 29)
-        Me.Label42.TabIndex = 141
-        Me.Label42.Text = "Label42"
-        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label46
-        '
-        Me.Label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label46.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "FactoryCode", True))
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.Location = New System.Drawing.Point(171, 140)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(237, 29)
-        Me.Label46.TabIndex = 140
-        Me.Label46.Text = "Label46"
-        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label47
-        '
-        Label47.AutoSize = True
-        Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label47.Location = New System.Drawing.Point(19, 247)
-        Label47.Name = "Label47"
-        Label47.Size = New System.Drawing.Size(146, 25)
-        Label47.TabIndex = 139
-        Label47.Text = "Order Quantity:"
-        '
-        'Label48
-        '
-        Label48.AutoSize = True
-        Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label48.Location = New System.Drawing.Point(19, 177)
-        Label48.Name = "Label48"
-        Label48.Size = New System.Drawing.Size(77, 25)
-        Label48.TabIndex = 138
-        Label48.Text = "Article :"
-        '
-        'Label49
-        '
-        Label49.AutoSize = True
-        Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label49.Location = New System.Drawing.Point(19, 141)
-        Label49.Name = "Label49"
-        Label49.Size = New System.Drawing.Size(141, 25)
-        Label49.TabIndex = 137
-        Label49.Text = "Factory Code :"
-        '
-        'Label50
-        '
-        Me.Label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label50.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "ArtSize", True))
-        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label50.Location = New System.Drawing.Point(167, 206)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(237, 29)
-        Me.Label50.TabIndex = 152
-        Me.Label50.Text = "Label50"
-        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label51
-        '
-        Label51.AutoSize = True
-        Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label51.Location = New System.Drawing.Point(15, 206)
-        Label51.Name = "Label51"
-        Label51.Size = New System.Drawing.Size(62, 25)
-        Label51.TabIndex = 151
-        Label51.Text = "Size :"
-        '
-        'Label52
-        '
-        Me.Label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label52.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "OrderQty", True))
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label52.Location = New System.Drawing.Point(167, 239)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(237, 29)
-        Me.Label52.TabIndex = 150
-        Me.Label52.Text = "Label52"
-        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label53
-        '
-        Me.Label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label53.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "ArtCode", True))
-        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label53.Location = New System.Drawing.Point(167, 170)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(237, 29)
-        Me.Label53.TabIndex = 149
-        Me.Label53.Text = "Label53"
-        Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label54
-        '
-        Me.Label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label54.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "FactoryCode", True))
-        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label54.Location = New System.Drawing.Point(167, 133)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(237, 29)
-        Me.Label54.TabIndex = 148
-        Me.Label54.Text = "Label54"
-        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label55
-        '
-        Label55.AutoSize = True
-        Label55.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label55.Location = New System.Drawing.Point(15, 240)
-        Label55.Name = "Label55"
-        Label55.Size = New System.Drawing.Size(146, 25)
-        Label55.TabIndex = 147
-        Label55.Text = "Order Quantity:"
-        '
-        'Label56
-        '
-        Label56.AutoSize = True
-        Label56.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label56.Location = New System.Drawing.Point(15, 170)
-        Label56.Name = "Label56"
-        Label56.Size = New System.Drawing.Size(77, 25)
-        Label56.TabIndex = 146
-        Label56.Text = "Article :"
-        '
-        'Label57
-        '
-        Label57.AutoSize = True
-        Label57.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label57.Location = New System.Drawing.Point(15, 134)
-        Label57.Name = "Label57"
-        Label57.Size = New System.Drawing.Size(141, 25)
-        Label57.TabIndex = 145
-        Label57.Text = "Factory Code :"
-        '
         'Label60
         '
         Me.Label60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1461,15 +1156,18 @@ Partial Class Form1
         Me.Label60.Text = "Label60"
         Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label61
+        'Label24
         '
-        Label61.AutoSize = True
-        Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label61.Location = New System.Drawing.Point(7, 208)
-        Label61.Name = "Label61"
-        Label61.Size = New System.Drawing.Size(62, 25)
-        Label61.TabIndex = 159
-        Label61.Text = "Size :"
+        Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label24.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label24.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.White
+        Me.Label24.Location = New System.Drawing.Point(0, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(408, 25)
+        Me.Label24.TabIndex = 120
+        Me.Label24.Text = "Metal Detector  5"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label62
         '
@@ -1507,40 +1205,343 @@ Partial Class Form1
         Me.Label64.Text = "Label64"
         Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label65
+        'Panel8
         '
-        Label65.AutoSize = True
-        Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label65.Location = New System.Drawing.Point(7, 242)
-        Label65.Name = "Label65"
-        Label65.Size = New System.Drawing.Size(146, 25)
-        Label65.TabIndex = 155
-        Label65.Text = "Order Quantity:"
+        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel8.Controls.Add(Me.Label50)
+        Me.Panel8.Controls.Add(Me.Label25)
+        Me.Panel8.Controls.Add(Label51)
+        Me.Panel8.Controls.Add(Me.ComboBox3)
+        Me.Panel8.Controls.Add(Me.Label52)
+        Me.Panel8.Controls.Add(Label17)
+        Me.Panel8.Controls.Add(Me.Label53)
+        Me.Panel8.Controls.Add(Me.Label20)
+        Me.Panel8.Controls.Add(Me.Label54)
+        Me.Panel8.Controls.Add(Label55)
+        Me.Panel8.Controls.Add(Label13)
+        Me.Panel8.Controls.Add(Label56)
+        Me.Panel8.Controls.Add(Me.Panel4)
+        Me.Panel8.Controls.Add(Label57)
+        Me.Panel8.Location = New System.Drawing.Point(1285, 55)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(440, 353)
+        Me.Panel8.TabIndex = 122
         '
-        'Label66
+        'Label50
         '
-        Label66.AutoSize = True
-        Label66.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label66.Location = New System.Drawing.Point(7, 172)
-        Label66.Name = "Label66"
-        Label66.Size = New System.Drawing.Size(77, 25)
-        Label66.TabIndex = 154
-        Label66.Text = "Article :"
+        Me.Label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label50.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "ArtSize", True))
+        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label50.Location = New System.Drawing.Point(167, 206)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(237, 29)
+        Me.Label50.TabIndex = 152
+        Me.Label50.Text = "Label50"
+        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label67
+        'Label25
         '
-        Label67.AutoSize = True
-        Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label67.Location = New System.Drawing.Point(7, 136)
-        Label67.Name = "Label67"
-        Label67.Size = New System.Drawing.Size(141, 25)
-        Label67.TabIndex = 153
-        Label67.Text = "Factory Code :"
+        Me.Label25.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label25.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label25.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(0, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(438, 25)
+        Me.Label25.TabIndex = 120
+        Me.Label25.Text = "Metal Detector  4 "
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label52
+        '
+        Me.Label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label52.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "OrderQty", True))
+        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label52.Location = New System.Drawing.Point(167, 239)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(237, 29)
+        Me.Label52.TabIndex = 150
+        Me.Label52.Text = "Label52"
+        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label53
+        '
+        Me.Label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label53.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "ArtCode", True))
+        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label53.Location = New System.Drawing.Point(167, 170)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(237, 29)
+        Me.Label53.TabIndex = 149
+        Me.Label53.Text = "Label53"
+        Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label54
+        '
+        Me.Label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label54.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "FactoryCode", True))
+        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label54.Location = New System.Drawing.Point(167, 133)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(237, 29)
+        Me.Label54.TabIndex = 148
+        Me.Label54.Text = "Label54"
+        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel9
+        '
+        Me.Panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel9.Controls.Add(Me.Label39)
+        Me.Panel9.Controls.Add(Me.ComboBox2)
+        Me.Panel9.Controls.Add(Label40)
+        Me.Panel9.Controls.Add(Label16)
+        Me.Panel9.Controls.Add(Me.Label41)
+        Me.Panel9.Controls.Add(Me.Label26)
+        Me.Panel9.Controls.Add(Me.Label42)
+        Me.Panel9.Controls.Add(Label12)
+        Me.Panel9.Controls.Add(Me.Label46)
+        Me.Panel9.Controls.Add(Label47)
+        Me.Panel9.Controls.Add(Me.Panel3)
+        Me.Panel9.Controls.Add(Label48)
+        Me.Panel9.Controls.Add(Me.Label19)
+        Me.Panel9.Controls.Add(Label49)
+        Me.Panel9.Location = New System.Drawing.Point(843, 54)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(428, 352)
+        Me.Panel9.TabIndex = 122
+        '
+        'Label39
+        '
+        Me.Label39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label39.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "ArtSize", True))
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(171, 213)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(237, 29)
+        Me.Label39.TabIndex = 144
+        Me.Label39.Text = "Label39"
+        Me.Label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label41
+        '
+        Me.Label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label41.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "OrderQty", True))
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(171, 246)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(237, 29)
+        Me.Label41.TabIndex = 142
+        Me.Label41.Text = "Label41"
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label26
+        '
+        Me.Label26.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label26.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label26.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.White
+        Me.Label26.Location = New System.Drawing.Point(0, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(426, 25)
+        Me.Label26.TabIndex = 120
+        Me.Label26.Text = "Metal Detector  3 "
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label42
+        '
+        Me.Label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label42.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "ArtCode", True))
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(171, 177)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(237, 29)
+        Me.Label42.TabIndex = 141
+        Me.Label42.Text = "Label42"
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label46
+        '
+        Me.Label46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label46.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "FactoryCode", True))
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.Location = New System.Drawing.Point(171, 140)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(237, 29)
+        Me.Label46.TabIndex = 140
+        Me.Label46.Text = "Label46"
+        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel10
+        '
+        Me.Panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel10.Controls.Add(Me.Label31)
+        Me.Panel10.Controls.Add(Me.Label27)
+        Me.Panel10.Controls.Add(Label32)
+        Me.Panel10.Controls.Add(Me.ComboBox1)
+        Me.Panel10.Controls.Add(Me.Label33)
+        Me.Panel10.Controls.Add(Label15)
+        Me.Panel10.Controls.Add(Me.Label34)
+        Me.Panel10.Controls.Add(Me.Panel2)
+        Me.Panel10.Controls.Add(Me.Label35)
+        Me.Panel10.Controls.Add(Label36)
+        Me.Panel10.Controls.Add(Me.Label18)
+        Me.Panel10.Controls.Add(Label37)
+        Me.Panel10.Controls.Add(Label11)
+        Me.Panel10.Controls.Add(Label38)
+        Me.Panel10.Location = New System.Drawing.Point(426, 53)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(411, 353)
+        Me.Panel10.TabIndex = 122
+        '
+        'Label31
+        '
+        Me.Label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label31.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "ArtSize", True))
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(153, 210)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(237, 29)
+        Me.Label31.TabIndex = 136
+        Me.Label31.Text = "Label31"
+        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label27
+        '
+        Me.Label27.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label27.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label27.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.White
+        Me.Label27.Location = New System.Drawing.Point(0, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(409, 25)
+        Me.Label27.TabIndex = 120
+        Me.Label27.Text = "Metal Detector  2 "
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label33
+        '
+        Me.Label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label33.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "OrderQty", True))
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(153, 243)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(237, 29)
+        Me.Label33.TabIndex = 134
+        Me.Label33.Text = "Label33"
+        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label34
+        '
+        Me.Label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label34.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "ArtCode", True))
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(153, 174)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(237, 29)
+        Me.Label34.TabIndex = 133
+        Me.Label34.Text = "Label34"
+        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label35
+        '
+        Me.Label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label35.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "FactoryCode", True))
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(153, 137)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(237, 29)
+        Me.Label35.TabIndex = 132
+        Me.Label35.Text = "Label35"
+        Me.Label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel11
+        '
+        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel11.Controls.Add(Me.Label58)
+        Me.Panel11.Controls.Add(Label59)
+        Me.Panel11.Controls.Add(Me.Label45)
+        Me.Panel11.Controls.Add(Me.Label44)
+        Me.Panel11.Controls.Add(Me.Label43)
+        Me.Panel11.Controls.Add(Label30)
+        Me.Panel11.Controls.Add(Label29)
+        Me.Panel11.Controls.Add(Label23)
+        Me.Panel11.Controls.Add(Me.Label28)
+        Me.Panel11.Controls.Add(Me.NameComboBox)
+        Me.Panel11.Controls.Add(Me.Panel1)
+        Me.Panel11.Controls.Add(Label10)
+        Me.Panel11.Controls.Add(NameLabel)
+        Me.Panel11.Controls.Add(Me.DedCountLabel1)
+        Me.Panel11.Location = New System.Drawing.Point(3, 53)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(410, 353)
+        Me.Panel11.TabIndex = 122
+        '
+        'Label58
+        '
+        Me.Label58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label58.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "ArtSize", True))
+        Me.Label58.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.Location = New System.Drawing.Point(160, 209)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(237, 29)
+        Me.Label58.TabIndex = 128
+        Me.Label58.Text = "Label58"
+        Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label45
+        '
+        Me.Label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label45.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "OrderQty", True))
+        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(160, 242)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(237, 29)
+        Me.Label45.TabIndex = 126
+        Me.Label45.Text = "Label45"
+        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label44
+        '
+        Me.Label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label44.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "ArtCode", True))
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(160, 173)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(237, 29)
+        Me.Label44.TabIndex = 125
+        Me.Label44.Text = "Label44"
+        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label43
+        '
+        Me.Label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label43.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONOBindingSource, "FactoryCode", True))
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(160, 136)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(237, 29)
+        Me.Label43.TabIndex = 124
+        Me.Label43.Text = "Label43"
+        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label28
+        '
+        Me.Label28.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label28.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label28.Font = New System.Drawing.Font("Georgia", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.White
+        Me.Label28.Location = New System.Drawing.Point(0, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(408, 25)
+        Me.Label28.TabIndex = 120
+        Me.Label28.Text = "Metal Detector 1"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label68
         '
         Me.Label68.AutoSize = True
         Me.Label68.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "PO", True))
+        Me.Label68.ForeColor = System.Drawing.Color.White
         Me.Label68.Location = New System.Drawing.Point(523, 429)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(45, 13)
@@ -1551,6 +1552,7 @@ Partial Class Form1
         '
         Me.Label69.AutoSize = True
         Me.Label69.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "POM", True))
+        Me.Label69.ForeColor = System.Drawing.Color.White
         Me.Label69.Location = New System.Drawing.Point(574, 430)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(45, 13)
@@ -1561,6 +1563,7 @@ Partial Class Form1
         '
         Me.Label70.AutoSize = True
         Me.Label70.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "POD", True))
+        Me.Label70.ForeColor = System.Drawing.Color.White
         Me.Label70.Location = New System.Drawing.Point(625, 429)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(45, 13)
@@ -1571,6 +1574,7 @@ Partial Class Form1
         '
         Me.Label71.AutoSize = True
         Me.Label71.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "PO", True))
+        Me.Label71.ForeColor = System.Drawing.Color.White
         Me.Label71.Location = New System.Drawing.Point(926, 442)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(45, 13)
@@ -1581,6 +1585,7 @@ Partial Class Form1
         '
         Me.Label72.AutoSize = True
         Me.Label72.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "POM", True))
+        Me.Label72.ForeColor = System.Drawing.Color.White
         Me.Label72.Location = New System.Drawing.Point(983, 445)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(45, 13)
@@ -1591,6 +1596,7 @@ Partial Class Form1
         '
         Me.Label73.AutoSize = True
         Me.Label73.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO11BindingSource, "POD", True))
+        Me.Label73.ForeColor = System.Drawing.Color.White
         Me.Label73.Location = New System.Drawing.Point(1055, 442)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(45, 13)
@@ -1601,6 +1607,7 @@ Partial Class Form1
         '
         Me.Label74.AutoSize = True
         Me.Label74.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "PO", True))
+        Me.Label74.ForeColor = System.Drawing.Color.White
         Me.Label74.Location = New System.Drawing.Point(1308, 426)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(45, 13)
@@ -1611,6 +1618,7 @@ Partial Class Form1
         '
         Me.Label75.AutoSize = True
         Me.Label75.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "POM", True))
+        Me.Label75.ForeColor = System.Drawing.Color.White
         Me.Label75.Location = New System.Drawing.Point(1367, 429)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(45, 13)
@@ -1621,6 +1629,7 @@ Partial Class Form1
         '
         Me.Label76.AutoSize = True
         Me.Label76.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO12BindingSource, "POD", True))
+        Me.Label76.ForeColor = System.Drawing.Color.White
         Me.Label76.Location = New System.Drawing.Point(1424, 426)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(45, 13)
@@ -1631,6 +1640,7 @@ Partial Class Form1
         '
         Me.Label77.AutoSize = True
         Me.Label77.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO13BindingSource, "PO", True))
+        Me.Label77.ForeColor = System.Drawing.Color.White
         Me.Label77.Location = New System.Drawing.Point(43, 778)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(45, 13)
@@ -1641,6 +1651,7 @@ Partial Class Form1
         '
         Me.Label78.AutoSize = True
         Me.Label78.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO13BindingSource, "POM", True))
+        Me.Label78.ForeColor = System.Drawing.Color.White
         Me.Label78.Location = New System.Drawing.Point(118, 778)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(45, 13)
@@ -1651,6 +1662,7 @@ Partial Class Form1
         '
         Me.Label79.AutoSize = True
         Me.Label79.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO13BindingSource, "POD", True))
+        Me.Label79.ForeColor = System.Drawing.Color.White
         Me.Label79.Location = New System.Drawing.Point(210, 778)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(45, 13)

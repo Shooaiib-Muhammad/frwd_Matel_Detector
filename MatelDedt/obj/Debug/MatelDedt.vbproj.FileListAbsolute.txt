@@ -16,7 +16,6 @@ C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\bin\Debug\Ma
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\bin\Debug\MatelDedt.exe
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\bin\Debug\MatelDedt.pdb
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\bin\Debug\MatelDedt.xml
-C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.vbprojAssemblyReference.cache
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.Form1.resources
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.Resources.resources
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.vbproj.GenerateResource.cache
