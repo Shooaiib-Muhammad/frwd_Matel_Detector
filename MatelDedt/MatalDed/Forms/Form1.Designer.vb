@@ -584,7 +584,7 @@ Partial Class Form1
         Me.Button1.Enabled = False
         Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(437, 560)
+        Me.Button1.Location = New System.Drawing.Point(426, 526)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(400, 70)
         Me.Button1.TabIndex = 16
@@ -596,7 +596,7 @@ Partial Class Form1
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(437, 476)
+        Me.Button2.Location = New System.Drawing.Point(426, 442)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(400, 70)
         Me.Button2.TabIndex = 17
