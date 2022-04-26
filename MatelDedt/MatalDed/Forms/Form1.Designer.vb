@@ -92,6 +92,8 @@ Partial Class Form1
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DedCountLabel1 = New System.Windows.Forms.Label()
+        Me.POWiseCOunter1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Ded11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Ded1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Ded2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -189,7 +191,6 @@ Partial Class Form1
         Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataTable1TableAdapter = New MatelDedt.DSmatalDedTableAdapters.DataTable1TableAdapter()
         Me.Label81 = New System.Windows.Forms.Label()
-        Me.Ded11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Ded11TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Ded11TableAdapter()
         Me.Ded21BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Ded21TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Ded21TableAdapter()
@@ -199,6 +200,15 @@ Partial Class Form1
         Me.Ded41TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Ded41TableAdapter()
         Me.Ded51BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Ded51TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Ded51TableAdapter()
+        Me.POWiseCOunter1TableAdapter = New MatelDedt.DSmatalDedTableAdapters.POWiseCOunter1TableAdapter()
+        Me.POWiseCOunter2BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.POWiseCOunter2TableAdapter = New MatelDedt.DSmatalDedTableAdapters.POWiseCOunter2TableAdapter()
+        Me.POWiseCOunter3BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.POWiseCOunter3TableAdapter = New MatelDedt.DSmatalDedTableAdapters.POWiseCOunter3TableAdapter()
+        Me.POWiseCOunter4BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.POWiseCOunter4TableAdapter = New MatelDedt.DSmatalDedTableAdapters.POWiseCOunter4TableAdapter()
+        Me.POWiseCOunter5BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.POWiseCOunter5TableAdapter = New MatelDedt.DSmatalDedTableAdapters.POWiseCOunter5TableAdapter()
         NameLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label10 = New System.Windows.Forms.Label()
@@ -246,6 +256,8 @@ Partial Class Form1
         CType(Me.Tbl_Matel_dedBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.View_Ded_CounterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.POWiseCOunter1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ded11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded3BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -266,11 +278,14 @@ Partial Class Form1
         Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Ded11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded21BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded31BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded41BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded51BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.POWiseCOunter2BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.POWiseCOunter3BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.POWiseCOunter4BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.POWiseCOunter5BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel
@@ -786,7 +801,7 @@ Partial Class Form1
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(437, 595)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(392, 61)
+        Me.Button3.Size = New System.Drawing.Size(400, 61)
         Me.Button3.TabIndex = 20
         Me.Button3.Text = "EXIT"
         Me.Button3.UseVisualStyleBackColor = False
@@ -898,7 +913,7 @@ Partial Class Form1
         'DedCountLabel1
         '
         Me.DedCountLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DedCountLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded11BindingSource, "DedCount", True))
+        Me.DedCountLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.POWiseCOunter1BindingSource, "DedCount", True))
         Me.DedCountLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DedCountLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DedCountLabel1.Location = New System.Drawing.Point(160, 286)
@@ -908,6 +923,16 @@ Partial Class Form1
         Me.DedCountLabel1.Text = "Label18"
         Me.DedCountLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'POWiseCOunter1BindingSource
+        '
+        Me.POWiseCOunter1BindingSource.DataMember = "POWiseCOunter1"
+        Me.POWiseCOunter1BindingSource.DataSource = Me.DSmatalDed
+        '
+        'Ded11BindingSource
+        '
+        Me.Ded11BindingSource.DataSource = Me.DSmatalDed
+        Me.Ded11BindingSource.Position = 0
+        '
         'Ded1BindingSource
         '
         Me.Ded1BindingSource.DataMember = "Ded1"
@@ -916,7 +941,7 @@ Partial Class Form1
         'Label18
         '
         Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded2BindingSource, "DedCount", True))
+        Me.Label18.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.POWiseCOunter2BindingSource, "DedCount", True))
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label18.Location = New System.Drawing.Point(153, 286)
@@ -934,7 +959,7 @@ Partial Class Form1
         'Label19
         '
         Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded3BindingSource, "DedCount", True))
+        Me.Label19.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.POWiseCOunter3BindingSource, "DedCount", True))
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label19.Location = New System.Drawing.Point(151, 286)
@@ -952,7 +977,7 @@ Partial Class Form1
         'Label20
         '
         Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label20.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded4BindingSource, "DedCount", True))
+        Me.Label20.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.POWiseCOunter4BindingSource, "DedCount", True))
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label20.Location = New System.Drawing.Point(167, 286)
@@ -970,7 +995,7 @@ Partial Class Form1
         'Label21
         '
         Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label21.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded5BindingSource, "DedCount", True))
+        Me.Label21.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.POWiseCOunter5BindingSource, "DedCount", True))
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label21.Location = New System.Drawing.Point(160, 275)
@@ -1996,11 +2021,6 @@ Partial Class Form1
         Me.Label81.TabIndex = 138
         Me.Label81.Text = "Label81"
         '
-        'Ded11BindingSource
-        '
-        Me.Ded11BindingSource.DataSource = Me.DSmatalDed
-        Me.Ded11BindingSource.Position = 0
-        '
         'Ded11TableAdapter
         '
         Me.Ded11TableAdapter.ClearBeforeFill = True
@@ -2040,6 +2060,46 @@ Partial Class Form1
         'Ded51TableAdapter
         '
         Me.Ded51TableAdapter.ClearBeforeFill = True
+        '
+        'POWiseCOunter1TableAdapter
+        '
+        Me.POWiseCOunter1TableAdapter.ClearBeforeFill = True
+        '
+        'POWiseCOunter2BindingSource
+        '
+        Me.POWiseCOunter2BindingSource.DataMember = "POWiseCOunter2"
+        Me.POWiseCOunter2BindingSource.DataSource = Me.DSmatalDed
+        '
+        'POWiseCOunter2TableAdapter
+        '
+        Me.POWiseCOunter2TableAdapter.ClearBeforeFill = True
+        '
+        'POWiseCOunter3BindingSource
+        '
+        Me.POWiseCOunter3BindingSource.DataMember = "POWiseCOunter3"
+        Me.POWiseCOunter3BindingSource.DataSource = Me.DSmatalDed
+        '
+        'POWiseCOunter3TableAdapter
+        '
+        Me.POWiseCOunter3TableAdapter.ClearBeforeFill = True
+        '
+        'POWiseCOunter4BindingSource
+        '
+        Me.POWiseCOunter4BindingSource.DataMember = "POWiseCOunter4"
+        Me.POWiseCOunter4BindingSource.DataSource = Me.DSmatalDed
+        '
+        'POWiseCOunter4TableAdapter
+        '
+        Me.POWiseCOunter4TableAdapter.ClearBeforeFill = True
+        '
+        'POWiseCOunter5BindingSource
+        '
+        Me.POWiseCOunter5BindingSource.DataMember = "POWiseCOunter5"
+        Me.POWiseCOunter5BindingSource.DataSource = Me.DSmatalDed
+        '
+        'POWiseCOunter5TableAdapter
+        '
+        Me.POWiseCOunter5TableAdapter.ClearBeforeFill = True
         '
         'Form1
         '
@@ -2087,6 +2147,8 @@ Partial Class Form1
         CType(Me.Tbl_Matel_dedBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_Inv_Tran_DateBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.View_Ded_CounterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.POWiseCOunter1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ded11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded3BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2117,11 +2179,14 @@ Partial Class Form1
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Ded11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded21BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded31BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded41BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded51BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.POWiseCOunter2BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.POWiseCOunter3BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.POWiseCOunter4BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.POWiseCOunter5BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2283,4 +2348,14 @@ Partial Class Form1
     Friend WithEvents Ded41TableAdapter As DSmatalDedTableAdapters.Ded41TableAdapter
     Friend WithEvents Ded51BindingSource As BindingSource
     Friend WithEvents Ded51TableAdapter As DSmatalDedTableAdapters.Ded51TableAdapter
+    Friend WithEvents POWiseCOunter1BindingSource As BindingSource
+    Friend WithEvents POWiseCOunter1TableAdapter As DSmatalDedTableAdapters.POWiseCOunter1TableAdapter
+    Friend WithEvents POWiseCOunter2BindingSource As BindingSource
+    Friend WithEvents POWiseCOunter2TableAdapter As DSmatalDedTableAdapters.POWiseCOunter2TableAdapter
+    Friend WithEvents POWiseCOunter3BindingSource As BindingSource
+    Friend WithEvents POWiseCOunter3TableAdapter As DSmatalDedTableAdapters.POWiseCOunter3TableAdapter
+    Friend WithEvents POWiseCOunter4BindingSource As BindingSource
+    Friend WithEvents POWiseCOunter4TableAdapter As DSmatalDedTableAdapters.POWiseCOunter4TableAdapter
+    Friend WithEvents POWiseCOunter5BindingSource As BindingSource
+    Friend WithEvents POWiseCOunter5TableAdapter As DSmatalDedTableAdapters.POWiseCOunter5TableAdapter
 End Class

@@ -42,3 +42,4 @@ C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\Ma
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.exe
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.xml
 C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.pdb
+C:\Users\ITS-4\Desktop\Github working\frwd_Matel_Detector\MatelDedt\obj\Debug\MatelDedt.vbprojAssemblyReference.cache
