@@ -639,12 +639,12 @@ LastLine:
         dayid = Label81.Text
 
         Try
-
+            Annnumouys1TableAdapter.Fill(Me.DSmatalDed.Annnumouys1, Val(Label1.Text))
             Annnumouys11TableAdapter.Fill(Me.DSmatalDed.Annnumouys11, Val(Label1.Text))
             Annnumouys12TableAdapter.Fill(Me.DSmatalDed.Annnumouys12, Val(Label1.Text))
             Annnumouys13TableAdapter.Fill(Me.DSmatalDed.Annnumouys13, Val(Label1.Text))
             Annnumouys14TableAdapter.Fill(Me.DSmatalDed.Annnumouys14, Val(Label1.Text))
-            Annnumouys1TableAdapter.Fill(Me.DSmatalDed.Annnumouys1, Val(Label1.Text))
+
 
         Catch ex As Exception
 
