@@ -99,78 +99,115 @@ LastLine:
                                         'Else
                                         If Incoming = "1" & vbCr Then
                                             Machinename = "1"
-                                            If RadioButton1.Checked = True Then
-
-                                                Try
-                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-
-
-                                                Catch ex As Exception
-                                                End Try
-
+                                            If RadioButton1.Checked = True Then ''Active btn End line 1
+                                                insertion(Val(Label105.Text), Val(Label106.Text), Val(Label107.Text), Machinename)
+                                            ElseIf RadioButton2.Checked = True Then
+                                                insertion(Nothing, Nothing, Nothing, Machinename)
                                             End If
-
-
                                         ElseIf Incoming = "2" & vbCr Then
-
                                             Machinename = "2"
-                                            If RadioButton4.Checked = True Then
-
-                                                Try
-                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename, 1)
-
-
-                                                Catch ex As Exception
-                                                End Try
-
+                                            If RadioButton4.Checked = True Then ''Active btn End line 2
+                                                insertion(Val(Label108.Text), Val(Label109.Text), Val(Label110.Text), Machinename)
+                                            ElseIf RadioButton3.Checked = True Then
+                                                insertion(Nothing, Nothing, Nothing, Machinename)
                                             End If
                                         ElseIf Incoming = "3" & vbCr Then
                                             Machinename = "3"
-                                            If RadioButton1.Checked = True Then
-                                                Dim dayid As Int64
-                                                dayid = Label81.Text
-                                                Try
-                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                                            If RadioButton6.Checked = True Then ''Active btn End line 3
 
+                                                insertion(Val(Label111.Text), Val(Label112.Text), Val(Label113.Text), Machinename)
+                                            ElseIf RadioButton5.Checked = True Then
+                                                insertion(Nothing, Nothing, Nothing, Machinename)
 
-                                                Catch ex As Exception
-                                                End Try
-                                                loadData()
                                             End If
                                         ElseIf Incoming = "4" & vbCr Then
                                             Machinename = "4"
-                                            If RadioButton1.Checked = True Then
-                                                Dim dayid As Int64
-                                                dayid = Label81.Text
-                                                Try
-                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                    Try
-                                                        Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                                                    Catch ex As Exception
-
-                                                    End Try
-
-                                                Catch ex As Exception
-                                                End Try
-
+                                            If RadioButton8.Checked = True Then ''Active btn End line 4
+                                                insertion(Val(Label114.Text), Val(Label115.Text), Val(Label116.Text), Machinename)
+                                            ElseIf RadioButton7.Checked = True Then
+                                                insertion(Nothing, Nothing, Nothing, Machinename)
                                             End If
                                         ElseIf Incoming = "5" & vbCr Then
                                             Machinename = "5"
-                                            If RadioButton1.Checked = True Then
-                                                Dim dayid As Int64
-                                                dayid = Label81.Text
-                                                Try
-                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                    Try
-                                                        Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                                                    Catch ex As Exception
-
-                                                    End Try
-
-                                                Catch ex As Exception
-                                                End Try
-
+                                            If RadioButton10.Checked = True Then ''Active btn End line 5
+                                                insertion(Val(Label117.Text), Val(Label118.Text), Val(Label119.Text), Machinename)
+                                            ElseIf RadioButton9.Checked = True Then
+                                                insertion(Nothing, Nothing, Nothing, Machinename)
                                             End If
+                                            'If Incoming = "1" & vbCr Then
+                                            '    Machinename = "1"
+                                            '    If RadioButton1.Checked = True Then
+
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+
+                                            '    End If
+
+
+                                            'ElseIf Incoming = "2" & vbCr Then
+
+                                            '    Machinename = "2"
+                                            '    If RadioButton4.Checked = True Then
+
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename, 1)
+
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+
+                                            '    End If
+                                            'ElseIf Incoming = "3" & vbCr Then
+                                            '    Machinename = "3"
+                                            '    If RadioButton1.Checked = True Then
+                                            '        Dim dayid As Int64
+                                            '        dayid = Label81.Text
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+                                            '        loadData()
+                                            '    End If
+                                            'ElseIf Incoming = "4" & vbCr Then
+                                            '    Machinename = "4"
+                                            '    If RadioButton1.Checked = True Then
+                                            '        Dim dayid As Int64
+                                            '        dayid = Label81.Text
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                                            '            Try
+                                            '                Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                                            '            Catch ex As Exception
+
+                                            '            End Try
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+
+                                            '    End If
+                                            'ElseIf Incoming = "5" & vbCr Then
+                                            '    Machinename = "5"
+                                            '    If RadioButton1.Checked = True Then
+                                            '        Dim dayid As Int64
+                                            '        dayid = Label81.Text
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                                            '            Try
+                                            '                Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                                            '            Catch ex As Exception
+
+                                            '            End Try
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+
+                                            '    End If
                                             'ElseIf Incoming = "machine 1" & vbCr Then
 
                                             '    Machinename = "Metal Ded 2"
@@ -261,7 +298,7 @@ LastLine:
                             loadData()
                         End Sub)
 
-    Private Sub insertion PO As Int32, POM As Int32, POD As Int32, MachineName As String)
+    Private Sub insertion(PO As Int32, POM As Int32, POD As Int32, MachineName As String)
         Dim dayid As Int64
         dayid = Label81.Text
         Try
@@ -285,40 +322,40 @@ LastLine:
             End Try
             If Incoming = "1" & vbCr Then
                 Machinename = "1"
-                If RadioButton1.Checked = True Then
+                If RadioButton1.Checked = True Then ''Active btn End line 1
                     insertion(Val(Label105.Text), Val(Label106.Text), Val(Label107.Text), Machinename)
-                ElseIf RadioButton1.Checked = True Then
-                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+                ElseIf RadioButton2.Checked = True Then
+                    insertion(Nothing, Nothing, Nothing, Machinename)
                 End If
             ElseIf Incoming = "2" & vbCr Then
                 Machinename = "2"
-                If RadioButton4.Checked = True Then
+                If RadioButton4.Checked = True Then ''Active btn End line 2
                     insertion(Val(Label108.Text), Val(Label109.Text), Val(Label110.Text), Machinename)
-                ElseIf RadioButton1.Checked = True Then
-                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+                ElseIf RadioButton3.Checked = True Then
+                    insertion(Nothing, Nothing, Nothing, Machinename)
                 End If
             ElseIf Incoming = "3" & vbCr Then
                 Machinename = "3"
-                If RadioButton6.Checked = True Then
+                If RadioButton6.Checked = True Then ''Active btn End line 3
 
                     insertion(Val(Label111.Text), Val(Label112.Text), Val(Label113.Text), Machinename)
-                ElseIf RadioButton1.Checked = True Then
-                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+                ElseIf RadioButton5.Checked = True Then
+                    insertion(Nothing, Nothing, Nothing, Machinename)
 
                 End If
             ElseIf Incoming = "4" & vbCr Then
                 Machinename = "4"
-                If RadioButton8.Checked = True Then
+                If RadioButton8.Checked = True Then ''Active btn End line 4
                     insertion(Val(Label114.Text), Val(Label115.Text), Val(Label116.Text), Machinename)
-                ElseIf RadioButton1.Checked = True Then
-                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+                ElseIf RadioButton7.Checked = True Then
+                    insertion(Nothing, Nothing, Nothing, Machinename)
                 End If
             ElseIf Incoming = "5" & vbCr Then
                 Machinename = "5"
-                If RadioButton10.Checked = True Then
+                If RadioButton10.Checked = True Then ''Active btn End line 5
                     insertion(Val(Label117.Text), Val(Label118.Text), Val(Label119.Text), Machinename)
-                ElseIf RadioButton1.Checked = True Then
-                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+                ElseIf RadioButton9.Checked = True Then
+                    insertion(Nothing, Nothing, Nothing, Machinename)
                 End If
                 'ElseIf Incoming = "6" & vbCr Then
                 '    Machinename = "6"
@@ -601,7 +638,17 @@ LastLine:
         Dim dayid As Int64
         dayid = Label81.Text
 
+        Try
 
+            Annnumouys11TableAdapter.Fill(Me.DSmatalDed.Annnumouys11, Val(Label1.Text))
+            Annnumouys12TableAdapter.Fill(Me.DSmatalDed.Annnumouys12, Val(Label1.Text))
+            Annnumouys13TableAdapter.Fill(Me.DSmatalDed.Annnumouys13, Val(Label1.Text))
+            Annnumouys14TableAdapter.Fill(Me.DSmatalDed.Annnumouys14, Val(Label1.Text))
+            Annnumouys1TableAdapter.Fill(Me.DSmatalDed.Annnumouys1, Val(Label1.Text))
+
+        Catch ex As Exception
+
+        End Try
 
         'Try
         '    'Me.View_Ded_CounterTableAdapter.Fill(Me.DSmatalDed.view_Ded_Counter, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
@@ -758,6 +805,14 @@ LastLine:
     Private Sub Label82_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+
+
+
+
+
+
+
 
 
 End Class
