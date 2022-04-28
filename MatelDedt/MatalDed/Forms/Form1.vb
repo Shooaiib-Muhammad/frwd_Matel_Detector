@@ -95,67 +95,96 @@ LastLine:
                                         '        End Try
 
                                         '    End If
+
                                         'Else
                                         If Incoming = "1" & vbCr Then
-                                                Machinename = "1"
-                                                If RadioButton1.Checked = True Then
-
-                                                    Try
-                                                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-
-                                                        loadData()
-                                                    Catch ex As Exception
-                                                    End Try
-
-                                                End If
-                                            ElseIf Incoming = "2" & vbCr Then
-                                                Machinename = "2"
-                                                If RadioButton1.Checked = True Then
-
-                                                    Try
-                                                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                        loadData()
-
-                                                    Catch ex As Exception
-                                                    End Try
-
-                                                End If
-                                            ElseIf Incoming = "3" & vbCr Then
-                                                Machinename = "3"
-                                                If RadioButton1.Checked = True Then
-
-                                                    Try
-                                                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                        loadData()
-
-                                                    Catch ex As Exception
-                                                    End Try
-
-                                                End If
-                                            ElseIf Incoming = "4" & vbCr Then
-                                                Machinename = "4"
-                                                If RadioButton1.Checked = True Then
-
-                                                    Try
-                                                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                        loadData()
-
-                                                    Catch ex As Exception
-                                                    End Try
-
-                                                End If
-                                            ElseIf Incoming = "5" & vbCr Then
-                                                Machinename = "5"
+                                            Machinename = "1"
                                             If RadioButton1.Checked = True Then
 
                                                 Try
                                                     Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                                                    loadData()
+
 
                                                 Catch ex As Exception
                                                 End Try
 
                                             End If
+
+
+                                        ElseIf Incoming = "2" & vbCr Then
+
+                                            Machinename = "2"
+                                            If RadioButton4.Checked = True Then
+
+                                                Try
+                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename, 1)
+
+
+                                                Catch ex As Exception
+                                                End Try
+
+                                            End If
+                                        ElseIf Incoming = "3" & vbCr Then
+                                            Machinename = "3"
+                                            If RadioButton1.Checked = True Then
+                                                Dim dayid As Int64
+                                                dayid = Label81.Text
+                                                Try
+                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+
+
+                                                Catch ex As Exception
+                                                End Try
+                                                loadData()
+                                            End If
+                                        ElseIf Incoming = "4" & vbCr Then
+                                            Machinename = "4"
+                                            If RadioButton1.Checked = True Then
+                                                Dim dayid As Int64
+                                                dayid = Label81.Text
+                                                Try
+                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                                                    Try
+                                                        Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                                                    Catch ex As Exception
+
+                                                    End Try
+
+                                                Catch ex As Exception
+                                                End Try
+
+                                            End If
+                                        ElseIf Incoming = "5" & vbCr Then
+                                            Machinename = "5"
+                                            If RadioButton1.Checked = True Then
+                                                Dim dayid As Int64
+                                                dayid = Label81.Text
+                                                Try
+                                                    Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                                                    Try
+                                                        Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                                                    Catch ex As Exception
+
+                                                    End Try
+
+                                                Catch ex As Exception
+                                                End Try
+
+                                            End If
+                                            'ElseIf Incoming = "machine 1" & vbCr Then
+
+                                            '    Machinename = "Metal Ded 2"
+                                            '    If RadioButton4.Checked = True Then
+
+                                            '        Try
+                                            '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename, 0)
+                                            '            loadData()
+
+                                            '        Catch ex As Exception
+                                            '        End Try
+
+                                            '    End If
+
                                             'ElseIf Incoming = "machine 2" & vbCr Then
 
                                             '    Machinename = "Metal Ded 2"
@@ -232,6 +261,16 @@ LastLine:
                             loadData()
                         End Sub)
 
+    Private Sub insertion PO As Int32, POM As Int32, POD As Int32, MachineName As String)
+        Dim dayid As Int64
+        dayid = Label81.Text
+        Try
+            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, dayid, PO, POM, POD, MachineName, 1)
+            loadData()
+
+        Catch ex As Exception
+        End Try
+    End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Timer1.Stop()
 
@@ -247,111 +286,74 @@ LastLine:
             If Incoming = "1" & vbCr Then
                 Machinename = "1"
                 If RadioButton1.Checked = True Then
-
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 0)
-
-
-                    Catch ex As Exception
-                    End Try
-
+                    insertion(Val(Label105.Text), Val(Label106.Text), Val(Label107.Text), Machinename)
+                ElseIf RadioButton1.Checked = True Then
+                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
                 End If
-
-
             ElseIf Incoming = "2" & vbCr Then
-
                 Machinename = "2"
                 If RadioButton4.Checked = True Then
-
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label68.Text), Val(Label69.Text), Val(Label70.Text), Machinename, 0)
-
-
-                    Catch ex As Exception
-                    End Try
-
+                    insertion(Val(Label108.Text), Val(Label109.Text), Val(Label110.Text), Machinename)
+                ElseIf RadioButton1.Checked = True Then
+                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
                 End If
             ElseIf Incoming = "3" & vbCr Then
                 Machinename = "3"
-                If RadioButton1.Checked = True Then
-                    Dim dayid As Int64
-                    dayid = Label81.Text
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                       
+                If RadioButton6.Checked = True Then
 
-                    Catch ex As Exception
-                    End Try
-                    loadData()
+                    insertion(Val(Label111.Text), Val(Label112.Text), Val(Label113.Text), Machinename)
+                ElseIf RadioButton1.Checked = True Then
+                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
+
                 End If
             ElseIf Incoming = "4" & vbCr Then
                 Machinename = "4"
-                If RadioButton1.Checked = True Then
-                    Dim dayid As Int64
-                    dayid = Label81.Text
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                        Try
-                            Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                        Catch ex As Exception
-
-                        End Try
-
-                    Catch ex As Exception
-                    End Try
-
+                If RadioButton8.Checked = True Then
+                    insertion(Val(Label114.Text), Val(Label115.Text), Val(Label116.Text), Machinename)
+                ElseIf RadioButton1.Checked = True Then
+                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
                 End If
             ElseIf Incoming = "5" & vbCr Then
                 Machinename = "5"
-                If RadioButton1.Checked = True Then
-                    Dim dayid As Int64
-                    dayid = Label81.Text
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                        Try
-                            Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                        Catch ex As Exception
-
-                        End Try
-
-                    Catch ex As Exception
-                    End Try
-
+                If RadioButton10.Checked = True Then
+                    insertion(Val(Label117.Text), Val(Label118.Text), Val(Label119.Text), Machinename)
+                ElseIf RadioButton1.Checked = True Then
+                    insertion(Label1.Text, Nothing, Nothing, Nothing, Machinename)
                 End If
-            ElseIf Incoming = "6" & vbCr Then
-                Machinename = "6"
-                If RadioButton1.Checked = True Then
-                    Dim dayid As Int64
-                    dayid = Label81.Text
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                        Try
-                            Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                        Catch ex As Exception
+                'ElseIf Incoming = "6" & vbCr Then
+                '    Machinename = "6"
+                '    If RadioButton1.Checked = True Then
+                '        Dim dayid As Int64
+                '        dayid = Label81.Text
+                '        Try
+                '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                '            Try
+                '                Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                '            Catch ex As Exception
 
-                        End Try
+                '            End Try
 
-                    Catch ex As Exception
-                    End Try
+                '        Catch ex As Exception
+                '        End Try
 
-                End If
-            ElseIf Incoming = "7" & vbCr Then
-                Machinename = "7"
-                If RadioButton1.Checked = True Then
-                    Dim dayid As Int64
-                    dayid = Label81.Text
-                    Try
-                        Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
-                        Try
-                            Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
-                        Catch ex As Exception
+                '    End If
+                'ElseIf Incoming = "7" & vbCr Then
+                '    Machinename = "7"
+                '    If RadioButton1.Checked = True Then
+                '        Dim dayid As Int64
+                '        dayid = Label81.Text
+                '        Try
+                '            Tbl_Matel_dedTableAdapter.Insert(1, 1, Nothing, Nothing, Nothing, Label1.Text, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text), Machinename, 1)
+                '            Try
+                '                Me.DataTable1TableAdapter.Fill(Me.DSmatalDed.DataTable1, dayid)
+                '            Catch ex As Exception
 
-                        End Try
+                '            End Try
 
-                    Catch ex As Exception
-                    End Try
+                '        Catch ex As Exception
+                '        End Try
 
-                End If
+                '    End If
                 'ElseIf Incoming = "machine 1" & vbCr Then
                 '    Machinename = "Metal Ded 1"
                 '    If RadioButton4.Checked = True Then
@@ -618,11 +620,12 @@ LastLine:
 
         End Try
         Try
-            Me.Ded11TableAdapter.Fill(Me.DSmatalDed.Ded11, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
-            Me.Ded21TableAdapter.Fill(Me.DSmatalDed.Ded21, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
-            Me.Ded31TableAdapter.Fill(Me.DSmatalDed.Ded31, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
-            Me.Ded41TableAdapter.Fill(Me.DSmatalDed.Ded41, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
-            Me.Ded51TableAdapter.Fill(Me.DSmatalDed.Ded51, Val(Label6.Text), Val(Label7.Text), Val(Label8.Text))
+            POWiseCOunter1TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter1, Val(Label105.Text), Val(Label106.Text), Val(Label107.Text), Val(Label1.Text))
+            POWiseCOunter2TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter2, Val(Label108.Text), Val(Label109.Text), Val(Label110.Text), Val(Label1.Text))
+            POWiseCOunter3TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter3, Val(Label111.Text), Val(Label112.Text), Val(Label113.Text), Val(Label1.Text))
+            POWiseCOunter4TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter4, Val(Label114.Text), Val(Label115.Text), Val(Label116.Text), Val(Label1.Text))
+            POWiseCOunter5TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter5, Val(Label117.Text), Val(Label118.Text), Val(Label119.Text), Val(Label1.Text))
+
         Catch ex As Exception
 
         End Try
@@ -744,48 +747,17 @@ LastLine:
 
     End Sub
 
-    Private Sub FillToolStripButton2_Click_2(sender As Object, e As EventArgs)
-        Try
-            Me.POWiseCOunter1TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter1, New System.Nullable(Of Integer)(CType(POToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(POMToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(PODToolStripTextBox.Text, Integer)))
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+    Private Sub Label84_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub FillToolStripButton2_Click_3(sender As Object, e As EventArgs)
-        Try
-            Me.POWiseCOunter2TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter2, New System.Nullable(Of Integer)(CType(POToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(POMToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(PODToolStripTextBox.Text, Integer)))
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub FillToolStripButton2_Click_4(sender As Object, e As EventArgs)
-        Try
-            Me.POWiseCOunter3TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter3, New System.Nullable(Of Integer)(CType(POToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(POMToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(PODToolStripTextBox.Text, Integer)))
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+    Private Sub Label82_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub FillToolStripButton2_Click_5(sender As Object, e As EventArgs)
-        Try
-            Me.POWiseCOunter4TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter4, New System.Nullable(Of Integer)(CType(POToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(POMToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(PODToolStripTextBox.Text, Integer)))
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-    End Sub
-
-    Private Sub FillToolStripButton2_Click_6(sender As Object, e As EventArgs)
-        Try
-            Me.POWiseCOunter5TableAdapter.Fill(Me.DSmatalDed.POWiseCOunter5, New System.Nullable(Of Integer)(CType(POToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(POMToolStripTextBox.Text, Integer)), New System.Nullable(Of Integer)(CType(PODToolStripTextBox.Text, Integer)))
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
 End Class

@@ -13522,7 +13522,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 1') AND (DayID = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -13707,7 +13707,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 2') AND (DayID = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -13892,7 +13892,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 3') AND (DayID = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -14077,7 +14077,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 4') AND (DayID = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -14262,7 +14262,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 5') AND (DayID = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -16420,19 +16420,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 1') AND (PO = ?) AND (POM = ?) AND (P"& _ 
-                "OD = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
+                "D (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter1DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter1DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16448,6 +16449,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -16460,7 +16466,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter1DataTable
+        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter1DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16476,6 +16482,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DSmatalDed.POWiseCOunter1DataTable = New DSmatalDed.POWiseCOunter1DataTable()
             Me.Adapter.Fill(dataTable)
@@ -16628,19 +16639,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 2') AND (PO = ?) AND (POM = ?) AND (P"& _ 
-                "OD = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
+                "D (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter2DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter2DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16656,6 +16668,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -16668,7 +16685,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter2DataTable
+        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter2DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16684,6 +16701,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DSmatalDed.POWiseCOunter2DataTable = New DSmatalDed.POWiseCOunter2DataTable()
             Me.Adapter.Fill(dataTable)
@@ -16836,19 +16858,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 3') AND (PO = ?) AND (POM = ?) AND (P"& _ 
-                "OD = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
+                "D (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter3DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter3DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16864,6 +16887,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -16876,7 +16904,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter3DataTable
+        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter3DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -16892,6 +16920,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DSmatalDed.POWiseCOunter3DataTable = New DSmatalDed.POWiseCOunter3DataTable()
             Me.Adapter.Fill(dataTable)
@@ -17044,19 +17077,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 4') AND (PO = ?) AND (POM = ?) AND (P"& _ 
-                "OD = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
+                "D (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter4DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter4DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -17072,6 +17106,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -17084,7 +17123,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter4DataTable
+        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter4DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -17100,6 +17139,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DSmatalDed.POWiseCOunter4DataTable = New DSmatalDed.POWiseCOunter4DataTable()
             Me.Adapter.Fill(dataTable)
@@ -17252,19 +17296,20 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = 'Metal Ded 5') AND (PO = ?) AND (POM = ?) AND (P"& _ 
-                "OD = ?)"
+                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
+                "D (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter5DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As DSmatalDed.POWiseCOunter5DataTable, ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -17280,6 +17325,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -17292,7 +17342,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter5DataTable
+        Public Overloads Overridable Function GetData(ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal DayID As Global.System.Nullable(Of Integer)) As DSmatalDed.POWiseCOunter5DataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (PO.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(PO.Value,Integer)
@@ -17308,6 +17358,11 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(POD.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (DayID.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(DayID.Value,Integer)
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim dataTable As DSmatalDed.POWiseCOunter5DataTable = New DSmatalDed.POWiseCOunter5DataTable()
             Me.Adapter.Fill(dataTable)
