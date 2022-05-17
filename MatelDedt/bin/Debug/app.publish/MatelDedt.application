@@ -9,7 +9,7 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="MatelDedt.exe.manifest" size="5068">
+    <dependentAssembly dependencyType="install" codebase="Application Files\MatelDedt_1_0_0_45\MatelDedt.exe.manifest" size="5068">
       <assemblyIdentity name="MatelDedt.exe" version="1.0.0.45" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>

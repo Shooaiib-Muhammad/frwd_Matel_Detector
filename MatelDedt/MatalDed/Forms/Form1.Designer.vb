@@ -142,9 +142,9 @@ Partial Class Form1
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label101 = New System.Windows.Forms.Label()
         Me.Label98 = New System.Windows.Forms.Label()
         Me.Annnumouys14BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label101 = New System.Windows.Forms.Label()
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
@@ -163,9 +163,9 @@ Partial Class Form1
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
         Me.Label90 = New System.Windows.Forms.Label()
         Me.Annnumouys12BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label69 = New System.Windows.Forms.Label()
         Me.Label70 = New System.Windows.Forms.Label()
         Me.Label93 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -177,6 +177,7 @@ Partial Class Form1
         Me.Label77 = New System.Windows.Forms.Label()
         Me.Label89 = New System.Windows.Forms.Label()
         Me.Label86 = New System.Windows.Forms.Label()
+        Me.Annnumouys11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label58 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
@@ -229,11 +230,11 @@ Partial Class Form1
         Me.Label118 = New System.Windows.Forms.Label()
         Me.Label119 = New System.Windows.Forms.Label()
         Me.Annnumouys1TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Annnumouys1TableAdapter()
-        Me.Annnumouys11BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Annnumouys11TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Annnumouys11TableAdapter()
         Me.Annnumouys12TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Annnumouys12TableAdapter()
         Me.Annnumouys13TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Annnumouys13TableAdapter()
         Me.Annnumouys14TableAdapter = New MatelDedt.DSmatalDedTableAdapters.Annnumouys14TableAdapter()
+        Me.Label96 = New System.Windows.Forms.Label()
         NameLabel = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
         Label10 = New System.Windows.Forms.Label()
@@ -308,6 +309,7 @@ Partial Class Form1
         Me.Panel9.SuspendLayout()
         CType(Me.Annnumouys12BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
+        CType(Me.Annnumouys11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         CType(Me.Annnumouys1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -315,7 +317,6 @@ Partial Class Form1
         CType(Me.Ded31BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded41BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ded51BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Annnumouys11BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel
@@ -743,9 +744,9 @@ Partial Class Form1
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label2.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(0, 827)
+        Me.Label2.Location = New System.Drawing.Point(0, 769)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1379, 14)
+        Me.Label2.Size = New System.Drawing.Size(1406, 14)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Stoped!"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -874,7 +875,7 @@ Partial Class Form1
         Me.Label3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_Ded_CounterBindingSource, "DedCount", True))
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Blue
-        Me.Label3.Location = New System.Drawing.Point(1030, 563)
+        Me.Label3.Location = New System.Drawing.Point(1039, 566)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(277, 139)
         Me.Label3.TabIndex = 23
@@ -898,7 +899,7 @@ Partial Class Form1
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1379, 50)
+        Me.Label5.Size = New System.Drawing.Size(1406, 50)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "RWPD OutPut"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1398,6 +1399,19 @@ Partial Class Form1
         Me.Label24.Text = "End Line 5"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label101
+        '
+        Me.Label101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label101.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded5BindingSource, "DedCount", True))
+        Me.Label101.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label101.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label101.Location = New System.Drawing.Point(165, 335)
+        Me.Label101.Name = "Label101"
+        Me.Label101.Size = New System.Drawing.Size(95, 31)
+        Me.Label101.TabIndex = 153
+        Me.Label101.Text = "Label18"
+        Me.Label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Label98
         '
         Me.Label98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1415,19 +1429,6 @@ Partial Class Form1
         '
         Me.Annnumouys14BindingSource.DataMember = "Annnumouys14"
         Me.Annnumouys14BindingSource.DataSource = Me.DSmatalDed
-        '
-        'Label101
-        '
-        Me.Label101.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label101.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Ded5BindingSource, "DedCount", True))
-        Me.Label101.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label101.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label101.Location = New System.Drawing.Point(165, 335)
-        Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(95, 31)
-        Me.Label101.TabIndex = 153
-        Me.Label101.Text = "Label18"
-        Me.Label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label62
         '
@@ -1672,6 +1673,17 @@ Partial Class Form1
         Me.Label46.Text = "Label46"
         Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "POM", True))
+        Me.Label69.ForeColor = System.Drawing.Color.White
+        Me.Label69.Location = New System.Drawing.Point(10, 344)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(45, 13)
+        Me.Label69.TabIndex = 124
+        Me.Label69.Text = "Label69"
+        '
         'Label90
         '
         Me.Label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1689,17 +1701,6 @@ Partial Class Form1
         '
         Me.Annnumouys12BindingSource.DataMember = "Annnumouys12"
         Me.Annnumouys12BindingSource.DataSource = Me.DSmatalDed
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.View_MS_PONO1BindingSource, "POM", True))
-        Me.Label69.ForeColor = System.Drawing.Color.White
-        Me.Label69.Location = New System.Drawing.Point(10, 344)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(45, 13)
-        Me.Label69.TabIndex = 124
-        Me.Label69.Text = "Label69"
         '
         'Label70
         '
@@ -1849,6 +1850,11 @@ Partial Class Form1
         Me.Label86.TabIndex = 135
         Me.Label86.Text = "Label18"
         Me.Label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Annnumouys11BindingSource
+        '
+        Me.Annnumouys11BindingSource.DataMember = "Annnumouys11"
+        Me.Annnumouys11BindingSource.DataSource = Me.DSmatalDed
         '
         'Panel11
         '
@@ -2072,12 +2078,13 @@ Partial Class Form1
         Me.Label80.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DataTable1BindingSource, "DedCount", True))
         Me.Label80.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label80.ForeColor = System.Drawing.Color.Blue
-        Me.Label80.Location = New System.Drawing.Point(1038, 579)
+        Me.Label80.Location = New System.Drawing.Point(169, 560)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(261, 112)
         Me.Label80.TabIndex = 135
         Me.Label80.Text = "Label80"
         Me.Label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label80.Visible = False
         '
         'DataTable1BindingSource
         '
@@ -2328,11 +2335,6 @@ Partial Class Form1
         '
         Me.Annnumouys1TableAdapter.ClearBeforeFill = True
         '
-        'Annnumouys11BindingSource
-        '
-        Me.Annnumouys11BindingSource.DataMember = "Annnumouys11"
-        Me.Annnumouys11BindingSource.DataSource = Me.DSmatalDed
-        '
         'Annnumouys11TableAdapter
         '
         Me.Annnumouys11TableAdapter.ClearBeforeFill = True
@@ -2349,13 +2351,25 @@ Partial Class Form1
         '
         Me.Annnumouys14TableAdapter.ClearBeforeFill = True
         '
+        'Label96
+        '
+        Me.Label96.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label96.ForeColor = System.Drawing.Color.Blue
+        Me.Label96.Location = New System.Drawing.Point(1050, 594)
+        Me.Label96.Name = "Label96"
+        Me.Label96.Size = New System.Drawing.Size(247, 78)
+        Me.Label96.TabIndex = 159
+        Me.Label96.Text = "Label96"
+        Me.Label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1379, 841)
+        Me.ClientSize = New System.Drawing.Size(1406, 783)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label96)
         Me.Controls.Add(Me.Label119)
         Me.Controls.Add(Me.Label118)
         Me.Controls.Add(Me.Label117)
@@ -2443,6 +2457,7 @@ Partial Class Form1
         CType(Me.Annnumouys12BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
+        CType(Me.Annnumouys11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         CType(Me.Annnumouys1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2451,7 +2466,6 @@ Partial Class Form1
         CType(Me.Ded31BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded41BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Ded51BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Annnumouys11BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -2652,4 +2666,5 @@ Partial Class Form1
     Friend WithEvents DayIDToolStripLabel1 As ToolStripLabel
     Friend WithEvents DayIDToolStripTextBox1 As ToolStripTextBox
     Friend WithEvents FillToolStripButton2 As ToolStripButton
+    Friend WithEvents Label96 As Label
 End Class

@@ -1,0 +1,159 @@
+#define button_pin1 3
+#define button_pin2 5
+#define button_pin3 7
+#define button_pin4 9
+#define button_pin5 11
+
+int machinID=0;
+int button_pressed_count = 0;
+int button_state = 0;
+int prev_button_state = 0;
+int button_pressed_count1 = 0;
+int button_state1 = 0;
+int prev_button_state1 = 0;
+int button_pressed_count2 = 0;
+int button_state2 = 0;
+int prev_button_state2 = 0;
+int button_pressed_count3 = 0;
+int button_state3 = 0;
+int prev_button_state3 = 0;
+int button_pressed_count4 = 0;
+int button_state4 = 0;
+int prev_button_state4 = 0;
+
+
+
+
+void setup(){
+  Serial.begin(9600);
+ 
+  pinMode(button_pin1, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+   pinMode(button_pin2, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+  pinMode(button_pin3, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+  pinMode(button_pin4, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+    pinMode(button_pin5, INPUT_PULLUP);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+  
+  //Serial.println("Button Count:");
+ 
+}
+void loop()
+{
+  button_state = digitalRead(button_pin1);
+  if (button_state != prev_button_state)
+  {
+    if (button_state == HIGH) 
+    {
+      digitalWrite(13, LOW);
+    }
+    else
+    {
+      machinID=1;
+      digitalWrite(13,HIGH);
+      button_pressed_count++;
+      Serial.print(button_pressed_count);
+      Serial.print(",");
+      Serial.println(machinID);
+    }
+    delay(50);
+  }
+  prev_button_state = button_state;
+  
+  // 2nd detector
+  
+   button_state1 = digitalRead(button_pin2);
+  if (button_state1 != prev_button_state1)
+  {
+    if (button_state1 == HIGH) 
+    {
+      digitalWrite(13, LOW);
+    }
+    else
+    {
+        machinID=2;
+      digitalWrite(13,HIGH);
+      button_pressed_count1++;
+        Serial.print(button_pressed_count1);
+      Serial.print(",");
+      Serial.println(machinID);
+    }
+    delay(50);
+  }
+  prev_button_state1 = button_state1;
+
+  // 3rd detector
+
+  button_state2 = digitalRead(button_pin3);
+  if (button_state2 != prev_button_state2)
+  {
+    if (button_state2 == HIGH) 
+    {
+      digitalWrite(13, LOW);
+    }
+    else
+    {
+        machinID=3;
+      digitalWrite(13,HIGH);
+      button_pressed_count2++;
+       Serial.print(button_pressed_count2);
+      Serial.print(",");
+      Serial.println(machinID);
+    }
+    delay(50);
+  }
+  prev_button_state2 = button_state2;
+
+  // 4th detector
+
+  button_state3 = digitalRead(button_pin4);
+  if (button_state3 != prev_button_state3)
+  {
+    if (button_state3 == HIGH) 
+    {
+      digitalWrite(13, LOW);
+    }
+    else
+    {
+        machinID=4;
+      digitalWrite(13,HIGH);
+      button_pressed_count3++;
+     Serial.print(button_pressed_count3);
+      Serial.print(",");
+      Serial.println(machinID);
+    }
+    delay(50);
+  }
+  prev_button_state3 = button_state3;
+  //5th Machine
+
+
+  button_state4 = digitalRead(button_pin5);
+  if (button_state4 != prev_button_state4)
+  {
+    if (button_state4 == HIGH) 
+    {
+      digitalWrite(13, LOW);
+    }
+    else
+    {
+        machinID=5;
+      digitalWrite(13,HIGH);
+      button_pressed_count4++;
+      Serial.print(button_pressed_count4);
+      Serial.print(",");
+      Serial.println(machinID);
+    }
+    delay(50);
+  }
+  prev_button_state4 = button_state4;
+  
+}

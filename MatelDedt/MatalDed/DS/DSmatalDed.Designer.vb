@@ -1610,6 +1610,8 @@ Partial Public Class DSmatalDed
         
         Private columnBallCounter As Global.System.Data.DataColumn
         
+        Private columnNoofBalls As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -1742,6 +1744,14 @@ Partial Public Class DSmatalDed
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property NoofBallsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNoofBalls
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1778,9 +1788,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addtbl_Matel_dedRow(ByVal MachineID As Integer, ByVal DedCount As Decimal, ByVal Ip As String, ByVal EntryDate As Date, ByVal _Date As String, ByVal DayID As Integer, ByVal PO As Integer, ByVal POM As Integer, ByVal POD As Integer, ByVal MachineName As String, ByVal BallCounter As Decimal) As tbl_Matel_dedRow
+        Public Overloads Function Addtbl_Matel_dedRow(ByVal MachineID As Integer, ByVal DedCount As Decimal, ByVal Ip As String, ByVal EntryDate As Date, ByVal _Date As String, ByVal DayID As Integer, ByVal PO As Integer, ByVal POM As Integer, ByVal POD As Integer, ByVal MachineName As String, ByVal BallCounter As Decimal, ByVal NoofBalls As Decimal) As tbl_Matel_dedRow
             Dim rowtbl_Matel_dedRow As tbl_Matel_dedRow = CType(Me.NewRow,tbl_Matel_dedRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, MachineID, DedCount, Ip, EntryDate, _Date, DayID, PO, POM, POD, MachineName, BallCounter}
+            Dim columnValuesArray() As Object = New Object() {Nothing, MachineID, DedCount, Ip, EntryDate, _Date, DayID, PO, POM, POD, MachineName, BallCounter, NoofBalls}
             rowtbl_Matel_dedRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_Matel_dedRow)
             Return rowtbl_Matel_dedRow
@@ -1821,6 +1831,7 @@ Partial Public Class DSmatalDed
             Me.columnPOD = MyBase.Columns("POD")
             Me.columnMachineName = MyBase.Columns("MachineName")
             Me.columnBallCounter = MyBase.Columns("BallCounter")
+            Me.columnNoofBalls = MyBase.Columns("NoofBalls")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1853,6 +1864,8 @@ Partial Public Class DSmatalDed
             MyBase.Columns.Add(Me.columnMachineName)
             Me.columnBallCounter = New Global.System.Data.DataColumn("BallCounter", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBallCounter)
+            Me.columnNoofBalls = New Global.System.Data.DataColumn("NoofBalls", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNoofBalls)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTID}, true))
             Me.columnTID.AutoIncrement = true
             Me.columnTID.AutoIncrementSeed = -1
@@ -2954,6 +2967,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Ded1DataTable
         Inherits Global.System.Data.TypedTableBase(Of Ded1Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2990,6 +3005,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -3036,9 +3059,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDed1Row(ByVal DedCount As Integer) As Ded1Row
+        Public Overloads Function AddDed1Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Ded1Row
             Dim rowDed1Row As Ded1Row = CType(Me.NewRow,Ded1Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDed1Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDed1Row)
             Return rowDed1Row
@@ -3061,14 +3084,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -3207,6 +3234,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Ded2DataTable
         Inherits Global.System.Data.TypedTableBase(Of Ded2Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3243,6 +3272,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -3289,9 +3326,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDed2Row(ByVal DedCount As Integer) As Ded2Row
+        Public Overloads Function AddDed2Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Ded2Row
             Dim rowDed2Row As Ded2Row = CType(Me.NewRow,Ded2Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDed2Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDed2Row)
             Return rowDed2Row
@@ -3314,14 +3351,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -3460,6 +3501,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Ded3DataTable
         Inherits Global.System.Data.TypedTableBase(Of Ded3Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3496,6 +3539,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -3542,9 +3593,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDed3Row(ByVal DedCount As Integer) As Ded3Row
+        Public Overloads Function AddDed3Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Ded3Row
             Dim rowDed3Row As Ded3Row = CType(Me.NewRow,Ded3Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDed3Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDed3Row)
             Return rowDed3Row
@@ -3567,14 +3618,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -3713,6 +3768,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Ded4DataTable
         Inherits Global.System.Data.TypedTableBase(Of Ded4Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3749,6 +3806,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -3795,9 +3860,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDed4Row(ByVal DedCount As Integer) As Ded4Row
+        Public Overloads Function AddDed4Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Ded4Row
             Dim rowDed4Row As Ded4Row = CType(Me.NewRow,Ded4Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDed4Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDed4Row)
             Return rowDed4Row
@@ -3820,14 +3885,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -3966,6 +4035,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Ded5DataTable
         Inherits Global.System.Data.TypedTableBase(Of Ded5Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4002,6 +4073,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -4048,9 +4127,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDed5Row(ByVal DedCount As Integer) As Ded5Row
+        Public Overloads Function AddDed5Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Ded5Row
             Dim rowDed5Row As Ded5Row = CType(Me.NewRow,Ded5Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDed5Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDed5Row)
             Return rowDed5Row
@@ -4073,14 +4152,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -5907,6 +5990,8 @@ Partial Public Class DSmatalDed
     Partial Public Class DataTable1DataTable
         Inherits Global.System.Data.TypedTableBase(Of DataTable1Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5943,6 +6028,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -5989,9 +6082,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddDataTable1Row(ByVal DedCount As Integer) As DataTable1Row
+        Public Overloads Function AddDataTable1Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As DataTable1Row
             Dim rowDataTable1Row As DataTable1Row = CType(Me.NewRow,DataTable1Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowDataTable1Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowDataTable1Row)
             Return rowDataTable1Row
@@ -6014,14 +6107,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -7425,6 +7522,8 @@ Partial Public Class DSmatalDed
     Partial Public Class POWiseCOunter1DataTable
         Inherits Global.System.Data.TypedTableBase(Of POWiseCOunter1Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7461,6 +7560,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -7507,9 +7614,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPOWiseCOunter1Row(ByVal DedCount As Integer) As POWiseCOunter1Row
+        Public Overloads Function AddPOWiseCOunter1Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As POWiseCOunter1Row
             Dim rowPOWiseCOunter1Row As POWiseCOunter1Row = CType(Me.NewRow,POWiseCOunter1Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowPOWiseCOunter1Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowPOWiseCOunter1Row)
             Return rowPOWiseCOunter1Row
@@ -7532,14 +7639,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -7678,6 +7789,8 @@ Partial Public Class DSmatalDed
     Partial Public Class POWiseCOunter2DataTable
         Inherits Global.System.Data.TypedTableBase(Of POWiseCOunter2Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7714,6 +7827,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -7760,9 +7881,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPOWiseCOunter2Row(ByVal DedCount As Integer) As POWiseCOunter2Row
+        Public Overloads Function AddPOWiseCOunter2Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As POWiseCOunter2Row
             Dim rowPOWiseCOunter2Row As POWiseCOunter2Row = CType(Me.NewRow,POWiseCOunter2Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowPOWiseCOunter2Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowPOWiseCOunter2Row)
             Return rowPOWiseCOunter2Row
@@ -7785,14 +7906,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -7931,6 +8056,8 @@ Partial Public Class DSmatalDed
     Partial Public Class POWiseCOunter3DataTable
         Inherits Global.System.Data.TypedTableBase(Of POWiseCOunter3Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7967,6 +8094,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -8013,9 +8148,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPOWiseCOunter3Row(ByVal DedCount As Integer) As POWiseCOunter3Row
+        Public Overloads Function AddPOWiseCOunter3Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As POWiseCOunter3Row
             Dim rowPOWiseCOunter3Row As POWiseCOunter3Row = CType(Me.NewRow,POWiseCOunter3Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowPOWiseCOunter3Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowPOWiseCOunter3Row)
             Return rowPOWiseCOunter3Row
@@ -8038,14 +8173,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -8184,6 +8323,8 @@ Partial Public Class DSmatalDed
     Partial Public Class POWiseCOunter4DataTable
         Inherits Global.System.Data.TypedTableBase(Of POWiseCOunter4Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8220,6 +8361,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -8266,9 +8415,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPOWiseCOunter4Row(ByVal DedCount As Integer) As POWiseCOunter4Row
+        Public Overloads Function AddPOWiseCOunter4Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As POWiseCOunter4Row
             Dim rowPOWiseCOunter4Row As POWiseCOunter4Row = CType(Me.NewRow,POWiseCOunter4Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowPOWiseCOunter4Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowPOWiseCOunter4Row)
             Return rowPOWiseCOunter4Row
@@ -8291,14 +8440,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -8437,6 +8590,8 @@ Partial Public Class DSmatalDed
     Partial Public Class POWiseCOunter5DataTable
         Inherits Global.System.Data.TypedTableBase(Of POWiseCOunter5Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8473,6 +8628,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -8519,9 +8682,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPOWiseCOunter5Row(ByVal DedCount As Integer) As POWiseCOunter5Row
+        Public Overloads Function AddPOWiseCOunter5Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As POWiseCOunter5Row
             Dim rowPOWiseCOunter5Row As POWiseCOunter5Row = CType(Me.NewRow,POWiseCOunter5Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowPOWiseCOunter5Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowPOWiseCOunter5Row)
             Return rowPOWiseCOunter5Row
@@ -8544,14 +8707,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -8690,6 +8857,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Annnumouys1DataTable
         Inherits Global.System.Data.TypedTableBase(Of Annnumouys1Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8726,6 +8895,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -8772,9 +8949,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddAnnnumouys1Row(ByVal DedCount As Integer) As Annnumouys1Row
+        Public Overloads Function AddAnnnumouys1Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Annnumouys1Row
             Dim rowAnnnumouys1Row As Annnumouys1Row = CType(Me.NewRow,Annnumouys1Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowAnnnumouys1Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowAnnnumouys1Row)
             Return rowAnnnumouys1Row
@@ -8797,14 +8974,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -8943,6 +9124,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Annnumouys11DataTable
         Inherits Global.System.Data.TypedTableBase(Of Annnumouys11Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8979,6 +9162,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -9025,9 +9216,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddAnnnumouys11Row(ByVal DedCount As Integer) As Annnumouys11Row
+        Public Overloads Function AddAnnnumouys11Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Annnumouys11Row
             Dim rowAnnnumouys11Row As Annnumouys11Row = CType(Me.NewRow,Annnumouys11Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowAnnnumouys11Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowAnnnumouys11Row)
             Return rowAnnnumouys11Row
@@ -9050,14 +9241,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -9196,6 +9391,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Annnumouys12DataTable
         Inherits Global.System.Data.TypedTableBase(Of Annnumouys12Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9232,6 +9429,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -9278,9 +9483,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddAnnnumouys12Row(ByVal DedCount As Integer) As Annnumouys12Row
+        Public Overloads Function AddAnnnumouys12Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Annnumouys12Row
             Dim rowAnnnumouys12Row As Annnumouys12Row = CType(Me.NewRow,Annnumouys12Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowAnnnumouys12Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowAnnnumouys12Row)
             Return rowAnnnumouys12Row
@@ -9303,14 +9508,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -9449,6 +9658,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Annnumouys13DataTable
         Inherits Global.System.Data.TypedTableBase(Of Annnumouys13Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9485,6 +9696,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -9531,9 +9750,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddAnnnumouys13Row(ByVal DedCount As Integer) As Annnumouys13Row
+        Public Overloads Function AddAnnnumouys13Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Annnumouys13Row
             Dim rowAnnnumouys13Row As Annnumouys13Row = CType(Me.NewRow,Annnumouys13Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowAnnnumouys13Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowAnnnumouys13Row)
             Return rowAnnnumouys13Row
@@ -9556,14 +9775,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -9702,6 +9925,8 @@ Partial Public Class DSmatalDed
     Partial Public Class Annnumouys14DataTable
         Inherits Global.System.Data.TypedTableBase(Of Annnumouys14Row)
         
+        Private columnColumn1 As Global.System.Data.DataColumn
+        
         Private columnDedCount As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9738,6 +9963,14 @@ Partial Public Class DSmatalDed
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Column1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnColumn1
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -9784,9 +10017,9 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddAnnnumouys14Row(ByVal DedCount As Integer) As Annnumouys14Row
+        Public Overloads Function AddAnnnumouys14Row(ByVal Column1 As Integer, ByVal DedCount As Decimal) As Annnumouys14Row
             Dim rowAnnnumouys14Row As Annnumouys14Row = CType(Me.NewRow,Annnumouys14Row)
-            Dim columnValuesArray() As Object = New Object() {DedCount}
+            Dim columnValuesArray() As Object = New Object() {Column1, DedCount}
             rowAnnnumouys14Row.ItemArray = columnValuesArray
             Me.Rows.Add(rowAnnnumouys14Row)
             Return rowAnnnumouys14Row
@@ -9809,14 +10042,18 @@ Partial Public Class DSmatalDed
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnColumn1 = MyBase.Columns("Column1")
             Me.columnDedCount = MyBase.Columns("DedCount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnColumn1 = New Global.System.Data.DataColumn("Column1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnColumn1)
+            Me.columnDedCount = New Global.System.Data.DataColumn("DedCount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDedCount)
+            Me.columnColumn1.ReadOnly = true
             Me.columnDedCount.ReadOnly = true
         End Sub
         
@@ -10221,6 +10458,21 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property NoofBalls() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tabletbl_Matel_ded.NoofBallsColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NoofBalls' in table 'tbl_Matel_ded' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletbl_Matel_ded.NoofBallsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsMachineIDNull() As Boolean
             Return Me.IsNull(Me.tabletbl_Matel_ded.MachineIDColumn)
         End Function
@@ -10349,6 +10601,18 @@ Partial Public Class DSmatalDed
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetBallCounterNull()
             Me(Me.tabletbl_Matel_ded.BallCounterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsNoofBallsNull() As Boolean
+            Return Me.IsNull(Me.tabletbl_Matel_ded.NoofBallsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetNoofBallsNull()
+            Me(Me.tabletbl_Matel_ded.NoofBallsColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -10673,10 +10937,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDed1.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDed1.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Ded1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDed1.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDed1.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Ded1' is DBNull.", e)
                 End Try
@@ -10685,6 +10964,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDed1.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDed1.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDed1.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -10716,10 +11007,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDed2.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDed2.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Ded2' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDed2.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDed2.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Ded2' is DBNull.", e)
                 End Try
@@ -10728,6 +11034,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDed2.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDed2.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDed2.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -10759,10 +11077,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDed3.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDed3.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Ded3' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDed3.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDed3.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Ded3' is DBNull.", e)
                 End Try
@@ -10771,6 +11104,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDed3.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDed3.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDed3.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -10802,10 +11147,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDed4.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDed4.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Ded4' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDed4.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDed4.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Ded4' is DBNull.", e)
                 End Try
@@ -10814,6 +11174,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDed4.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDed4.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDed4.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -10845,10 +11217,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDed5.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDed5.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Ded5' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDed5.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDed5.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Ded5' is DBNull.", e)
                 End Try
@@ -10857,6 +11244,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDed5.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDed5.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDed5.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -11780,10 +12179,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableDataTable1.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableDataTable1.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'DataTable1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableDataTable1.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableDataTable1.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'DataTable1' is DBNull.", e)
                 End Try
@@ -11792,6 +12206,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableDataTable1.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableDataTable1.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableDataTable1.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12038,10 +12464,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePOWiseCOunter1.DedCountColumn),Integer)
+                    Return CType(Me(Me.tablePOWiseCOunter1.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'POWiseCOunter1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePOWiseCOunter1.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablePOWiseCOunter1.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'POWiseCOunter1' is DBNull.", e)
                 End Try
@@ -12050,6 +12491,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tablePOWiseCOunter1.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tablePOWiseCOunter1.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tablePOWiseCOunter1.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12081,10 +12534,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePOWiseCOunter2.DedCountColumn),Integer)
+                    Return CType(Me(Me.tablePOWiseCOunter2.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'POWiseCOunter2' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePOWiseCOunter2.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablePOWiseCOunter2.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'POWiseCOunter2' is DBNull.", e)
                 End Try
@@ -12093,6 +12561,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tablePOWiseCOunter2.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tablePOWiseCOunter2.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tablePOWiseCOunter2.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12124,10 +12604,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePOWiseCOunter3.DedCountColumn),Integer)
+                    Return CType(Me(Me.tablePOWiseCOunter3.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'POWiseCOunter3' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePOWiseCOunter3.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablePOWiseCOunter3.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'POWiseCOunter3' is DBNull.", e)
                 End Try
@@ -12136,6 +12631,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tablePOWiseCOunter3.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tablePOWiseCOunter3.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tablePOWiseCOunter3.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12167,10 +12674,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePOWiseCOunter4.DedCountColumn),Integer)
+                    Return CType(Me(Me.tablePOWiseCOunter4.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'POWiseCOunter4' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePOWiseCOunter4.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablePOWiseCOunter4.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'POWiseCOunter4' is DBNull.", e)
                 End Try
@@ -12179,6 +12701,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tablePOWiseCOunter4.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tablePOWiseCOunter4.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tablePOWiseCOunter4.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12210,10 +12744,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePOWiseCOunter5.DedCountColumn),Integer)
+                    Return CType(Me(Me.tablePOWiseCOunter5.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'POWiseCOunter5' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePOWiseCOunter5.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablePOWiseCOunter5.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'POWiseCOunter5' is DBNull.", e)
                 End Try
@@ -12222,6 +12771,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tablePOWiseCOunter5.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tablePOWiseCOunter5.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tablePOWiseCOunter5.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12253,10 +12814,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAnnnumouys1.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableAnnnumouys1.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Annnumouys1' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableAnnnumouys1.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableAnnnumouys1.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Annnumouys1' is DBNull.", e)
                 End Try
@@ -12265,6 +12841,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableAnnnumouys1.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableAnnnumouys1.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableAnnnumouys1.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12296,10 +12884,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAnnnumouys11.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableAnnnumouys11.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Annnumouys11' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableAnnnumouys11.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableAnnnumouys11.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Annnumouys11' is DBNull.", e)
                 End Try
@@ -12308,6 +12911,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableAnnnumouys11.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableAnnnumouys11.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableAnnnumouys11.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12339,10 +12954,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAnnnumouys12.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableAnnnumouys12.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Annnumouys12' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableAnnnumouys12.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableAnnnumouys12.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Annnumouys12' is DBNull.", e)
                 End Try
@@ -12351,6 +12981,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableAnnnumouys12.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableAnnnumouys12.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableAnnnumouys12.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12382,10 +13024,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAnnnumouys13.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableAnnnumouys13.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Annnumouys13' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableAnnnumouys13.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableAnnnumouys13.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Annnumouys13' is DBNull.", e)
                 End Try
@@ -12394,6 +13051,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableAnnnumouys13.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableAnnnumouys13.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableAnnnumouys13.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -12425,10 +13094,25 @@ Partial Public Class DSmatalDed
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DedCount() As Integer
+        Public Property Column1() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAnnnumouys14.DedCountColumn),Integer)
+                    Return CType(Me(Me.tableAnnnumouys14.Column1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Column1' in table 'Annnumouys14' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableAnnnumouys14.Column1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property DedCount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tableAnnnumouys14.DedCountColumn),Decimal)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DedCount' in table 'Annnumouys14' is DBNull.", e)
                 End Try
@@ -12437,6 +13121,18 @@ Partial Public Class DSmatalDed
                 Me(Me.tableAnnnumouys14.DedCountColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsColumn1Null() As Boolean
+            Return Me.IsNull(Me.tableAnnnumouys14.Column1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetColumn1Null()
+            Me(Me.tableAnnnumouys14.Column1Column) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -14028,6 +14724,7 @@ Namespace DSmatalDedTableAdapters
             tableMapping.ColumnMappings.Add("POD", "POD")
             tableMapping.ColumnMappings.Add("MachineName", "MachineName")
             tableMapping.ColumnMappings.Add("BallCounter", "BallCounter")
+            tableMapping.ColumnMappings.Add("NoofBalls", "NoofBalls")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -14038,7 +14735,8 @@ Namespace DSmatalDedTableAdapters
                 "(? = 1 AND [DayID] IS NULL) OR ([DayID] = ?)) AND ((? = 1 AND [PO] IS NULL) OR ("& _ 
                 "[PO] = ?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] "& _ 
                 "IS NULL) OR ([POD] = ?)) AND ((? = 1 AND [MachineName] IS NULL) OR ([MachineName"& _ 
-                "] = ?)) AND ((? = 1 AND [BallCounter] IS NULL) OR ([BallCounter] = ?)))"
+                "] = ?)) AND ((? = 1 AND [BallCounter] IS NULL) OR ([BallCounter] = ?)) AND ((? ="& _ 
+                " 1 AND [NoofBalls] IS NULL) OR ([NoofBalls] = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -14063,11 +14761,13 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_MachineName", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineName", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_BallCounter", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_BallCounter", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_NoofBalls", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_NoofBalls", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Matel_ded] ([MachineID], [DedCount], [Ip], [Date], [EntryDate], "& _ 
-                "[DayID], [PO], [POM], [POD], [MachineName], [BallCounter]) VALUES (?, ?, ?, ?, ?"& _ 
-                ", ?, ?, ?, ?, ?, ?)"
+                "[DayID], [PO], [POM], [POD], [MachineName], [BallCounter], [NoofBalls]) VALUES ("& _ 
+                "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DedCount", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "DedCount", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14080,18 +14780,20 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineName", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("BallCounter", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("NoofBalls", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Matel_ded] SET [MachineID] = ?, [DedCount] = ?, [Ip] = ?, [Date] = ?,"& _ 
                 " [EntryDate] = ?, [DayID] = ?, [PO] = ?, [POM] = ?, [POD] = ?, [MachineName] = ?"& _ 
-                ", [BallCounter] = ? WHERE (([TID] = ?) AND ((? = 1 AND [MachineID] IS NULL) OR ("& _ 
-                "[MachineID] = ?)) AND ((? = 1 AND [DedCount] IS NULL) OR ([DedCount] = ?)) AND ("& _ 
-                "(? = 1 AND [Ip] IS NULL) OR ([Ip] = ?)) AND ((? = 1 AND [Date] IS NULL) OR ([Dat"& _ 
-                "e] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] = ?)) AND ((? = 1 "& _ 
-                "AND [DayID] IS NULL) OR ([DayID] = ?)) AND ((? = 1 AND [PO] IS NULL) OR ([PO] = "& _ 
-                "?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 AND [POD] IS NULL"& _ 
-                ") OR ([POD] = ?)) AND ((? = 1 AND [MachineName] IS NULL) OR ([MachineName] = ?))"& _ 
-                " AND ((? = 1 AND [BallCounter] IS NULL) OR ([BallCounter] = ?)))"
+                ", [BallCounter] = ?, [NoofBalls] = ? WHERE (([TID] = ?) AND ((? = 1 AND [Machine"& _ 
+                "ID] IS NULL) OR ([MachineID] = ?)) AND ((? = 1 AND [DedCount] IS NULL) OR ([DedC"& _ 
+                "ount] = ?)) AND ((? = 1 AND [Ip] IS NULL) OR ([Ip] = ?)) AND ((? = 1 AND [Date] "& _ 
+                "IS NULL) OR ([Date] = ?)) AND ((? = 1 AND [EntryDate] IS NULL) OR ([EntryDate] ="& _ 
+                " ?)) AND ((? = 1 AND [DayID] IS NULL) OR ([DayID] = ?)) AND ((? = 1 AND [PO] IS "& _ 
+                "NULL) OR ([PO] = ?)) AND ((? = 1 AND [POM] IS NULL) OR ([POM] = ?)) AND ((? = 1 "& _ 
+                "AND [POD] IS NULL) OR ([POD] = ?)) AND ((? = 1 AND [MachineName] IS NULL) OR ([M"& _ 
+                "achineName] = ?)) AND ((? = 1 AND [BallCounter] IS NULL) OR ([BallCounter] = ?))"& _ 
+                " AND ((? = 1 AND [NoofBalls] IS NULL) OR ([NoofBalls] = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DedCount", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "DedCount", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14104,6 +14806,7 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POD", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POD", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("MachineName", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("BallCounter", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("NoofBalls", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_TID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "TID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_MachineID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineID", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -14127,6 +14830,8 @@ Namespace DSmatalDedTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_MachineName", Global.System.Data.Odbc.OdbcType.VarChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "MachineName", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_BallCounter", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_BallCounter", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "BallCounter", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("IsNull_NoofBalls", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_NoofBalls", Global.System.Data.Odbc.OdbcType.Numeric, 0, Global.System.Data.ParameterDirection.Input, CType(18,Byte), CType(0,Byte), "NoofBalls", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14143,7 +14848,7 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        TID, MachineID, DedCount, Ip, [Date], EntryDate, DayID, PO, POM, PO"& _ 
-                "D, MachineName, BallCounter"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_ded"
+                "D, MachineName, BallCounter, NoofBalls"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_ded"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -14203,7 +14908,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_TID As Integer, ByVal Original_MachineID As Global.System.Nullable(Of Integer), ByVal Original_DedCount As Global.System.Nullable(Of Decimal), ByVal Original_Ip As String, ByVal Original_Date As String, ByVal Original_EntryDate As Global.System.Nullable(Of Date), ByVal Original_DayID As Global.System.Nullable(Of Integer), ByVal Original_PO As Global.System.Nullable(Of Integer), ByVal Original_POM As Global.System.Nullable(Of Integer), ByVal Original_POD As Global.System.Nullable(Of Integer), ByVal Original_MachineName As String, ByVal Original_BallCounter As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_TID As Integer, ByVal Original_MachineID As Global.System.Nullable(Of Integer), ByVal Original_DedCount As Global.System.Nullable(Of Decimal), ByVal Original_Ip As String, ByVal Original_Date As String, ByVal Original_EntryDate As Global.System.Nullable(Of Date), ByVal Original_DayID As Global.System.Nullable(Of Integer), ByVal Original_PO As Global.System.Nullable(Of Integer), ByVal Original_POM As Global.System.Nullable(Of Integer), ByVal Original_POD As Global.System.Nullable(Of Integer), ByVal Original_MachineName As String, ByVal Original_BallCounter As Global.System.Nullable(Of Decimal), ByVal Original_NoofBalls As Global.System.Nullable(Of Decimal)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_TID,Integer)
             If (Original_MachineID.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -14282,6 +14987,13 @@ Namespace DSmatalDedTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
+            If (Original_NoofBalls.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_NoofBalls.Value,Decimal)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -14301,7 +15013,7 @@ Namespace DSmatalDedTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal MachineID As Global.System.Nullable(Of Integer), ByVal DedCount As Global.System.Nullable(Of Decimal), ByVal Ip As String, ByVal _Date As String, ByVal EntryDate As Global.System.Nullable(Of Date), ByVal DayID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal MachineName As String, ByVal BallCounter As Global.System.Nullable(Of Decimal)) As Integer
+        Public Overloads Overridable Function Insert(ByVal MachineID As Global.System.Nullable(Of Integer), ByVal DedCount As Global.System.Nullable(Of Decimal), ByVal Ip As String, ByVal _Date As String, ByVal EntryDate As Global.System.Nullable(Of Date), ByVal DayID As Global.System.Nullable(Of Integer), ByVal PO As Global.System.Nullable(Of Integer), ByVal POM As Global.System.Nullable(Of Integer), ByVal POD As Global.System.Nullable(Of Integer), ByVal MachineName As String, ByVal BallCounter As Global.System.Nullable(Of Decimal), ByVal NoofBalls As Global.System.Nullable(Of Decimal)) As Integer
             If (MachineID.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(MachineID.Value,Integer)
             Else
@@ -14357,6 +15069,11 @@ Namespace DSmatalDedTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
+            If (NoofBalls.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(NoofBalls.Value,Decimal)
+            Else
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -14388,6 +15105,7 @@ Namespace DSmatalDedTableAdapters
                     ByVal POD As Global.System.Nullable(Of Integer),  _
                     ByVal MachineName As String,  _
                     ByVal BallCounter As Global.System.Nullable(Of Decimal),  _
+                    ByVal NoofBalls As Global.System.Nullable(Of Decimal),  _
                     ByVal Original_TID As Integer,  _
                     ByVal Original_MachineID As Global.System.Nullable(Of Integer),  _
                     ByVal Original_DedCount As Global.System.Nullable(Of Decimal),  _
@@ -14399,7 +15117,8 @@ Namespace DSmatalDedTableAdapters
                     ByVal Original_POM As Global.System.Nullable(Of Integer),  _
                     ByVal Original_POD As Global.System.Nullable(Of Integer),  _
                     ByVal Original_MachineName As String,  _
-                    ByVal Original_BallCounter As Global.System.Nullable(Of Decimal)) As Integer
+                    ByVal Original_BallCounter As Global.System.Nullable(Of Decimal),  _
+                    ByVal Original_NoofBalls As Global.System.Nullable(Of Decimal)) As Integer
             If (MachineID.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(MachineID.Value,Integer)
             Else
@@ -14455,83 +15174,95 @@ Namespace DSmatalDedTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_TID,Integer)
-            If (Original_MachineID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_MachineID.Value,Integer)
+            If (NoofBalls.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(NoofBalls.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_TID,Integer)
+            If (Original_MachineID.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_MachineID.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
             If (Original_DedCount.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_DedCount.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_DedCount.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
             If (Original_Ip Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Ip,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Ip,String)
             End If
             If (Original_Date Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Date,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Date,String)
             End If
             If (Original_EntryDate.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_EntryDate.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_EntryDate.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
             If (Original_DayID.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_DayID.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_DayID.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             If (Original_PO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_PO.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_PO.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
             If (Original_POM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_POM.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_POM.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
             End If
             If (Original_POD.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_POD.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_POD.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
             End If
             If (Original_MachineName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_MachineName,String)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_MachineName,String)
             End If
             If (Original_BallCounter.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_BallCounter.Value,Decimal)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_BallCounter.Value,Decimal)
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+            End If
+            If (Original_NoofBalls.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_NoofBalls.Value,Decimal)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -15339,6 +16070,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Ded1"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -15356,8 +16088,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -15524,6 +16256,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Ded2"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -15541,8 +16274,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -15709,6 +16442,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Ded3"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -15726,8 +16460,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -15894,6 +16628,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Ded4"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -15911,8 +16646,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -16079,6 +16814,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Ded5"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -16096,8 +16832,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -17012,6 +17748,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "DataTable1"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -17029,8 +17766,8 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(Isnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -18237,6 +18974,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "POWiseCOunter1"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -18254,9 +18992,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
-                "D (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (PO = ?) AND (POM = ?) "& _ 
+                "AND (POD = ?) AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -18456,6 +19194,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "POWiseCOunter2"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -18473,9 +19212,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
-                "D (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (PO = ?) AND (POM = ?) "& _ 
+                "AND (POD = ?) AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -18675,6 +19414,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "POWiseCOunter3"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -18692,9 +19432,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
-                "D (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (PO = ?) AND (POM = ?) "& _ 
+                "AND (POD = ?) AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -18894,6 +19634,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "POWiseCOunter4"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -18911,9 +19652,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
-                "D (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (PO = ?) AND (POM = ?) "& _ 
+                "AND (POD = ?) AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -19113,6 +19854,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "POWiseCOunter5"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -19130,9 +19872,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (PO = ?) AND (POM = ?) AND (POD = ?) AN"& _ 
-                "D (DayID = ?)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (PO = ?) AND (POM = ?) "& _ 
+                "AND (POD = ?) AND (DayID = ?)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("PO", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PO", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("POM", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "POM", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -19332,6 +20074,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Annnumouys1"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -19349,9 +20092,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (DayID = ?) AND (PO = 0) AND (POM = 0) "& _ 
-                "AND (POD = 0)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '1') AND (DayID = ?) AND (PO = 0"& _ 
+                ") AND (POM = 0) AND (POD = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -19518,6 +20261,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Annnumouys11"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -19535,9 +20279,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (DayID = ?) AND (PO = 0) AND (POM = 0) "& _ 
-                "AND (POD = 0)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '2') AND (DayID = ?) AND (PO = 0"& _ 
+                ") AND (POM = 0) AND (POD = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -19704,6 +20448,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Annnumouys12"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -19721,9 +20466,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (DayID = ?) AND (PO = 0) AND (POM = 0) "& _ 
-                "AND (POD = 0)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '3') AND (DayID = ?) AND (PO = 0"& _ 
+                ") AND (POM = 0) AND (POD = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -19890,6 +20635,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Annnumouys13"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -19907,9 +20653,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (DayID = ?) AND (PO = 0) AND (POM = 0) "& _ 
-                "AND (POD = 0)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '4') AND (DayID = ?) AND (PO = 0"& _ 
+                ") AND (POM = 0) AND (POD = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
@@ -20076,6 +20822,7 @@ Namespace DSmatalDedTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Annnumouys14"
+            tableMapping.ColumnMappings.Add("Column1", "Column1")
             tableMapping.ColumnMappings.Add("DedCount", "DedCount")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
@@ -20093,9 +20840,9 @@ Namespace DSmatalDedTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_Matel_d"& _ 
-                "ed"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (DayID = ?) AND (PO = 0) AND (POM = 0) "& _ 
-                "AND (POD = 0)"
+            Me._commandCollection(0).CommandText = "SELECT        COUNT(ISnull(DedCount, 0)), MAX(NoofBalls) AS DedCount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     tbl_Matel_ded"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MachineName = '5') AND (DayID = ?) AND (PO = 0"& _ 
+                ") AND (POM = 0) AND (POD = 0)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("DayID", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DayID", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
