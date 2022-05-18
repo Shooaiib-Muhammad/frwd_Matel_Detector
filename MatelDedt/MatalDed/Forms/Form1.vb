@@ -49,7 +49,7 @@ Public Class Form1
 
 
 
-        Me.Timer1.Interval = 4000
+        Me.Timer1.Interval = 1000
 
         Me.Timer2.Interval = 1000
         Try
@@ -57,7 +57,7 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
-        loadData()
+
     End Sub
 
     Dim StartClick = False
@@ -165,6 +165,7 @@ LastLine:
         End Try
     End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        loadData()
         'Timer1.Stop()
 
         '        Dim Machinename As String
